@@ -1,0 +1,65 @@
+@use '../../foundation/function' as *; // function.scss を使用
+
+.p-card{
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: rem(40);
+}
+
+.p-card__item {
+  flex: 1;
+}
+.p-card__img img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  height: auto;
+  width: 100%;
+  margin-bottom: rem(19);
+}
+.p-card__img {
+  transition: transform 0.8s ease-in-out;
+}
+.p-card__img:hover {
+  cursor:pointer;
+  transform: scale(1.08); /* ホバー時に少し拡大 */
+  // transition: transform 0.8s ease-in-out;
+}
+.p-card__title{
+  color: rgba(0, 0, 0, 1);
+}
+
+
+
+
+//   /* モーダルのスタイル */
+// .p-modal {
+//   display: none; /* 初期状態は非表示 */
+//   position: fixed; /* スクロールしても位置が固定 */
+//   z-index: 1; /* 他の要素の上に表示 */
+//   top: 0;
+//   left: 0;
+//   width: 100%; /* 幅は全体 */
+//   height: 100%; /* 高さも全体 */
+//   overflow: auto; /* コンテンツが多い場合はスクロール */
+//   background-color: rgba(0, 0, 0, 0.5); /* 背景の透明度 */
+// }
+
+// .p-modal img {
+//   display: block; /* ブロック要素 */
+//   margin: 15% auto; /* 中央寄せ */
+//   width: 50%; /* 幅は50% */
+//   max-width: 500px; /* 最大幅を設定 */
+// }
+
+// .p-modal__close {
+//   position: absolute; /* 絶対位置に配置 */
+//   top: 10px; /* 上から10pxの位置 */
+//   right: 25px; /* 右から25pxの位置 */
+//   font-size: 35px; /* フォントサイズを35pxに */
+//   font-weight: bold; /* 太字 */
+//   color: white; /* 色を白に */
+//   cursor: pointer;  /* カーソルをポインターにしてクリック可能に */
+// }

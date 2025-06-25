@@ -1,0 +1,7 @@
+@use '../../foundation/mixin' as *;  // mixin.scss を使用
+
+.u-pc{
+  @include pc{
+     display: none;
+  }
+}

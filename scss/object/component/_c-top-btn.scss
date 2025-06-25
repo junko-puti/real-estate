@@ -1,0 +1,66 @@
+@use '../../foundation/function' as *;
+
+.c-top-btn{
+  // position: fixed;
+  // width: 68px;
+  // height: 68px;
+  // right: 60px;
+  // bottom: 60px;
+  position: fixed;
+  width: rem(68);
+  height: rem(68);
+  right: rem(60);
+  bottom: rem(60);
+  background-color: #4D9600;
+  border-radius: 50%;
+  cursor: pointer;
+  /*デフォルトで非表示にする*/
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+  z-index: 999;
+}
+
+
+.c-top-btn::before{
+ content: "";
+  position: absolute;
+  display: block;
+  width: rem(23.15);
+  height: rem(15.7);
+  background-image: url("../images/icon-to-top.png"); /* 画像のパス */
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 完全に中央配置 */
+  z-index: 99999;
+}
+.c-top-btn:hover{
+  opacity: 0.5;
+}
+
+/*.activeクラス付与で表示する*/
+.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+
+.c-top-btn:hover{
+  opacity: 0.5;
+
+}
+
+/*.activeクラス付与で表示する*/
+.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+

@@ -1,11 +1,446 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="住まいに関するあらゆるご相談を承ります。不動産売買・賃貸は信頼の株式会社北村建設興業へ。永遠も、瞬間も、あなたと共に。"/>
+    <meta name="apple-mobile-web-app-capable" content="no" />
+    <title>株式会社北村建設興業Webサイト</title>
+    <!-- <link rel="icon" href="img/favicon.ico" /> -->
+     <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7t27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"/>
+    <!-- <link rel="stylesheet" href="css/reset.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  </head>
+  <body>
+    <header class="l-header p-header js-header">
+      <div class="p-header__inner">
+        <h1 class="p-header__logo"><a href="#">株式会社北村建設興業</a></h1>
+        <nav class="p-header__nav ">
+          <ul class="p-header__menu">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#service">SERVICE</a></li>
+            <li><a href="#works">WORKS</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#company">COMPANY</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header> 
+    <main>
+      <section class="p-fv">
+        <div class="p-fv__slider p-slider">
+          <div class="p-slider__item"><img src="./images/image-fv_1.jpg" alt="ファーストビュー1"></div>
+          <div class="p-slider__item"><img src="./images/image-fv_02.jpg" alt="ファーストビュー2"></div>
+          <div class="p-slider__item"><img src="./images/image-fv_03.jpg" alt="ファーストビュー3"></div>
+        </div>
+        <h2 class="p-fv__catch">永遠も。<br class="u-pc">瞬間も。<br>あなたと共に。</h2>
+      </section>
+      <!------------about-->
+      <section class="p-about" id="about">
+        <div class="p-about__inner p-fade-in">
+          <h3>伝統とイマを繋ぐ</h3>
+          <p>古来から伝わる伝統文化</p>
+          <p>昔からそこにある材料</p>
+          <p>その土地に長い間かけて</p>
+          <p>最適化してきた</p>
+          <p>たくさんのヒントを</p>
+          <p>イマを生きる私たちの</p>
+          <p>心地よさに取り入れ</p>
+          <p>新たな技術革新を</p>
+          <p>起こし続ける会社です</p>
+        </div>
+      </section>
+      <!------------service-->
+      <section class="p-service p-section" id="service">
+        <div class="p-service__inner p-section__inner">
+          <div class="c-headline p-fade-in">
+            <h3 class="c-headline__main">SERVICE</h3>
+            <h4 class="c-headline__sub">サービス</h4>
+          </div>
+          <div class="p-service__list p-service-list">
+            <!--service1-->
+            <div class="p-service-list__item p-service-item p-fade-in">
+              <figure class="p-service-item__img">
+                  <img src="./images/pc-service_01.jpg" alt="静岡県U.I様自宅">
+                  <p class="p-service-item__title">静岡県U.I様自宅</p>
+              </figure>
+              <div class="p-service-item__caption">
+                <h3 class="p-service-item__caption-head">新築<br>（土地探し〜建築）</h3>
+                <p class="p-service-item__caption-txt">
+                  お客様にあった土地探しから<br>建築、施工までサポートいたします。<br>風水的観点からもご提案。
+                </p>
+              </div>
+            </div>
+            <!--service2-->
+            <div class="p-service-list__item p-service-item p-fade-in">
+              <figure class="p-service-item__img">
+                  <img src="./images/pc-service_02.jpg" alt="北海道富良野市ブックカフェ">
+                  <p class="p-service-item__title">北海道富良野市ブックカフェ</p>
+              </figure>
+              <div class="p-service-item__caption">
+                <h3 class="p-service-item__caption-head">リフォーム<br>リノベーション</h3>
+                <p class="p-service-item__caption-txt">
+                  温かみと雰囲気をそのままに<br>住み心地、使い心地を<br>追求しご提供いたします。
+                </p>
+              </div>
+            </div>
+            <!--service3-->
+            <div class="p-service-list__item p-service-item p-fade-in">
+              <figure class="p-service-item__img">
+                  <img src="./images/pc-service_03.jpg" alt="広島県竹原市">
+                  <p class="p-service-item__title">広島県竹原市</p>
+              </figure>
+              <div class="p-service-item__caption">
+                <h3 class="p-service-item__caption-head">都市計画〜開発<br>公共施設</h3>
+                <p class="p-service-item__caption-txt">
+                  都市計画から都市開発まで<br>ご提案いたします。<br>公共施設もさらに居心地良く。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------works-->
+      <section class="p-works p-section" id="works">
+        <div class="p-works__inner p-section__inner">
+          <div class="c-headline p-fade-in">
+            <h3 class="c-headline__main">WORKS</h3>
+            <h4 class="c-headline__sub">施工事例</h4>
+          </div>
+          <div class="p-works__card p-card p-fade-in">
+            <div class="p-card__item">
+              <figure class="p-card__img">
+                  <img src="./images/pc-works_01.png" alt="【新築】長崎県T.O様自宅">
+              </figure>
+              <div class="p-card__body">
+                  <h3 class="p-card__title">【新築】<br>長崎県T.O様自宅</h3>
+              </div>
+            </div>
+            <div class="p-card__item">
+              <figure class="p-card__img">
+                  <img src="./images/pc-works_02.png" alt="【リノベーション】京都府カトリック丹波教会">
+              </figure>
+              <div class="p-card__body">
+                  <h3 class="p-card__title">【リノベーション】<br>京都府カトリック丹波教会</h3>
+              </div>
+            </div>
+            <div class="p-card__item">
+              <figure class="p-card__img">
+                  <img src="./images/pc-works_03.png" alt="【新築】東京都A.F様自宅件事務所">
+              </figure>
+              <div class="p-card__body">
+                  <h3 class="p-card__title">【新築】<br>東京都A.F様自宅件事務所</h3>
+              </div>
+            </div>
+            <div class="p-card__item">
+              <figure class="p-card__img">
+                  <img src="./images/pc-works_04.png" alt="【都市開発】山形県銀山温泉協同組合">
+              </figure>
+              <div class="p-card__body">
+                  <h3 class="p-card__title">【都市開発】<br>山形県銀山温泉協同組合</h3>
+              </div>
+            </div>
+          </div>
+          <!-- モーダル -->
+          <div id="myModal" class="p-modal">
+            <div class="p-modal__close"></div> <!-- 閉じるボタン -->
+            <img id="js-modal-img" /> <!-- 拡大画像 -->
+            <!-- <div id="caption"></div> 画像のキャプション -->
+          </div>
+        </div>
+      </section>
+      <!------------news-->
+      <section class="p-news p-section" id="news">
+        <div class="p-news__inner p-section__inner">
+          <div class="c-headline p-fade-in">
+            <h3 class="c-headline__main">NEWS</h3>
+            <h4 class="c-headline__sub">お知らせ</h4>
+          </div>
+          <div class="p-news__item p-fade-in">
+            <div class="p-news__content">
+              <h5 class="p-news__title">お知らせ</h5>
+              <div class="p-news__container">
+                <dl class="p-news__list">
+                  <a href="">
+                    <dt class="p-news__date">0000.00</dt>
+                    <dd class="p-news__article">公式Instagram、YouTubeはじめました。</dd>
+                  </a>
+                  <a href="">
+                    <dt class="p-news__date">0000.00</dt>
+                    <dd class="p-news__article">非住宅 木造建築フェアに出展します。</dd>
+                  </a>
+                  <a href="">
+                    <dt class="p-news__date">0000.00</dt>
+                    <dd class="p-news__article">公式ホームページがリニューアルしました。</dd>
+                  </a>
+                </dl>
+                <div class="p-news__more-btn c-more-btn">
+                  <a href="#" class="p-news__link c-more-btn__link">more</a>
+                  <span class="c-more-btn__arrow"></span>
+                </div>
+              </div>
+            </div>
+            <div class="p-news__content">
+              <h5 class="p-news__title">ブログ</h5>
+              <div class="p-news__container">
+                <dl class="p-news__list">
+                  <a href="">
+                    <dt class="p-news__date">0000.00</dt>
+                    <dd class="p-news__article">あけましておめでとうございます。〜会長から社員まで〜</dd>
+                  </a>
+                  <a href="">
+                    <dt class="p-news__date">0000.00</dt>
+                    <dd class="p-news__article">【検証】土地と人に相性はあるのか？</dd>
+                  </a>
+                  <a href="">
+                    <dt class="p-news__date">0000.00</dt>
+                    <dd class="p-news__article">弊社創業初の入社式が行われました。</dd>
+                  </a>
+                </dl>
+                <div class="p-news__more-btn c-more-btn">
+                  <a href="#" class="p-news__link c-more-btn__link">more</a>
+                  <span class="c-more-btn__arrow"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------company-->
+      <section class="p-company p-section" id="company">
+        <div class="p-company__inner p-section__inner">
+          <div class="c-headline p-fade-in">
+            <h3 class="c-headline__main">COMPANY</h3>
+            <h4 class="c-headline__sub">会社概要</h4>
+          </div>
+          <div class="p-company__details p-company-details p-fade-in">
+            <figure class="p-company-details__map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51871.68182311378!2d139.70416671035196!3d35.65286157934853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbbb41922f3%3A0x33ebfd75f2f06cac!2z5p2x5Lqs6YO95riv5Yy6!5e0!3m2!1sja!2sjp!4v1748830059459!5m2!1sja!2sjp" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </figure>
+            <div class="p-company-details__info">
+              <h3 class="p-company-details__company-name">株式会社 北村建設興業</h3>
+              <p class="p-company-details__access p-company-details__address">
+                〒852-8065<br>長崎県長崎市横尾○丁目○-○
+              </p>
+              <p class="p-company-details__access p-company-details__tel">
+                TEL <span>000-000-0000</span>
+              </p>
+              <p class="p-company-details__access">
+                Mail  info@example.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------contact-->
+      <section class="p-contact p-section" id="contact">
+        <div class="p-contact__inner p-section__inner">
+          <div class="c-headline p-fade-in">
+            <h3 class="c-headline__main">CONTACT</h3>
+            <h4 class="c-headline__sub">お問い合わせ</h4>
+          </div>
+          <p class="p-contact__message p-fade-in">３営業日以内にメールにてご連絡いたします。*は入力必須項目となります。</p>
+
+          <form class="p-contact__form p-form p-fade-in" method="post"  action="javascript:void(0);">
+
+            <div class="p-form__row">
+              <label class="p-form__label" for="name">お名前 *</label>
+              <div class="p-form__input">
+                <input type="text" id="name" name="お名前" class="p-form__text" placeholder="例：北村太郎" autocomplete="name">
+              </div>
+            </div>
+
+            <div class="p-form__row">
+              <p class="p-form__label">性別</p>
+              <div class="p-form__input p-form__radio">
+                <label for="male"><input type="radio" id="male" name="gender" value="男性">男性</label>
+                <label for="female"><input type="radio" id="female" name="gender" value="女性">女性</label>
+              </div>
+            </div>
+            
+            <div class="p-form__row">
+              <label class="p-form__label" for="mail">メールアドレス *</label>
+              <div class="p-form__input">
+                <input type="email" id="mail" name="メールアドレス" class="p-form__text" placeholder="例：aaaaaaaa@gmail.com" autocomplete="email">
+              </div>
+            </div>
+
+            <div class="p-form__row">
+              <label class="p-form__label" for="category">問い合わせ種別</label>
+              <div class="p-form__input p-form__input-select">
+                <select name="選択肢" id="category" class="p-form__select">
+                  <option selected>家づくりについて</option>
+                  <option>Google/Yahoo検索</option>
+                  <option>SNS</option>
+                  <option>ブログ</option>
+                  <option>友人や知人</option>
+                  <option>その他</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="p-form__row p-form__textarea-container">
+              <label class="p-form__label" for="content">内容 *</label>
+              <div class="p-form__input">
+                <textarea name="お問合せ" id="content" class="p-form__textarea"></textarea>
+              </div>
+            </div>
+
+            <!-- <div class="p-form__row p-form__column"> -->
+            <div class="p-form__row p-form__checkbox-container"><!--6.5-->
+              <p class="p-form__label">何を見て当社HPを知りましたか？ (複数回答可) *</p>
+              <div class="p-form__input p-form__checkbox">
+                <label for="internet"><input type="checkbox" name="source[]" value="internet" id="internet"> インターネット</label>
+                <label for="flyer"><input type="checkbox" name="source[]" value="flyer" id="flyer"> チラシ</label>
+                <label for="housing"><input type="checkbox" name="source[]" value="housing" id="housing"> 住宅展示場</label>
+                <label for="signboard"><input type="checkbox" name="source[]" value="signboard" id="signboard"> 看板</label>
+                <label for="sns"><input type="checkbox" name="source[]" value="sns" id="sns"> 各種SNS</label>
+                <label for="referral"><input type="checkbox" name="source[]" value="referral" id="referral"> 紹介</label>
+                <label for="passing"><input type="checkbox" name="source[]" value="passing" id="passing"> 通りがかり</label>
+                <label for="other"><input type="checkbox" name="source[]" value="other" id="other"> その他</label>
+              </div>
+            </div>
+            <!---------->
+            <div class="p-form__row p-form__privacy p-form-privacy">
+              <h4 class="p-form__label">個人情報保護方針</h4>
+              <div class="p-form-privacy__container">
+                <div class="p-form-privacy__inner">
+                  <article>
+                    <h5 class="p-form-privacy__title">個人情報取扱事業者の氏名又は名称(法24条1項1号)</h5>
+                    <p  class="p-form-privacy__text">株式会社 北村建設興業</p>
+                  </article>
+                  <article>
+                    <h5 class="p-form-privacy__title">個人情報の取り扱い</h5>
+                    <p class="p-form-privacy__text">
+                      弊社は、個人情報保護に関連する法令を遵守し、お客様からご提供いただく個人情報を、
+                      細心の注意を払って取り扱っております。このプライバシーポリシーでは、当社における
+                      お客様の個人情報の取扱いについてご説明しております。
+                    </p>
+                  </article>
+                  <article>
+                    <h5 class="p-form-privacy__title">個人情報の利用目的(法18条、15条)</h5>
+                    <p class="p-form-privacy__text p-form-privacy__text-mb">
+                      弊社は建築物の設計、施工を主とした当社業務ならびにアフターサービスをさせていただく上で、
+                      お客様の個人情報を原則として次の利用目的の範囲内で利用させていただきます。
+                      なお、アンケート用紙・ウェブサイトの他のページ等で特に利用目的を定めている場合は、その利用目的を含みます。
+                    </p>
+                    <ul class="p-form-privacy__list">
+                      <li>
+                        お客様からご注文頂いた工事を適切に完成させるため及び物品の納品をさせて頂くため、
+                        お客様へ弊社が取扱う商品を積極的に提案する営業活動のため、
+                        商品及びサービスの提供に関する手続(融資・申請・保証・保険・登記など)の支援、取次ぎのため
+                      </li>
+                      <li>お客様に弊社が取扱う商品、企業活動、イベント等に関するお知らせをお届けするため (カタログ、ご提案資料、展示のご案内、各種刊行物など)</li>
+                      <li>見学会等へご来場のお客様へのご商談、ご来場日時の確認のため</li>
+                      <li>商品やサービスについてお客さまからいただいたご意見を活用するため</li>
+                      <li>商品のアフターサービス、メンテナンス等のためにお客さまと接触するため</li>
+                      <li>その他お客さまから寄せられたご意見、ご要望にお応えするため、及び弊社が取扱う商品、サービス等の向上を図るため</li>
+                    </ul>
+                  </article>
+                  <article>
+                    <h5 class="p-form-privacy__title">保有個人データ利用目的(法24条1項2号)</h5>
+                    <ul class="p-form-privacy__list">
+                      <li>当社が建築したお客様宅のアフターメンテナンスを行うため</li>
+                      <li>当社がお客様に提供するサービスにおいて利用するため</li>
+                      <li>お客様に特別なサービスや新しい商品などの情報を的確にお知らせするため</li>
+                      <li>お客様に合ったサービスを提供するため</li>
+                      <li>当社の建築した住宅の利用状況や利用環境などに関する調査を実施して客観的にお客様の満足度を把握するため</li>
+                      <li>必要に応じてお客様に連絡を行うため</li>
+                      <li>会計監査上の確認作業を行うため</li>
+                    </ul>
+                  </article>
+                  <article>
+                    <h5 class="p-form-privacy__title">個人情報の安全対策(法20条)</h5>
+                    <p class="p-form-privacy__text">お客様の個人情報を安全に管理・運営するよう鋭意努力しており、
+                      個人情報への外部からの不正なアクセス、個人情報の紛失・毀損・破壊・改ざん・漏えい、
+                      社外への不正な流出などへの危険防止に対する合理的かつ適切な安全対策を行っています。
+                      また個人情報を取り扱う部門ごとに情報管理責任者を置き、個人情報の適切な管理に努めるとともに、
+                      情報セキュリティに関する規程を設けて社員への周知徹底を実施しています。
+                    </p>
+                  </article>
+                  <article>
+                    <h5 class="p-form-privacy__title">第三者への提供(法23条)</h5>
+                    <p class="p-form-privacy__text">個人情報は、以下のいずれかに該当する場合を除いて、いかなる第三者にも開示・提供いたしません。</p>
+                    <ul class="p-form-privacy__list">
+                      <li>お客さまの同意がある場合。</li>
+                      <li>お客様個人を識別することができない状態で開示する場合。</li>
+                      <li>業務を円滑に進める等の理由で外部事業者に取扱いを委託する場合。(この場合には、十分な保護水準を備えている委託先を選定し、漏えいや再提供を防止するために契約により義務づける等の方法によって、適切な管理を実施します)</li>
+                      <li>法令等により開示を要求された場合</li>
+                      <li>人の生命、身体又は財産の保護のために必要であって、お客様の同意を得ることが困難である場合</li>
+                      <li>国の機関や地方公共団体又はその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、お客様の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがある場合</li>
+                    </ul>
+                  </article>
+                  <article>
+                    <h5 class="p-form-privacy__title">個人情報の開示手続(法25条)</h5>
+                    <p class="p-form-privacy__text">お客様本人の個人情報に関する保有データの開示請求があった場合には、ご本人であることを運転免許証・パスポート等の身分証明書で確認させていただいた上、本人確認が終了後、速やかに開示させていただきます。</p>
+                  </article>
+                  <article>
+                    <h5 class="p-form-privacy__title">個人情報の訂正等(法26条)</h5>
+                    <p class="p-form-privacy__text">前項の開示手続きにより、弊社が保有する保有個人データ内容に事実と異なる記載がある場合には、訂正、変更又は削除の手続きを取らせて頂きます。</p>
+                  </article>
+                  <article>
+                    <h5 class="p-form-privacy__title">プライバシーポリシーに関するお問合せ先</h5>
+                    <p class="p-form-privacy__text">弊社の個人情報の取扱いに関するお問合せは、下記までお問い合せください。</p>
+                  </article>
+                  <address class="p-form-privacy__address">
+                    <h5 class="p-form-privacy__title">社名</h5>
+                    <p class="p-form-privacy__text">株式会社北村建設興業</p>
+                    <h5 class="p-form-privacy__title">住所</h5>
+                    <p class="p-form-privacy__text">長崎県長崎市横尾○丁目○-○</p>
+                    <h5 class="p-form-privacy__title">電話</h5>
+                    <p class="p-form-privacy__text">000-000-0000</p>
+                    <h5 class="p-form-privacy__title">FAX</h5>
+                    <p class="p-form-privacy__text">000-000-0000</p>
+                    <h5 class="p-form-privacy__title p-form-privacy__title-last">メールアドレス</h5>
+                    <p class="p-form-privacy__text p-form-privacy__text-last">info@example.com</p>
+                  </address>
+                </div>
+              </div>
+            </div>
+            <p class="c-button">
+                <button type="submit" class="c-button__submit">内容に同意して送信</button>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="l-footer p-footer">
+      <div class="p-footer__menu-container">
+        <div class="p-footer__menu-inner">
+          <h1 class="p-footer__logo"><a href="#">株式会社北村建設興業</a></h1>
+          <nav class="p-footer__nav-menu ">
+            <ul class="p-footer__menu">
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#service">SERVICE</a></li>
+              <li><a href="#works">WORKS</a></li>
+              <li><a href="#news">NEWS</a></li>
+              <li><a href="#company">COMPANY</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+          </nav>
+          <nav class="p-footer__nav-sns ">
+            <ul class="p-footer__sns-menu p-footer__menu">
+              <li><a href="#"><img src="./images/icon-twitter.png" alt="Twitter"></a></li>
+              <li><a href="#"><img src="./images/icon-facebook.png" alt="Facebook"></a></li>
+              <li><a href="#"><img src="./images/icon-youtube.png" alt="YouTube"></a></li>
+              <li><a href="#"><img src="./images/icon-instagram.png" alt="Instagram"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <p class="p-footer__copyright">&copy;Copyright0000  kitamurakensetukogyo</p>
+      <a href="#" class="c-top-btn"></a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

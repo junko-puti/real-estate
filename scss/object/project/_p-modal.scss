@@ -1,0 +1,31 @@
+@use '../../foundation/function' as *; // function.scss を使用
+
+  /* モーダルのスタイル */
+.p-modal {
+  display: none; /* 初期状態は非表示 */
+  position: fixed; /* スクロールしても位置が固定 */
+  z-index: 1; /* 他の要素の上に表示 */
+  top: 0;
+  left: 0;
+  width: 100%; /* 幅は全体 */
+  height: 100%; /* 高さも全体 */
+  overflow: auto; /* コンテンツが多い場合はスクロール */
+  background-color: rgba(0, 0, 0, 0.5); /* 背景の透明度 */
+}
+
+.p-modal img {
+  display: block; /* ブロック要素 */
+  margin: 15% auto; /* 中央寄せ */
+  width: 50%; /* 幅は50% */
+  max-width: rem(500); /* 最大幅を設定 */
+}
+
+.p-modal__close {
+  position: absolute; /* 絶対位置に配置 */
+  top: rem(10); /* 上から10pxの位置 */
+  right: rem(25); /* 右から25pxの位置 */
+  font-size: rem(35); /* フォントサイズを35pxに */
+  font-weight: bold; /* 太字 */
+  color: white; /* 色を白に */
+  cursor: pointer;  /* カーソルをポインターにしてクリック可能に */
+}

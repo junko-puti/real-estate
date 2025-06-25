@@ -1,0 +1,38 @@
+@use '../../foundation/function' as *;
+
+.p-about {
+  display: flex;
+  justify-content: center;
+  max-width: 100%; /* 幅を画面いっぱいに*/
+  height: auto; /*内容に応じて高さを自動調整*/
+  // min-height: 500px; /*最低限の高さを確保*/
+  padding-top: rem(110);
+  padding-bottom: rem(110);
+  background-image: url('../images/about.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.p-about__inner {
+  padding-right: rem(288);
+  writing-mode: vertical-rl; /* 右から左への縦書き */
+  text-orientation: upright; /* 文字を縦向きに揃える */
+  transform: rotate(0deg); /* 調整が必要なら回転も可能 */
+  color: #000;
+}
+
+.p-about h3{
+margin-left: rem(60);
+font-size: rem(30);
+line-height: 1;
+letter-spacing: 0.167em;/*118%微調整*/
+}
+.p-about p{
+margin-left: rem(30);
+font-size: rem(18);
+line-height: 1;
+letter-spacing: 0.4em;/*137％微調整*/
+}
+.p-about p:last-child{
+margin-left: 0;
+}

@@ -1,0 +1,23 @@
+@use '../../foundation/function' as *;
+
+.c-button{
+  display: block;
+  margin: 0 auto;
+  padding: rem(8) rem(60) rem(9) rem(60);
+  max-width: rem(300);
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #4D9600;
+  transition: background-color 0.5s ease, color 0.5s ease; /* なめらかに変化 */
+}
+.c-button:hover{
+  color: #4D9600;
+  background-color: #FFFFFF;
+  // border: solid 1px #4D9600;
+  outline: 1px solid #4D9600; /* 枠線を追加するが、要素のサイズは変わらない */
+}
+.c-button__submit{
+  font-size: rem(20);
+  font-weight: 600;
+  line-height: calc(33 / 20);
+}
