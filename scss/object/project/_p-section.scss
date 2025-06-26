@@ -1,0 +1,13 @@
+@use '../../foundation/function' as *;
+
+.p-section{
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+}
+.p-section__inner{
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}

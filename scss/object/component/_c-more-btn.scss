@@ -1,0 +1,65 @@
+@use '../../foundation/function' as *;
+
+.c-more-btn{
+  color: #55A500;
+  // transition: transform 5.8s;//animationを適用しているので不要？
+}
+.c-more-btn__link{
+  font-size: rem(20);
+  font-weight: 600;
+  line-height: calc(33 / 20);
+  // transition: transform 5.8s;
+}
+.c-more-btn__arrow {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 1px;
+  border-radius: 9999px;
+  background-color: #55A500;
+}
+.c-more-btn__arrow::before,
+.c-more-btn__arrow::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  border-radius: 9999px;
+  background-color: #55A500;
+  transform-origin: calc(100% - 0.5px) 50%;
+}
+.c-more-btn__arrow::before {
+  top: calc(50% - 0.5px);
+  right: 0;
+  width: 14px;
+  transform: rotate(45deg);
+}
+.c-more-btn__arrow::after {
+  right: 9px;
+  top: -9px;
+  width: 18px;
+  transform: rotate(-90deg);
+}
+
+
+
+
+.c-more-btn:hover{
+  animation: shake-right 1s ease-in-out 1; // 1秒間で1回のアニメーション
+}
+.c-more-btn__link:hover{
+  text-decoration: none;
+  color: #4D9600;
+}
+@keyframes shake-right {
+  0% {
+    transform: translateX(0); // 初期位置
+  }
+  50% {
+    transform: translateX(5px); // 右に揺れる量
+  }
+  100% {
+    transform: translateX(0); // 元の位置に戻る
+  }
+}
+
+

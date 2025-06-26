@@ -1,0 +1,23 @@
+@use '../../foundation/function' as *;
+
+.c-headline{
+  padding-bottom: rem(68);
+}
+.c-headline__main {
+  padding-bottom: rem(6);
+  font-size: rem(30);
+  font-weight:500;
+  line-height:calc(33 / 30);
+  letter-spacing: 0.3em; 
+  text-align: center;
+  color:rgba(77, 150, 0, 1);
+}
+
+.c-headline__sub {
+  font-size:rem(20) ;
+  font-weight: 500;
+  line-height:calc(33 / 20);
+  letter-spacing: 0.3em; 
+  text-align: center;
+  color:rgba(0, 0, 0, 1);
+}

@@ -1,0 +1,24 @@
+@use '../../foundation/function' as *;
+
+.p-contact{
+  color: #000000;
+  background-color: rgba(77, 150, 0, 0.1);
+}
+.p-contact__message{
+  margin-top: rem(-33);
+  margin-bottom: rem(70);
+  padding: 0 rem(60);
+  text-align: left;
+  font-size: rem(20);
+  font-weight: 500;
+  line-height: calc(33 / 20);
+}
+.p-contact__form{
+  padding-left: rem(60);
+  padding-right: rem(60);
+}
+
+
+
+
+

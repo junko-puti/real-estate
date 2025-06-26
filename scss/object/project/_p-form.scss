@@ -1,0 +1,203 @@
+@use '../../foundation/function' as *;
+
+.p-form__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: rem(50);
+}
+.p-form__label {
+  width: 21.25%;
+  font-size: rem(20);
+  font-weight: 500;
+  line-height: calc(33 / 20);
+}
+.p-form__input {
+  width: 78.75%;
+  font-size: rem(16);
+  font-weight: 500;
+  line-height: calc(25 / 16);
+}
+.p-form__textarea-container .p-form__label,
+.p-form__checkbox-container .p-form__label,
+.p-form__privacy .p-form__label{
+  margin-bottom: rem(10);
+  width: 100%;
+}
+.p-form__textarea-container .p-form__input{
+  width: 100%;
+}
+.p-form__text,
+.p-form__select,
+.p-form__textarea {
+  width: 100%;
+  padding: rem(13) rem(20) rem(12) rem(20);
+  font-size: rem(16);
+  background-color: #fff;
+  line-height: calc(25 / 16);
+}
+.p-form__textarea-container .p-form__textarea {
+  height: rem(200);
+  resize: vertical;
+  overflow-y: auto;
+}
+.p-form__radio,
+.p-form__checkbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.p-form__radio label {
+  margin-right: rem(74);
+}
+.p-form__radio input {
+  margin-right: rem(19);
+}
+.p-form__checkbox{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4列を均等な幅で設定 */
+    gap: rem(20);
+    width: 100%;
+}
+.p-form__radio label,
+.p-form__checkbox label {
+  font-size: rem(18);
+  font-weight: 500;
+  line-height: calc(25 / 18);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.p-form__input-select {
+  position: relative;
+  appearance: none;
+}
+.p-form__select {
+  appearance: none;
+  background: #fff;
+  cursor: pointer;
+}
+.p-form__input-select::after {
+  content: '';
+  position: absolute;
+  right: rem(17);
+  top: 50%;
+  transform: translateY(-50%);
+  width: rem(20);
+  height: rem(16);
+  background-image: url("../images/select-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+[type="radio"] ,
+[type="checkbox"]{
+  width: rem(20);
+  height: rem(20);
+  background-color: #fff;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+}
+
+[type="radio"] {
+  margin-right: rem(19);
+  border-radius: 50%;
+}
+
+[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background: #000;
+  border-radius: 50%;
+}
+
+[type="checkbox"]{
+  margin-right: rem(20);
+}
+
+[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 6px;
+  width: 8px;
+  height: 12px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #4D9600; /* 緑色の枠線 */
+  outline-offset: 2px; /* 枠線を少し外側にずらす */
+}
+input[type="checkbox"]:focus,
+input[type="radio"]:focus,
+input[type="submit"] {
+  outline: none; /* フォーカス時の枠線を削除 */
+}
+
+
+
+/*個人情報保護方針*/
+.p-form-privacy {
+  margin-bottom: 80px;
+}
+.p-form-privacy__container {
+  width: 100%;
+  max-height: 300px; /* 縦スクロールの高さを制限 */
+  overflow: auto; /* 必要に応じてスクロールを追加 */
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  background: #FFFFFF;
+}
+.p-form-privacy__inner {
+  max-width: rem(800);
+  margin: 0 auto;
+  padding-left: rem(40);
+  padding-right: rem(60);
+}
+.p-form-privacy article{
+  margin-bottom: rem(30);
+}
+.p-form-privacy__title,
+.p-form-privacy__text,
+.p-form-privacy__list li{
+  font-size: rem(18);
+  font-weight: 500;
+  line-height: calc(31 / 18);
+}
+.p-form-privacy__text-mb{
+  margin-bottom: rem(30);
+}
+.p-form-privacy__list li {
+  list-style-type: disc; /* 点をリストアイコンとして使用 */
+  margin-left: rem(20);
+}
+.p-form-privacy__address{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.p-form-privacy__address .p-form-privacy__title{
+  margin-top: 0;
+  width: 15%;
+}
+.p-form-privacy__address .p-form-privacy__text{
+  width: 85%;
+}
+.p-form-privacy__address .p-form-privacy__title-last{
+  width: 30%;
+  margin-top: 0;
+}
+.p-form-privacy__address .p-form-privacy__text-last{
+  width: 70%;
+}
+

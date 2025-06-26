@@ -1,0 +1,37 @@
+
+@use 'mixin' as *;  // mixin.scss を使用
+@use './function' as *; // function.scss を使用
+
+//ソリッドコーディング
+html {
+  font-size: 62.5%; /* 1rem = 10px に統一 */
+}
+
+//リキッドコーディング
+// html {
+//   //375px~767px
+//   font-size: 16px;
+//   //768~980px
+//   @include pc {
+//     font-size: calc(16 / 980 * 100vw);
+//   }
+//   //980px~
+//   @media (min-width: 980px) {
+//     font-size: 16px;
+//   }
+//   @media (max-width: 375px) {
+//     font-size: calc(16 / 375 * 100vw);
+//   }
+// }
+
+body {
+  font-family: "YuMincho", serif;
+  font-size: rem(16);//ソリッドコーディング
+  line-height: 1.6;
+  color: #FFFFFF;
+}
+img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
