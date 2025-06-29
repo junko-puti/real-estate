@@ -376,14 +376,19 @@ th {
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%; /* 1rem = 10px に統一 */
 }
 
 body {
-  font-family: "YuMincho", serif;
+  font-family: "Yu Mincho", "YuMincho", serif;
   font-size: 1.6rem;
   line-height: 1.6;
   color: #FFFFFF;
+}
+
+[id] {
+  scroll-margin-top: 8rem;
 }
 
 img {
@@ -412,16 +417,18 @@ img {
 }
 
 .c-headline__main {
-  padding-bottom: 0.6rem;
+  padding-left: 0.6rem; /*微調整*/
   font-size: 3rem;
   font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: 0.3em;
+  line-height: 1.16;
+  letter-spacing: 0.28em;
   text-align: center;
   color: rgb(77, 150, 0);
 }
 
 .c-headline__sub {
+  display: block;
+  margin-top: 0.6rem;
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.65;
@@ -443,9 +450,9 @@ img {
 .c-more-btn__arrow {
   position: relative;
   display: inline-block;
-  width: 80px;
-  height: 1px;
-  border-radius: 9999px;
+  width: 8rem;
+  height: 0.1rem;
+  top: -0.4rem;
   background-color: #55A500;
 }
 
@@ -453,8 +460,7 @@ img {
 .c-more-btn__arrow::after {
   content: "";
   position: absolute;
-  height: 1px;
-  border-radius: 9999px;
+  height: 0.1rem;
   background-color: #55A500;
   -webkit-transform-origin: calc(100% - 0.5px) 50%;
           transform-origin: calc(100% - 0.5px) 50%;
@@ -463,15 +469,15 @@ img {
 .c-more-btn__arrow::before {
   top: calc(50% - 0.5px);
   right: 0;
-  width: 14px;
+  width: 1.4rem;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 .c-more-btn__arrow::after {
-  right: 9px;
-  top: -9px;
-  width: 18px;
+  right: 0.9rem;
+  top: -0.9rem;
+  width: 1.8rem;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
@@ -595,7 +601,7 @@ img {
 .p-header {
   -webkit-transition: background-color 0.5s, padding 0.5s;
   transition: background-color 0.5s, padding 0.5s;
-  height: 8rem;
+  height: 8.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -605,6 +611,7 @@ img {
 }
 
 .p-header.is-colored {
+  height: 8rem;
   background-color: #4D9600;
 }
 
@@ -622,12 +629,14 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 1080px; /*6/2*/
+  max-width: 1080px;
+  max-width: 980px; /*920+30+30*/
   width: 100%;
   height: 100%;
-  margin: 0 auto;
+  padding-top: 5px;
   padding-left: 30px;
-  padding-right: 30px; /*6.2*/
+  padding-right: 30px;
+  margin: 0 auto;
 }
 
 .p-header__logo {
@@ -655,8 +664,11 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
-  gap: 3rem;
+  gap: 2.9rem; /*微調整*/
 }
 
 .p-header__menu a {
@@ -696,8 +708,8 @@ img {
 
 .p-fv__catch {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 51%;
+  left: 50.5%;
   font-size: 4rem;
   line-height: 1.75;
   letter-spacing: 0.3em; /* 文字サイズの30% */
@@ -721,6 +733,7 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: -0.7rem;
 }
 
 .p-about__inner {
@@ -800,12 +813,13 @@ img {
   width: 65.217%;
   padding-bottom: 6.2rem;
   padding-bottom: 5.1rem;
+  padding-bottom: 4.9rem;
   max-width: 600px;
   z-index: 1;
 }
 
 .p-service-item__img img {
-  margin-bottom: 1.9rem;
+  margin-bottom: 2rem; /*微調*/
 }
 
 .p-service-item__title {
@@ -825,7 +839,7 @@ img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  width: 54.347%;
+  width: 54.348%; /*微調整*/
   margin-left: -19.565%;
   padding-top: 5rem;
   padding-bottom: 4.2rem;
@@ -835,7 +849,7 @@ img {
 
 .p-service-item__caption-head,
 .p-service-item__caption-txt {
-  width: 27.5rem;
+  width: 28rem; /*微調整*/
 }
 
 .p-service-item__caption-head {
@@ -869,6 +883,10 @@ img {
       -ms-flex-align: start;
           align-items: flex-start;
   padding-left: 4rem;
+}
+
+.p-works {
+  padding-bottom: 9.7rem;
 }
 
 .p-card {
@@ -962,14 +980,15 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 6rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: -0.3rem; /*微調整*/
+  width: 100%;
 }
 
 .p-news__content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  width: 43rem;
+  width: 46.74%;
   background-color: rgb(255, 255, 255);
 }
 
@@ -997,14 +1016,14 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-}
-
-.p-news__list a:hover {
-  color: rgba(0, 0, 0, 0.5);
   -webkit-transition: -webkit-transform 1s ease-in-out;
   transition: -webkit-transform 1s ease-in-out;
   transition: transform 1s ease-in-out;
   transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.p-news__list a:hover {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .p-news__date {
@@ -1014,29 +1033,36 @@ img {
   line-height: 2.0625;
 }
 
+.p-news__date_time {
+  line-height: 1;
+  vertical-align: top;
+}
+
 .p-news__article {
   width: 68.72%;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.3888888889;
+  letter-spacing: -0.1px; /*微調整*/
 }
 
 .p-news__date,
 .p-news__article {
   position: relative;
-  padding-bottom: 3.3rem;
+  padding-bottom: 1.3rem;
+  margin-bottom: 2rem;
 }
 
-.p-news__date:last-child,
-.p-news__article:last-child {
-  padding-bottom: 3rem;
+.p-news__date_last,
+.p-news__article_last {
+  margin-bottom: 1.7rem;
 }
 
 .p-news__date::after,
 .p-news__article::after {
   content: "";
   position: absolute;
-  bottom: 1.3rem;
+  bottom: 0;
   left: 0;
   width: 100%;
   border-bottom: solid 1px #55A500;
@@ -1054,11 +1080,14 @@ img {
       -ms-flex-align: end;
           align-items: flex-end;
   text-align: center;
-  padding-bottom: 0.9rem;
 }
 
 .p-news__link {
   padding-right: 3.3rem;
+}
+
+.p-company {
+  margin-top: -0.2rem; /*微調整*/
 }
 
 .p-company-details {
@@ -1111,7 +1140,7 @@ img {
 
 .p-company-details__company-name,
 .p-company-details__access {
-  width: 27.5rem;
+  width: 28rem;
 }
 
 .p-company-details__company-name {
@@ -1137,9 +1166,13 @@ img {
 
 .p-company-details__tel span {
   display: inline-block;
-  vertical-align: middle;
   font-size: 2.5rem;
   line-height: 1; /* 親要素の line-height を継承 */
+}
+
+.p-company-details__mail span {
+  display: inline-block;
+  width: 1em;
 }
 
 .p-contact {
@@ -1168,9 +1201,9 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 5rem;
 }
 

@@ -13,30 +13,31 @@
 .c-more-btn__arrow {
   position: relative;
   display: inline-block;
-  width: 80px;
-  height: 1px;
-  border-radius: 9999px;
+  width: rem(80);
+  height: rem(1);
+  top: rem(-4);
+  // border-radius: 9999px;
   background-color: #55A500;
 }
 .c-more-btn__arrow::before,
 .c-more-btn__arrow::after {
   content: "";
   position: absolute;
-  height: 1px;
-  border-radius: 9999px;
+  height: rem(1);
+  // border-radius: 9999px;
   background-color: #55A500;
   transform-origin: calc(100% - 0.5px) 50%;
 }
 .c-more-btn__arrow::before {
   top: calc(50% - 0.5px);
   right: 0;
-  width: 14px;
+  width: rem(14);
   transform: rotate(45deg);
 }
 .c-more-btn__arrow::after {
-  right: 9px;
-  top: -9px;
-  width: 18px;
+  right: rem(9);
+  top: rem(-9);
+  width: rem(18);
   transform: rotate(-90deg);
 }
 

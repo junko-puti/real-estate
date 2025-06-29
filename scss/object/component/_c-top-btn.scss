@@ -1,11 +1,6 @@
 @use '../../foundation/function' as *;
 
 .c-top-btn{
-  // position: fixed;
-  // width: 68px;
-  // height: 68px;
-  // right: 60px;
-  // bottom: 60px;
   position: fixed;
   width: rem(68);
   height: rem(68);
@@ -45,11 +40,6 @@
   opacity: 1;
   visibility: visible;
 }
-
-
-
-
-
 
 .c-top-btn:hover{
   opacity: 0.5;

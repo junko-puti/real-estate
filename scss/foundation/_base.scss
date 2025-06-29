@@ -2,11 +2,6 @@
 @use 'mixin' as *;  // mixin.scss を使用
 @use './function' as *; // function.scss を使用
 
-//ソリッドコーディング
-html {
-  font-size: 62.5%; /* 1rem = 10px に統一 */
-}
-
 //リキッドコーディング
 // html {
 //   //375px~767px
@@ -24,11 +19,21 @@ html {
 //   }
 // }
 
+//ソリッドコーディング
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /* 1rem = 10px に統一 */
+}
 body {
-  font-family: "YuMincho", serif;
+  font-family: "Yu Mincho", "YuMincho", serif;
+  // font-family: "YuMincho", serif;
   font-size: rem(16);//ソリッドコーディング
   line-height: 1.6;
   color: #FFFFFF;
+  // background-color: pink;
+}
+[id] {
+  scroll-margin-top: rem(80); // 固定ヘッダーの高さに合わせて調整
 }
 img{
   width: 100%;
