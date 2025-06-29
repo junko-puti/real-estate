@@ -4,16 +4,20 @@
   padding-bottom: rem(68);
 }
 .c-headline__main {
-  padding-bottom: rem(6);
+  padding-left: rem(6);/*微調整*/
   font-size: rem(30);
   font-weight:500;
-  line-height:calc(33 / 30);
-  letter-spacing: 0.3em; 
+  // line-height:calc(33 / 30);
+  line-height:1.16;
+  // letter-spacing: 0.3em; 
+  letter-spacing: 0.28em; 
   text-align: center;
   color:rgba(77, 150, 0, 1);
 }
 
 .c-headline__sub {
+  display: block;
+  margin-top: rem(6);
   font-size:rem(20) ;
   font-weight: 500;
   line-height:calc(33 / 20);

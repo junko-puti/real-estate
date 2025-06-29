@@ -1,5 +1,10 @@
 @use '../../foundation/function' as *; // function.scss を使用
 
+.p-company{
+    margin-top: rem(-2);/*微調整*/
+
+}
+
 .p-company-details {
   display: flex;
   flex-direction: row;
@@ -35,7 +40,7 @@
 
 .p-company-details__company-name,
 .p-company-details__access{
-  width: rem(275);
+  width: rem(280);
 }
 .p-company-details__company-name{
   margin-bottom: rem(7);
@@ -56,7 +61,10 @@
 }
 .p-company-details__tel span{
   display: inline-block;
-  vertical-align: middle; 
   font-size: rem(25);
   line-height: calc(25/25); /* 親要素の line-height を継承 */
+}
+.p-company-details__mail span{
+  display: inline-block;
+  width: 1em; // 全角1文字ぶん
 }
