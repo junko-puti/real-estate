@@ -1,4 +1,6 @@
-@use '../../foundation/function' as *; // function.scss を使用
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
 
 .p-works{
   padding-bottom: rem(97);

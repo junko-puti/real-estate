@@ -1,4 +1,6 @@
 @use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
 
 .p-news{
   background-color: rgba(77, 150, 0, 0.1);
@@ -11,10 +13,21 @@
   justify-content: space-between;
   margin-top: rem(-3);/*微調整*/
   width:100%;
+  @include sp {
+    flex-direction: column;
+  }
 }
 .p-news__content{
   width:46.74%;
   background-color: rgba(255, 255, 255, 1);
+  @include sp {
+    width: 100%;
+  }
+}
+.p-news__content:first-child{
+  @include sp {
+    margin-bottom: rem(50);
+  }
 }
 .p-news__title{
   padding: rem(9) rem(20) rem(8) rem(20);
@@ -49,20 +62,15 @@
   line-height: calc(33 / 16);
 }
 .p-news__date_time {
-  line-height: 1;
+  line-height: calc(25 / 18);/*textと揃える*/
   vertical-align: top;
 }
-
-
-
-
 .p-news__article{
   // padding-bottom: rem(33);
   width: 68.72%;//calc(268 / (122 + 268) * 100%); // 同様に計算
   font-size: rem(18);
   font-weight: 500;
   line-height: calc(25 / 18);
-  letter-spacing: -0.1px;/*微調整*/
 }
 .p-news__date,
 .p-news__article{

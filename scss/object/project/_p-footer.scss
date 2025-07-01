@@ -1,6 +1,5 @@
 @use '../../foundation/function' as *;
-
-
+@use '../../foundation/mixin' as *;
 
 
 .p-footer {
@@ -27,14 +26,22 @@
   padding-right: 30px;
 }
 .p-footer__logo{
+  position: relative;
   height:100%;
   width: 100%;
   margin-bottom: rem(28);
   padding-bottom: rem(28);
-  border-bottom: 1px solid #000000;
+  // border-bottom: 1px solid #000000;
 }
-
-
+.p-footer__logo::after{
+  position: absolute;
+  content: '';
+  width: 100% ;
+  height: 1px ;
+  left: 0;
+  bottom: 0;
+  background-color: #000000;
+}
 .p-footer__logo a{
   display: flex;
   align-items: center;
@@ -43,16 +50,24 @@
   font-size: rem(20);
   font-weight: 500;
   line-height: calc(33 / 20);
+  transition: opacity 0.3s ease-in-out;
 }
 .p-footer__nav-menu{
+  max-width: 710px;
+  width: 100%;
   height: 100%;
   margin-bottom: rem(26);
 }
 .p-footer__menu{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   height: 100%;
-  gap: rem(50);
+  @include sp {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    column-gap: rem(30);
+  }
 }
 .p-footer__sns-menu{
   gap: rem(30);
@@ -67,6 +82,8 @@
   font-size: rem(18);
   font-weight: 500;
   line-height: calc(33 / 18);
+  transition: opacity 0.3s ease-in-out;
+
 }
 .p-footer__logo a:hover,
 .p-footer__menu a:hover{
@@ -75,7 +92,7 @@
 }
 .p-footer__sns-menu a:hover{
   opacity: 0.6;
-  transition: opacity 0.3s ease-in-out;
+  // transition: opacity 0.3s ease-in-out;
 }
   
 
@@ -84,10 +101,13 @@
   width: 100%;
   padding-top: rem(29);
   padding-bottom: rem(30);
+  padding-top: rem(30);
+  padding-bottom: rem(29);
   font-size: rem(20);
   font-weight: 500;
   line-height: calc(33 / 20);
   text-align: center;
+  vertical-align: middle;
   color: #FFFFFF;
   background-color: #4D9600;
 }

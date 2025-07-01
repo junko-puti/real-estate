@@ -21,7 +21,7 @@
     <header class="l-header p-header js-header">
       <div class="p-header__inner">
         <h1 class="p-header__logo"><a href="#">株式会社北村建設興業</a></h1>
-        <nav class="p-header__nav ">
+        <nav class="p-header__nav u-sp">
           <ul class="p-header__menu">
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#service">SERVICE</a></li>
@@ -36,25 +36,42 @@
     <main>
       <section class="p-fv">
         <div class="p-fv__slider p-slider">
-          <div class="p-slider__item"><img src="./images/image-fv_1.jpg" alt="ファーストビュー1"></div>
-          <div class="p-slider__item"><img src="./images/image-fv_02.jpg" alt="ファーストビュー2"></div>
-          <div class="p-slider__item"><img src="./images/image-fv_03.jpg" alt="ファーストビュー3"></div>
+          <div class="p-slider__item">
+            <picture>
+              <source srcset="./images/pc-fv_01.jpg" media="(min-width: 768px)">
+              <img src="./images/sp-fv_01.jpg" alt="ファーストビュー1">
+            </picture>
+          </div>
+          <div class="p-slider__item">
+            <picture>
+              <source srcset="./images/pc-fv_02.jpg" media="(min-width: 768px)">
+              <img src="./images/sp-fv_02.jpg" alt="ファーストビュー2">
+            </picture>
+          </div>
+          <div class="p-slider__item">
+            <picture>
+              <source srcset="./images/pc-fv_03.jpg" media="(min-width: 768px)">
+              <img src="./images/sp-fv_03.jpg" alt="ファーストビュー3">
+            </picture>
+          </div>
         </div>
         <h2 class="p-fv__catch">永遠も。<br class="u-pc">瞬間も。<br>あなたと共に。</h2>
       </section>
       <!------------about-->
       <section class="p-about" id="about">
-        <div class="p-about__inner p-fade-in">
+        <div class="p-about__inner p-about-inner p-fade-in">
           <h3>伝統とイマを繋ぐ</h3>
-          <p>古来から伝わる伝統文化</p>
-          <p>昔からそこにある材料</p>
-          <p>その土地に長い間かけて</p>
-          <p>最適化してきた</p>
-          <p>たくさんのヒントを</p>
-          <p>イマを生きる私たちの</p>
-          <p>心地よさに取り入れ</p>
-          <p>新たな技術革新を</p>
-          <p>起こし続ける会社です</p>
+          <div class="p-about-inner__text">
+            <p>古来から伝わる伝統文化</p>
+            <p>昔からそこにある材料</p>
+            <p>その土地に長い間かけて</p>
+            <p>最適化してきた</p>
+            <p>たくさんのヒントを</p>
+            <p>イマを生きる私たちの</p>
+            <p>心地よさに取り入れ</p>
+            <p>新たな技術革新を</p>
+            <p>起こし続ける会社です</p>
+          </div>
         </div>
       </section>
       <!------------service-->
@@ -67,8 +84,11 @@
             <!--service1-->
             <div class="p-service-list__item p-service-item p-fade-in">
               <figure class="p-service-item__img">
-                  <img src="./images/pc-service_01.jpg" alt="静岡県U.I様自宅">
-                  <p class="p-service-item__title">静岡県U.I様自宅</p>
+              <picture>
+                <source srcset="./images/pc-service_01.jpg" media="(min-width: 768px)">
+                <img src="./images/sp-service_01.jpg" alt="静岡県U.I様自宅">
+              </picture>
+              <p class="p-service-item__title">静岡県U.I様自宅</p>
               </figure>
               <div class="p-service-item__caption">
                 <h3 class="p-service-item__caption-head">新築<br>（土地探し〜建築）</h3>
@@ -80,8 +100,11 @@
             <!--service2-->
             <div class="p-service-list__item p-service-item p-fade-in">
               <figure class="p-service-item__img">
-                  <img src="./images/pc-service_02.jpg" alt="北海道富良野市ブックカフェ">
-                  <p class="p-service-item__title">北海道富良野市ブックカフェ</p>
+              <picture>
+                <source srcset="./images/pc-service_02.jpg" media="(min-width: 768px)">
+                <img src="./images/sp-service_02.jpg" alt="北海道富良野市ブックカフェ">
+              </picture>
+              <p class="p-service-item__title">北海道富良野市ブックカフェ</p>
               </figure>
               <div class="p-service-item__caption">
                 <h3 class="p-service-item__caption-head">リフォーム<br>リノベーション</h3>
@@ -93,8 +116,11 @@
             <!--service3-->
             <div class="p-service-list__item p-service-item p-fade-in">
               <figure class="p-service-item__img">
-                  <img src="./images/pc-service_03.jpg" alt="広島県竹原市">
-                  <p class="p-service-item__title">広島県竹原市</p>
+              <picture>
+                <source srcset="./images/pc-service_03.jpg" media="(min-width: 768px)">
+                <img src="./images/sp-service_03.jpg" alt="広島県竹原市">
+              </picture>
+              <p class="p-service-item__title">広島県竹原市</p>
               </figure>
               <div class="p-service-item__caption">
                 <h3 class="p-service-item__caption-head">都市計画〜開発<br>公共施設</h3>
@@ -115,7 +141,8 @@
           <div class="p-works__card p-card p-fade-in">
             <div class="p-card__item">
               <figure class="p-card__img">
-                  <img src="./images/pc-works_01.png" alt="【新築】長崎県T.O様自宅">
+                  <!-- <img src="./images/pc-works_01.png" alt="【新築】長崎県T.O様自宅"> -->
+                  <img src="./images/pc-works_01.png" alt="【新築】長崎県T.O様自宅" data-modal="./images/pc-works_02-modal.png">
               </figure>
               <div class="p-card__body">
                   <h3 class="p-card__title">【新築】<br>長崎県T.O様自宅</h3>
@@ -123,7 +150,8 @@
             </div>
             <div class="p-card__item">
               <figure class="p-card__img">
-                  <img src="./images/pc-works_02.png" alt="【リノベーション】京都府カトリック丹波教会">
+                  <!-- <img src="./images/pc-works_02.png" alt="【リノベーション】京都府カトリック丹波教会"> -->
+                  <img src="./images/pc-works_02.png" alt="【リノベーション】京都府カトリック丹波教会" data-modal="./images/pc-works_02-modal.png">
               </figure>
               <div class="p-card__body">
                   <h3 class="p-card__title">【リノベーション】<br>京都府カトリック丹波教会</h3>
@@ -131,7 +159,8 @@
             </div>
             <div class="p-card__item">
               <figure class="p-card__img">
-                  <img src="./images/pc-works_03.png" alt="【新築】東京都A.F様自宅件事務所">
+                  <!-- <img src="./images/pc-works_03.png" alt="【新築】東京都A.F様自宅件事務所"> -->
+                  <img src="./images/pc-works_03.png" alt="【新築】東京都A.F様自宅件事務所" data-modal="./images/pc-works_03-modal.png">
               </figure>
               <div class="p-card__body">
                   <h3 class="p-card__title">【新築】<br>東京都A.F様自宅件事務所</h3>
@@ -139,7 +168,8 @@
             </div>
             <div class="p-card__item">
               <figure class="p-card__img">
-                  <img src="./images/pc-works_04.png" alt="【都市開発】山形県銀山温泉協同組合">
+                  <!-- <img src="./images/pc-works_04.png" alt="【都市開発】山形県銀山温泉協同組合"> -->
+                  <img src="./images/pc-works_04.png" alt="【都市開発】山形県銀山温泉協同組合" data-modal="./images/pc-works_04-modal.png">
               </figure>
               <div class="p-card__body">
                   <h3 class="p-card__title">【都市開発】<br>山形県銀山温泉協同組合</h3>
@@ -148,9 +178,12 @@
           </div>
           <!-- モーダル -->
           <div id="myModal" class="p-modal">
-            <div class="p-modal__close"></div> <!-- 閉じるボタン -->
-            <img id="js-modal-img" /> <!-- 拡大画像 -->
-            <!-- <div id="caption"></div> 画像のキャプション -->
+            <div class="p-modal__overlay"></div> <!-- 背景クリック領域 -->
+            <div class="p-modal__content">
+              <button class="p-modal__close" aria-label="閉じる">&times;</button>
+              <img id="js-modal-img" class="p-modal__img" />
+              <p id="caption" class="p-modal__caption"></p>
+            </div>
           </div>
         </div>
       </section>
@@ -236,7 +269,7 @@
                 TEL <span>000-000-0000</span>
               </p>
               <p class="p-company-details__access p-company-details__mail">
-                Mail<span class="p-company-details__spacer"></span>info@example.com
+                Mail<span class="u-spacer"></span>info@example.com
               </p>
               <!-- <p class="p-company-details__access">
                 Mail  info@example.com
@@ -300,7 +333,13 @@
 
             <!-- <div class="p-form__row p-form__column"> -->
             <div class="p-form__row p-form__checkbox-container"><!--6.5-->
-              <p class="p-form__label">何を見て当社HPを知りましたか？ (複数回答可) *</p>
+              <!-- <p class="p-form__label">何を見て当社HPを知りましたか？ (複数回答可) *</p> -->
+
+              <p class="p-form__label">
+                何を見て当社HPを知りましたか？ (複数回答可)
+                <span class="p-form__required">*</span>
+              </p>
+
               <div class="p-form__input p-form__checkbox">
                 <label for="internet"><input type="checkbox" name="source[]" value="internet" id="internet"><span> インターネット</span></label>
                 <label for="flyer"><input type="checkbox" name="source[]" value="flyer" id="flyer"> チラシ</label>
@@ -419,7 +458,7 @@
     <footer class="l-footer p-footer">
       <div class="p-footer__menu-container">
         <div class="p-footer__menu-inner">
-          <h1 class="p-footer__logo"><a href="#">株式会社北村建設興業</a></h1>
+          <h1 class="p-footer__logo"><a href="#">株式会社 北村建設興業</a></h1>
           <nav class="p-footer__nav-menu ">
             <ul class="p-footer__menu">
               <li><a href="#about">ABOUT</a></li>
@@ -440,7 +479,7 @@
           </nav>
         </div>
       </div>
-      <p class="p-footer__copyright">&copy;Copyright0000  kitamurakensetukogyo</p>
+      <p class="p-footer__copyright">&copy;Copyright0000<span class="u-spacer"></span>kitamurakensetukogyo</p>
       <a href="#" class="c-top-btn"></a>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

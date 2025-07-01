@@ -1,6 +1,9 @@
 @use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
 
 .p-contact{
+  margin-top: rem(-2);/*微調整*/
   color: #000000;
   background-color: rgba(77, 150, 0, 0.1);
 }
@@ -12,10 +15,18 @@
   font-size: rem(20);
   font-weight: 500;
   line-height: calc(33 / 20);
+  @include sp {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .p-contact__form{
   padding-left: rem(60);
   padding-right: rem(60);
+  @include sp {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 

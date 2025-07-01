@@ -1,7 +1,7 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-
-.u-mb0{
-  margin-bottom: 0;
+.u-spacer{
+  display: inline-block;
+  width: 1em; // 全角1文字ぶん
 }

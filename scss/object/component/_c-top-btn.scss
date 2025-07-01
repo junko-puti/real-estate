@@ -1,4 +1,6 @@
 @use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
 
 .c-top-btn{
   position: fixed;
@@ -14,6 +16,10 @@
   visibility: hidden;
   transition: opacity 1s ease-in-out;
   z-index: 999;
+  @include sp {
+    right: rem(30);
+    bottom: rem(60);
+  }
 }
 
 

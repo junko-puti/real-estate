@@ -62,27 +62,27 @@ $(function () {
 
 
 
- // モーダル
-var modal = document.getElementById("myModal");
-var modalImg = document.getElementById("js-modal-img");
-var captionText = document.getElementById("caption");
+// モーダル
+const modal = document.getElementById("myModal");
+const modalImg = document.getElementById("js-modal-img");
+const captionText = document.getElementById("caption");
+const closeBtn = document.querySelector(".p-modal__close");
+const overlay = document.querySelector(".p-modal__overlay");
 
-// サムネイル画像をクリックしたときの処理
-var images = document.querySelectorAll(".p-card__img img");
-images.forEach(function(img) {
-    img.onclick = function() {
-        modal.style.display = "block";
-        modalImg.src = this.src; // クリックした画像をモーダルに表示
-        // captionText.innerHTML = this.alt; // キャプションを設定
-    }
+// 画像クリックで開く（altをキャプションに使用）
+document.querySelectorAll(".p-card__img img").forEach(img => {
+  img.onclick = function () {
+    modal.style.display = "block";
+    modalImg.src = this.dataset.modal || this.src;
+    captionText.textContent = this.alt;
+  };
 });
 
-// モーダル外をクリックしたときにモーダルを閉じる
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// 閉じるボタン、またはオーバーレイクリックで閉じる
+closeBtn.onclick = overlay.onclick = function () {
+  modal.style.display = "none";
+};
+
 
 
 
