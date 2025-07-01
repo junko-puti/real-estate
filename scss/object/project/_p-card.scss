@@ -1,4 +1,6 @@
-@use '../../foundation/function' as *; // function.scss を使用
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
 
 .p-card{
   max-width: 100%;
@@ -7,6 +9,9 @@
   flex-direction: row;
   justify-content: space-between;
   gap: rem(40);
+  @include sp {
+    flex-direction: column;
+  }
 }
 
 .p-card__item {

@@ -1,4 +1,6 @@
 @use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
 
 .p-form__row {
   display: flex;
@@ -36,6 +38,10 @@
   background-color: #fff;
   line-height: calc(25 / 16);
 }
+.p-form__select{
+  font-size: rem(18);
+  line-height: calc(25 / 18);
+}
 .p-form__textarea-container .p-form__textarea {
   height: rem(200);
   resize: vertical;
@@ -50,12 +56,13 @@
   margin-right: rem(74);
 }
 .p-form__radio input {
-  margin-right: rem(19);
+  margin-right: rem(21);
 }
 .p-form__checkbox{
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4列を均等な幅で設定 */
-    gap: rem(20);
+    row-gap: 1.6rem;
+    column-gap: 0.7rem;
     width: 100%;
 }
 .p-form__radio label,
@@ -67,6 +74,15 @@
   align-items: center;
   cursor: pointer;
 }
+
+.p-form__required {
+  margin-left: 0.5em; //アスタリスクの前に少し空ける
+  // font-weight: bold;
+  // font-size: 0.9em;// やや小さめでもOK
+}
+
+
+
 .p-form__input-select {
   position: relative;
   appearance: none;
@@ -79,15 +95,16 @@
 .p-form__input-select::after {
   content: '';
   position: absolute;
-  right: rem(17);
-  top: 50%;
+  right: rem(19);
+  top: 55%;
   transform: translateY(-50%);
-  width: rem(20);
-  height: rem(16);
+  width: rem(18);
+  height: rem(12);
   background-image: url("../images/select-down.png");
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
+
 }
 
 [type="radio"] ,

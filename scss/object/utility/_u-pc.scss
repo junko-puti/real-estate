@@ -1,4 +1,5 @@
-@use '../../foundation/mixin' as *;  // mixin.scss を使用
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *; 
 
 .u-pc{
   @include pc{

@@ -1,7 +1,8 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-
-.u-mb0{
-  margin-bottom: 0;
+.u-sp{
+  @include sp{
+     display: none;
+  }
 }

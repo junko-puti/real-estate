@@ -1,15 +1,19 @@
 @use '../../foundation/function' as *; // function.scss を使用
+@use '../../foundation/mixin' as *;
 
-.p-company{
-    margin-top: rem(-2);/*微調整*/
-
-}
+// .p-company{
+//     margin-top: rem(-2);/*微調整*/
+// }
 
 .p-company-details {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  @include sp {
+    flex-direction: column;
+  }
+
 }
 //地図
 .p-company-details__map {
@@ -18,6 +22,9 @@
   padding-bottom: rem(62);
   max-width: 600px;
   z-index: 1;
+  @include sp {
+    width: 100%;
+  }
 }
 .p-company-details__map iframe {
   width: 100%;
@@ -36,6 +43,9 @@
   padding-bottom: rem(42);
   color: #ffffff;
   background-color: #4D9600;
+  @include sp {
+    width: 100%;
+  }
 }
 
 .p-company-details__company-name,
@@ -64,7 +74,7 @@
   font-size: rem(25);
   line-height: calc(25/25); /* 親要素の line-height を継承 */
 }
-.p-company-details__mail span{
-  display: inline-block;
-  width: 1em; // 全角1文字ぶん
-}
+// .p-company-details__mail span{
+//   display: inline-block;
+//   width: 1em; // 全角1文字ぶん
+// }
