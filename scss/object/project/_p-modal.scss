@@ -52,7 +52,7 @@
   background: #fff;
   text-align: center;
   @include sp {
-  max-width: rem(300);
+    max-width: calc(100% - rem(60));
   }
 
 }

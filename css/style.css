@@ -556,12 +556,10 @@ img {
 
 .c-top-btn {
   position: fixed;
-  width: 6.8rem;
-  height: 6.8rem;
   right: 6rem;
   bottom: 6rem;
-  background-color: #4D9600;
-  border-radius: 50%;
+  width: 6.8rem;
+  height: 6.8rem;
   cursor: pointer;
   /*デフォルトで非表示にする*/
   opacity: 0;
@@ -572,35 +570,11 @@ img {
 }
 @media (max-width: 767px) {
   .c-top-btn {
-    right: 3rem;
+    right: 2rem;
     bottom: 6rem;
+    width: 5rem;
+    height: 5rem;
   }
-}
-
-.c-top-btn::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 2.315rem;
-  height: 1.57rem;
-  background-image: url("../images/icon-to-top.png"); /* 画像のパス */
-  background-size: contain;
-  background-repeat: no-repeat;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); /* 完全に中央配置 */
-  z-index: 99999;
-}
-
-.c-top-btn:hover {
-  opacity: 0.5;
-}
-
-/*.activeクラス付与で表示する*/
-.active {
-  opacity: 1;
-  visibility: visible;
 }
 
 .c-top-btn:hover {
@@ -991,6 +965,12 @@ img {
   line-height: 1.5625;
 }
 
+.p-service-item:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
 @media (max-width: 767px) {
   .p-service-item:nth-child(even) {
     -webkit-box-orient: vertical;
@@ -1100,7 +1080,7 @@ img {
 }
 @media (max-width: 767px) {
   .p-modal__content {
-    max-width: 30rem;
+    max-width: calc(100% - 6rem);
   }
 }
 
