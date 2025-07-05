@@ -4,5 +4,8 @@
 
 .p-works{
   padding-bottom: rem(97);
+  @include sp {
+    padding-bottom: rem(42);
+  }
 }
 

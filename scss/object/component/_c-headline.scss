@@ -4,6 +4,10 @@
 
 .c-headline{
   padding-bottom: rem(68);
+  @include sp {
+  padding-bottom: rem(38);
+  }
+
 }
 .c-headline__main {
   padding-left: rem(6);/*微調整*/

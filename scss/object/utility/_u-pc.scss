@@ -2,7 +2,7 @@
 @use '../../foundation/mixin' as *; 
 
 .u-pc{
-  @include pc{
+  @include sp{
      display: none;
   }
 }

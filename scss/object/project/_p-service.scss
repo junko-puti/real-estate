@@ -9,6 +9,9 @@
   display: flex;
   flex-direction: column;
   row-gap: rem(80);
+  @include sp {
+    row-gap: rem(50);
+  }
 }
 .p-service-item {
   display: flex;
@@ -25,18 +28,22 @@
 .p-service-item__img {
   // flex: 0 0 65.217%;ｓ
   width: 65.217%;
-  padding-bottom: rem(62);
-  padding-bottom: rem(51);
+  // padding-bottom: rem(62);
+  // padding-bottom: rem(51);
   padding-bottom: rem(49);
   max-width: 600px;
   z-index: 1;
   @include sp {
-    width: 100%;;
+    width: 100%;
+    padding-bottom: rem(6);
   }
 }
 .p-service-item__img img{
   // margin-bottom: rem(19);
   margin-bottom: rem(20);/*微調*/
+  @include sp {
+    margin-bottom: rem(5);/*微調*/
+  }
 }
 .p-service-item__title{
   font-size: rem(16);
@@ -55,23 +62,32 @@
   color: #ffffff;
   background-color: #4D9600;
   @include sp {
-    width: 100%;;
+    width: 100%;
+    padding: rem(20) 6.349% rem(12) 6.349%;
   }
 }
 .p-service-item__caption-head,
 .p-service-item__caption-txt{
   // width: rem(275);
   width: rem(280);/*微調整*/
+  @include sp {
+    width: 100%;
+  }
 }
 .p-service-item__caption-head{
   margin-bottom: rem(17);
   font-size: rem(25);
-  font-weight: 600;
+  font-weight: 400;
   line-height: calc(33 / 25);
+  @include sp {
+    margin-bottom: rem(14);
+    font-size: rem(20);
+    line-height: calc(25 / 20);
+  }
 }
 .p-service-item__caption-txt{
   font-size: rem(16);
-  font-weight: 600;
+  font-weight: 400;
   line-height: calc(25 / 16);
 }
 
@@ -93,7 +109,7 @@
   padding-left: rem(40);
   @include sp {
     margin-right: 0;
+    padding: rem(20) 6.349% rem(12) 6.349%;
   }
-
 }
 
