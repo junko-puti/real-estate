@@ -24,12 +24,19 @@
   z-index: 1;
   @include sp {
     width: 100%;
+    padding-bottom: rem(19);
+    margin: 0 auto;
   }
 }
 .p-company-details__map iframe {
   width: 100%;
   height: auto;
   aspect-ratio: 3 / 2; /* 幅600px高さ400pxの比率を維持 */
+  @include sp {
+    // aspect-ratio: 7 / 6;
+    aspect-ratio: 21 / 20; // 315:300 = 21:20
+  }
+
 }
 //テキスト
 .p-company-details__info {
@@ -45,12 +52,20 @@
   background-color: #4D9600;
   @include sp {
     width: 100%;
+    padding-top: rem(19);
+    padding-bottom: rem(12);
+    padding-left: rem(20);
+    padding-right: rem(20);
   }
 }
 
 .p-company-details__company-name,
 .p-company-details__access{
   width: rem(280);
+  @include sp {
+    width: 100%;
+  }
+
 }
 .p-company-details__company-name{
   margin-bottom: rem(7);

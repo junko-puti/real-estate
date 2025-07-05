@@ -11,6 +11,7 @@
   gap: rem(40);
   @include sp {
     flex-direction: column;
+    gap: rem(22);
   }
 }
 
@@ -23,6 +24,11 @@
   height: auto;
   width: 100%;
   margin-bottom: rem(19);
+  @include sp {
+    aspect-ratio: auto;
+    margin-bottom: rem(9);
+  }
+
 }
 .p-card__img {
   transition: transform 0.8s ease-in-out;

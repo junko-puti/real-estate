@@ -2,23 +2,60 @@
 @use '../../foundation/mixin' as *;
 
 
-.p-form__row {
+.p-form__item,
+.p-form__item_row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: rem(50);
+  @include sp {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: rem(30);
+  }
 }
 .p-form__label {
   width: 21.25%;
   font-size: rem(20);
   font-weight: 500;
   line-height: calc(33 / 20);
+  @include sp {
+    width: 100%;
+  }
 }
+
+/*-----.p-form__item_row*/
+.p-form__item_row {
+  @include sp {
+    flex-direction: row;
+    gap: rem(50);
+  }
+}
+.p-form__item_row .p-form__label {
+  @include sp {
+    width: auto;
+  }
+}
+.p-form__item_row .p-form__input {
+  @include sp {
+    width: auto;
+  }
+}
+.p-form__item_row .p-form__radio label {
+  @include sp {
+  margin-right: rem(30);
+  }
+}
+/*----------------------*/
 .p-form__input {
   width: 78.75%;
   font-size: rem(16);
   font-weight: 500;
   line-height: calc(25 / 16);
+  @include sp {
+    width: 100%;
+  }
+
 }
 .p-form__textarea-container .p-form__label,
 .p-form__checkbox-container .p-form__label,
@@ -61,9 +98,14 @@
 .p-form__checkbox{
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4列を均等な幅で設定 */
-    row-gap: 1.6rem;
-    column-gap: 0.7rem;
+    row-gap: rem(16);
+    column-gap: rem(7);
     width: 100%;
+    @include sp {
+      grid-template-columns: repeat(2, 1fr); /* 4列を均等な幅で設定 */
+      column-gap: rem(1);
+    }
+
 }
 .p-form__radio label,
 .p-form__checkbox label {
@@ -73,6 +115,10 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  @include sp {
+    font-size: rem(16);
+    line-height: calc(25 / 16);
+  }
 }
 
 .p-form__required {
@@ -136,6 +182,10 @@
 
 [type="checkbox"]{
   margin-right: rem(20);
+  @include sp {
+    margin-right: rem(10);
+  }
+
 }
 
 [type="checkbox"]:checked::after {
@@ -165,7 +215,11 @@ input[type="submit"] {
 
 /*個人情報保護方針*/
 .p-form-privacy {
-  margin-bottom: 80px;
+  margin-bottom: rem(80);
+  @include sp {
+    margin-bottom: rem(50);
+  }
+
 }
 .p-form-privacy__container {
   width: 100%;
@@ -180,6 +234,10 @@ input[type="submit"] {
   margin: 0 auto;
   padding-left: rem(40);
   padding-right: rem(60);
+  @include sp {
+    padding-left: rem(30);
+    padding-right: rem(50);
+  }
 }
 .p-form-privacy article{
   margin-bottom: rem(30);

@@ -22,7 +22,7 @@
       <div class="p-header__inner">
         <h1 class="p-header__logo"><a href="#">株式会社北村建設興業</a></h1>
         <nav class="p-header__nav u-sp">
-          <ul class="p-header__menu">
+          <ul class="p-header__menu u-pc">
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#service">SERVICE</a></li>
             <li><a href="#works">WORKS</a></li>
@@ -55,7 +55,7 @@
             </picture>
           </div>
         </div>
-        <h2 class="p-fv__catch">永遠も。<br class="u-pc">瞬間も。<br>あなたと共に。</h2>
+        <h2 class="p-fv__catch">永遠も。<br class="u-spc">瞬間も。<br>あなたと共に。</h2>
       </section>
       <!------------about-->
       <section class="p-about" id="about">
@@ -91,7 +91,7 @@
                 <p class="p-service-item__title">静岡県U.I様自宅</p>
               </figure>
               <div class="p-service-item__caption">
-                <h3 class="p-service-item__caption-head">新築<br>（土地探し〜建築）</h3>
+                <h3 class="p-service-item__caption-head">新築<br class="u-pc">（土地探し〜建築）</h3>
                 <p class="p-service-item__caption-txt">
                   お客様にあった土地探しから<br>建築、施工までサポートいたします。<br>風水的観点からもご提案。
                 </p>
@@ -123,7 +123,7 @@
                 <p class="p-service-item__title">広島県竹原市</p>
               </figure>
               <div class="p-service-item__caption">
-                <h3 class="p-service-item__caption-head">都市計画〜開発<br>公共施設</h3>
+                <h3 class="p-service-item__caption-head">都市計画〜開発<br class="u-pc">公共施設</h3>
                 <p class="p-service-item__caption-txt">
                   都市計画から都市開発まで<br>ご提案いたします。<br>公共施設もさらに居心地良く。
                 </p>
@@ -141,8 +141,11 @@
           <div class="p-works__card p-card p-fade-in">
             <div class="p-card__item">
               <figure class="p-card__img">
-                  <!-- <img src="./images/pc-works_01.png" alt="【新築】長崎県T.O様自宅"> -->
-                  <img src="./images/pc-works_01.png" alt="【新築】長崎県T.O様自宅" data-modal="./images/pc-works_02-modal.png">
+                  <!-- <img src="./images/pc-works_01.png" alt="【新築】長崎県T.O様自宅" data-modal="./images/pc-works_02-modal.png"> -->
+                  <picture>
+                    <source srcset="./images/pc-works_01.png" media="(min-width: 768px)">
+                    <img src="./images/sp-works_01.jpg" alt="【新築】長崎県T.O様自宅" data-modal="./images/pc-works_02-modal.png">
+                  </picture>
               </figure>
               <div class="p-card__body">
                   <h3 class="p-card__title">【新築】<br>長崎県T.O様自宅</h3>
@@ -150,8 +153,11 @@
             </div>
             <div class="p-card__item">
               <figure class="p-card__img">
-                  <!-- <img src="./images/pc-works_02.png" alt="【リノベーション】京都府カトリック丹波教会"> -->
-                  <img src="./images/pc-works_02.png" alt="【リノベーション】京都府カトリック丹波教会" data-modal="./images/pc-works_02-modal.png">
+                  <!-- <img src="./images/pc-works_02.png" alt="【リノベーション】京都府カトリック丹波教会" data-modal="./images/pc-works_02-modal.png"> -->
+                  <picture>
+                    <source srcset="./images/pc-works_02.png" media="(min-width: 768px)">
+                    <img src="./images/sp-works_02.jpg" alt="【リノベーション】京都府カトリック丹波教会" data-modal="./images/pc-works_02-modal.png">
+                  </picture>
               </figure>
               <div class="p-card__body">
                   <h3 class="p-card__title">【リノベーション】<br>京都府カトリック丹波教会</h3>
@@ -159,19 +165,24 @@
             </div>
             <div class="p-card__item">
               <figure class="p-card__img">
-                  <!-- <img src="./images/pc-works_03.png" alt="【新築】東京都A.F様自宅件事務所"> -->
-                  <img src="./images/pc-works_03.png" alt="【新築】東京都A.F様自宅件事務所" data-modal="./images/pc-works_03-modal.png">
-              </figure>
+                  <!-- <img src="./images/pc-works_03.png" alt="【新築】東京都A.F様自宅件事務所" data-modal="./images/pc-works_03-modal.png"> -->
+                  <picture>
+                    <source srcset="./images/pc-works_03.png" media="(min-width: 768px)">
+                    <img src="./images/sp-works_03.jpg" alt="【新築】東京都A.F様自宅件事務所" data-modal="./images/pc-works_03-modal.png">
+                  </picture>
+                </figure>
               <div class="p-card__body">
                   <h3 class="p-card__title">【新築】<br>東京都A.F様自宅件事務所</h3>
               </div>
             </div>
             <div class="p-card__item">
               <figure class="p-card__img">
-                  <!-- <img src="./images/pc-works_04.png" alt="【都市開発】山形県銀山温泉協同組合"> -->
-                  <img src="./images/pc-works_04.png" alt="【都市開発】山形県銀山温泉協同組合" data-modal="./images/pc-works_04-modal.png">
-              </figure>
-              <div class="p-card__body">
+                  <!-- <img src="./images/pc-works_04.png" alt="【都市開発】山形県銀山温泉協同組合" data-modal="./images/pc-works_04-modal.png"> -->
+                  <picture>
+                    <source srcset="./images/pc-works_04.png" media="(min-width: 768px)">
+                    <img src="./images/sp-works_04.jpg" alt="【都市開発】山形県銀山温泉協同組合" data-modal="./images/pc-works_04-modal.png">
+                  </picture>
+                  <div class="p-card__body">
                   <h3 class="p-card__title">【都市開発】<br>山形県銀山温泉協同組合</h3>
               </div>
             </div>
@@ -197,23 +208,27 @@
             <div class="p-news__content">
               <h5 class="p-news__title">お知らせ</h5>
               <div class="p-news__container">
-                <dl class="p-news__list">
-                  <a href="">
-                    <dt class="p-news__date"><time class="p-news__date_time" datetime="2025-06">2025.06</time></dt>
-                    <!-- <dt class="p-news__date">0000.00</dt> -->
-                    <dd class="p-news__article">公式Instagram、YouTubeはじめました。</dd>
-                  </a>
-                  <a href="">
-                    <dt class="p-news__date"><time class="p-news__date_time" datetime="2025-06">2025.06</time></dt>
-                    <!-- <dt class="p-news__date">0000.00</dt> -->
-                    <dd class="p-news__article">非住宅 木造建築フェアに出展します。</dd>
-                  </a>
-                  <a href="">
-                    <dt class="p-news__date p-news__date_last"><time  class="p-news__date_time" datetime="2025-06">2025.06</time></dt>
-                    <!-- <dt class="p-news__date">0000.00</dt> -->
-                    <dd class="p-news__article p-news__article_last">公式ホームページがリニューアルしました。</dd>
-                  </a>
-                </dl>
+                <ul class="p-news__list">
+                  <li class="p-news__entry">
+                    <a href="#"  aria-label="公式Instagram、YouTubeはじめました。">
+                      <span class="p-news__date"><time class="p-news__date_time" datetime="2025-06">2025.06</time></span>
+                      <span class="p-news__article">公式Instagram、YouTubeはじめました。</span>
+                    </a>
+                  </li>
+                  <li class="p-news__entry">
+                    <a href="#"  aria-label="非住宅 木造建築フェアに出展します。">
+                      <span class="p-news__date"><time class="p-news__date_time" datetime="2025-06">2025.06</time></span>
+                      <span class="p-news__article">非住宅 木造建築フェアに出展します。</span>
+                    </a>
+                  </li>
+                  <li>
+                  <li class="p-news__entry">
+                    <a href="#"  aria-label="公式ホームページがリニューアルしました。">
+                      <span class="p-news__date p-news__date_last"><time  class="p-news__date_time" datetime="2025-06">2025.06</time></span>
+                      <span class="p-news__article p-news__article_last">公式ホームページがリニューアルしました。</span>
+                    </a>
+                  </li>
+                </ul>
                 <div class="p-news__more-btn c-more-btn">
                   <a href="#" class="p-news__link c-more-btn__link">more</a>
                   <span class="c-more-btn__arrow"></span>
@@ -223,23 +238,26 @@
             <div class="p-news__content">
               <h5 class="p-news__title">ブログ</h5>
               <div class="p-news__container">
-                <dl class="p-news__list">
-                  <a href="">
-                    <dt class="p-news__date"><time class="p-news__date_time" datetime="2025-06">2025.06</time></dt>
-                    <!-- <dt class="p-news__date">0000.00</dt> -->
-                    <dd class="p-news__article">あけましておめでとうございます。〜会長から社員まで〜</dd>
-                  </a>
-                  <a href="">
-                    <dt class="p-news__date"><time class="p-news__date_time" datetime="2025-06">2025.06</time></dt>
-                    <!-- <dt class="p-news__date">0000.00</dt> -->
-                    <dd class="p-news__article">【検証】土地と人に相性はあるのか？</dd>
-                  </a>
-                  <a href="">
-                    <dt class="p-news__date p-news__date_last"><time  class="p-news__date_time" datetime="2025-06">2025.06</time></dt>
-                    <!-- <dt class="p-news__date">0000.00</dt> -->
-                    <dd class="p-news__article p-news__article_last">弊社創業初の入社式が行われました。</dd>
-                  </a>
-                </dl>
+                <ul class="p-news__list">
+                  <li class="p-news__entry">
+                    <a href="#"  aria-label="あけましておめでとうございます。〜会長から社員まで〜">
+                      <dt class="p-news__date"><time class="p-news__date_time" datetime="2025-06">2025.06</time></dt>
+                      <dd class="p-news__article">あけましておめでとうございます。〜会長から社員まで〜</dd>
+                    </a>
+                  </li>
+                  <li class="p-news__entry">
+                    <a href="#"  aria-label="【検証】土地と人に相性はあるのか？">
+                      <dt class="p-news__date"><time class="p-news__date_time" datetime="2025-06">2025.06</time></dt>
+                      <dd class="p-news__article">【検証】土地と人に相性はあるのか？</dd>
+                    </a>
+                  </li>
+                  <li class="p-news__entry">
+                    <a href="#"  aria-label="弊社創業初の入社式が行われました。">
+                      <dt class="p-news__date p-news__date_last"><time  class="p-news__date_time" datetime="2025-06">2025.06</time></dt>
+                      <dd class="p-news__article p-news__article_last">弊社創業初の入社式が行われました。</dd>
+                    </a>
+                  </li>
+                </ul>
                 <div class="p-news__more-btn c-more-btn">
                   <a href="#" class="p-news__link c-more-btn__link">more</a>
                   <span class="c-more-btn__arrow"></span>
@@ -288,14 +306,14 @@
 
           <form class="p-contact__form p-form p-fade-in" method="post"  action="javascript:void(0);">
 
-            <div class="p-form__row">
+            <div class="p-form__item">
               <label class="p-form__label" for="name">お名前 *</label>
               <div class="p-form__input">
                 <input type="text" id="name" name="お名前" class="p-form__text" placeholder="例：北村太郎" autocomplete="name">
               </div>
             </div>
 
-            <div class="p-form__row">
+            <div class="p-form__item_row">
               <p class="p-form__label">性別</p>
               <div class="p-form__input p-form__radio">
                 <label for="male"><input type="radio" id="male" name="gender" value="男性">男性</label>
@@ -303,14 +321,14 @@
               </div>
             </div>
             
-            <div class="p-form__row">
+            <div class="p-form__item">
               <label class="p-form__label" for="mail">メールアドレス *</label>
               <div class="p-form__input">
                 <input type="email" id="mail" name="メールアドレス" class="p-form__text" placeholder="例：aaaaaaaa@gmail.com" autocomplete="email">
               </div>
             </div>
 
-            <div class="p-form__row">
+            <div class="p-form__item">
               <label class="p-form__label" for="category">問い合わせ種別</label>
               <div class="p-form__input p-form__input-select">
                 <select name="選択肢" id="category" class="p-form__select">
@@ -324,7 +342,7 @@
               </div>
             </div>
 
-            <div class="p-form__row p-form__textarea-container">
+            <div class="p-form__item p-form__textarea-container">
               <label class="p-form__label" for="content">内容 *</label>
               <div class="p-form__input">
                 <textarea name="お問合せ" id="content" class="p-form__textarea"></textarea>
@@ -332,7 +350,7 @@
             </div>
 
             <!-- <div class="p-form__row p-form__column"> -->
-            <div class="p-form__row p-form__checkbox-container"><!--6.5-->
+            <div class="p-form__item p-form__checkbox-container"><!--6.5-->
               <!-- <p class="p-form__label">何を見て当社HPを知りましたか？ (複数回答可) *</p> -->
 
               <p class="p-form__label">
@@ -352,7 +370,7 @@
               </div>
             </div>
             <!---------->
-            <div class="p-form__row p-form__privacy p-form-privacy">
+            <div class="p-form__item p-form__privacy p-form-privacy">
               <h4 class="p-form__label">個人情報保護方針</h4>
               <div class="p-form-privacy__container">
                 <div class="p-form-privacy__inner">
@@ -479,7 +497,7 @@
           </nav>
         </div>
       </div>
-      <p class="p-footer__copyright">&copy;Copyright0000<span class="u-spacer"></span>kitamurakensetukogyo</p>
+      <p class="p-footer__copyright">&copy;Copyright0000<br class="u-sp"><span class="u-spacer"></span>kitamurakensetukogyo</p>
       <a href="#" class="c-top-btn">
         <picture>
           <source srcset="./images/pc-top.png" media="(min-width: 768px)">
