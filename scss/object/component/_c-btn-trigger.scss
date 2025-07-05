@@ -1,0 +1,50 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+
+.c-btn-trigger {
+  // display: none;
+  @include sp {
+    display: block;
+    position: relative;
+    width: 72px;
+    min-width: 72px;
+    height: 50px;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+}
+
+.c-btn-trigger span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 32px;
+  height: 4px;
+  background-color: #4D9600;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+// 各バーの初期位置（上下にずらす）
+.c-btn-trigger span:nth-of-type(1) {
+  transform: translate(-50%, -13px);
+}
+.c-btn-trigger span:nth-of-type(2) {
+  transform: translate(-50%, -50%);
+}
+.c-btn-trigger span:nth-of-type(3) {
+  transform: translate(-50%, 9px);
+}
+
+// アクティブ時（×になる）
+#btn-trigger.active span:nth-of-type(1) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+#btn-trigger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+#btn-trigger.active span:nth-of-type(3) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
