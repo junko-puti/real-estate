@@ -39,6 +39,17 @@ $(document).ready(function(){
 
 
 
+//btn-trigger
+$(function(){
+  $('.c-btn-trigger').on('click', function() {
+    $(this).toggleClass('active');
+    return false;
+  });
+});
+
+
+
+
 // メニュー背景色の変化---ABOUTエリアが画面の真ん中に来たら変更する
 function updateHeaderClass() {
   const $about = $('#about');
