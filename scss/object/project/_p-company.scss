@@ -65,18 +65,25 @@
   @include sp {
     width: 100%;
   }
+  @media (min-width: 768px) and (max-width: 979px) {
+    width: rem(220);/*微調整*/
+  }
 
 }
 .p-company-details__company-name{
   margin-bottom: rem(7);
   font-size: rem(20);
-  font-weight: 600;
+  /*font-weight: 600;*/
   line-height: calc(33 / 20);
 }
 .p-company-details__access{
   font-size: rem(16);
-  font-weight: 600;
+  /*font-weight: 600;*/
   line-height: calc(25 / 16);
+  @media (min-width: 768px) and (max-width: 979px) {
+    font-size: rem(14);
+  }
+
 }
 .p-company-details__address{
   margin-bottom: rem(12);
@@ -88,6 +95,9 @@
   display: inline-block;
   font-size: rem(25);
   line-height: calc(25/25); /* 親要素の line-height を継承 */
+  @media (min-width: 768px) and (max-width: 979px) {
+    font-size: rem(20);
+  }
 }
 // .p-company-details__mail span{
 //   display: inline-block;

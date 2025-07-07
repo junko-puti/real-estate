@@ -10,9 +10,9 @@
 
 }
 .c-headline__main {
-  padding-left: rem(6);/*微調整*/
+  padding-left: rem(8);/*微調整*/
   font-size: rem(30);
-  font-weight:500;
+  /*font-weight: 500;*/
   // line-height:calc(33 / 30);
   line-height:1.16;
   // letter-spacing: 0.3em; 
@@ -23,9 +23,9 @@
 
 .c-headline__sub {
   display: block;
-  margin-top: rem(5.5);
+  margin-top: rem(5);
   font-size:rem(20) ;
-  font-weight: 500;
+  /*font-weight: 500;*/
   line-height:calc(33 / 20);
   letter-spacing: 0.3em; 
   text-align: center;

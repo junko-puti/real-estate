@@ -11,8 +11,9 @@
   gap: rem(40);
   @include sp {
     flex-direction: column;
-    gap: rem(22);
-  }
+    // gap: rem(22);
+    gap: rem(20);/*微調整/*/
+   }
 }
 
 .p-card__item {
@@ -35,7 +36,7 @@
 }
 .p-card__img:hover {
   cursor:pointer;
-  transform: scale(1.08); /* ホバー時に少し拡大 */
+  transform: scale(1.02); /* ホバー時に少し拡大 */
   // transition: transform 0.8s ease-in-out;
 }
 .p-card__title{

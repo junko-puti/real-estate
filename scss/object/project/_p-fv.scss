@@ -43,7 +43,13 @@ object-fit: cover; /* 画像を要素のサイズに合わせてトリミング 
   text-shadow: 5px 5px 5px #000000;
   @include sp {
     width: 100%;
+    top: 50.5%;
+    left: 51%;
     font-size: rem(30);
     line-height: calc(60 / 30);
   }
+  @media (min-width: 768px) and (max-width: 979px) {
+    font-size: rem(30);
+  }
+
 }

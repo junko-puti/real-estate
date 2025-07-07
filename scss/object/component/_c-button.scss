@@ -15,13 +15,18 @@
   background-color: #4D9600;
   border: 1px solid #4D9600; 
   transition: background-color 0.5s ease, color 0.5s ease; /* なめらかに変化 */
+  @include sp {
+    max-width: rem(315);
+  }
+
 }
+
 .c-button:hover{
   color: #4D9600;
   background-color: #FFFFFF;
 }
 .c-button__submit{
   font-size: rem(20);
-  font-weight: 600;
+  /*font-weight: 600;*/
   line-height: calc(33 / 20);
 }

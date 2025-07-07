@@ -39,13 +39,55 @@ $(document).ready(function(){
 
 
 
-//btn-trigger
+///////////////////
+// triggerボタン、ドロワーメニュー開閉
 $(function(){
   $('.c-btn-trigger').on('click', function() {
     $(this).toggleClass('active');
+    $('#drawer').toggleClass('is-open');
     return false;
   });
+
+  // メニュー内リンククリックで閉じる
+  $('#drawer a').on('click', function() {
+    $('#drawer').removeClass('is-open');
+    $('.c-btn-trigger').removeClass('active');
+  });
+
+  // メニュー外クリックで閉じる
+  $(document).on('click', function(e) {
+    const $drawer = $('#drawer');
+    const $btn = $('.c-btn-trigger');
+    if (!$drawer.is(e.target) && $drawer.has(e.target).length === 0 &&
+        !$btn.is(e.target) && $btn.has(e.target).length === 0) {
+      $drawer.removeClass('is-open');
+      $btn.removeClass('active');
+    }
+  });
+
+  // スクロールでトップに戻ったら閉じる
+  $(window).on('scroll', function() {
+    if ($(window).scrollTop() === 0) {
+      $('#drawer').removeClass('is-open');
+      $('.c-btn-trigger').removeClass('active');
+    }
+  });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -23,15 +23,13 @@
   }
 }
 
-
 //画像
 .p-service-item__img {
   // flex: 0 0 65.217%;ｓ
   width: 65.217%;
-  // padding-bottom: rem(62);
-  // padding-bottom: rem(51);
-  padding-bottom: rem(49);
   max-width: 600px;
+  padding-bottom: rem(49);
+  margin: 0 auto;
   z-index: 1;
   @include sp {
     width: 100%;
@@ -42,7 +40,7 @@
   // margin-bottom: rem(19);
   margin-bottom: rem(20);/*微調*/
   @include sp {
-    margin-bottom: rem(5);/*微調*/
+    margin-bottom: rem(4);/*微調*/
   }
 }
 .p-service-item__title{
@@ -73,22 +71,33 @@
   @include sp {
     width: 100%;
   }
+  @media (min-width: 768px) and (max-width: 979px) {
+    width: rem(220);/*微調整*/
+  }
+
 }
 .p-service-item__caption-head{
   margin-bottom: rem(17);
   font-size: rem(25);
-  font-weight: 400;
+  /*font-weight: 400;*/
   line-height: calc(33 / 25);
   @include sp {
     margin-bottom: rem(14);
     font-size: rem(20);
     line-height: calc(25 / 20);
   }
+  @media (min-width: 768px) and (max-width: 979px) {
+    font-size: rem(20);
+  }
+
 }
 .p-service-item__caption-txt{
   font-size: rem(16);
-  font-weight: 400;
+  /*font-weight: 400;*/
   line-height: calc(25 / 16);
+  @media (min-width: 768px) and (max-width: 979px) {
+    font-size: rem(14);
+  }
 }
 
 .p-service-item:nth-child(even) {
@@ -101,6 +110,10 @@
 
 .p-service-item:nth-child(even) .p-service-item__title{
   text-align: right;
+  @include sp {
+    text-align: left;
+  }
+
 }
 .p-service-item:nth-child(even) .p-service-item__caption {
   margin-left: 0;

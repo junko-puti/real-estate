@@ -57,7 +57,7 @@
   justify-content: center;
   height: 100%;
   font-size: rem(20);
-  font-weight: 500;
+  /*font-weight: 500;*/
   line-height: calc(33 / 20);
   transition: opacity 0.3s ease-in-out;
 }
@@ -79,7 +79,8 @@
   @include sp {
     flex-wrap: wrap;
     justify-content: space-evenly;
-    column-gap: rem(30);
+    column-gap: rem(20);
+    row-gap: rem(4);
   }
 }
 .p-footer__sns-menu{
@@ -93,7 +94,7 @@
   align-items: center;
   height: 100%;
   font-size: rem(18);
-  font-weight: 500;
+  /*font-weight: 500;*/
   line-height: calc(33 / 18);
   transition: opacity 0.3s ease-in-out;
 
@@ -115,7 +116,7 @@
   padding-top: rem(30);
   padding-bottom: rem(29);
   font-size: rem(20);
-  font-weight: 500;
+  /*font-weight: 500;*/
   line-height: calc(33 / 20);
   text-align: center;
   vertical-align: middle;
@@ -124,6 +125,7 @@
   @include sp {
     padding-top: rem(21);
     padding-bottom: rem(21);
+    margin-left: rem(-20);
     line-height: calc(25 / 20);
   }
 
