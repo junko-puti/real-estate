@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="住まいに関するあらゆるご相談を承ります。不動産売買・賃貸は信頼の株式会社北村建設興業へ。永遠も、瞬間も、あなたと共に。"/>
-    <meta name="apple-mobile-web-app-capable" content="no" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="住まいに関するあらゆるご相談を承ります。不動産売買・賃貸は信頼の株式会社北村建設興業へ。永遠も、瞬間も、あなたと共に。">
+    <meta name="apple-mobile-web-app-capable" content="no">
     <title>株式会社北村建設興業Webサイト</title>
-    <!-- <link rel="icon" href="img/favicon.ico" /> -->
+    <!-- <link rel="icon" href="img/favicon.ico"> -->
      <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7t27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     <!-- Slick CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"/>
-    <!-- <link rel="stylesheet" href="css/reset.css" /> -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   </head>
   <body>
     <header class="l-header p-header js-header">
       <div class="p-header__inner">
         <h1 class="p-header__logo"><a href="#">株式会社北村建設興業</a></h1>
-        <nav class="p-header__nav">
-          <ul class="p-header__menu u-pc">
+        <!-- PC用メニュー -->
+        <nav class="p-header__nav u-pc">
+          <ul class="p-header__menu">
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#service">SERVICE</a></li>
             <li><a href="#works">WORKS</a></li>
@@ -32,11 +33,23 @@
           </ul>
         </nav>
       </div>
+      <!-- ハンバーガーボタン（SP用） -->
       <div class="c-btn-trigger u-sp" id="btn-trigger">
         <span></span>
         <span></span>
         <span></span>
       </div>
+      <!-- SP用ドロワーメニュー -->
+      <nav class="p-header__drawer u-sp" id="drawer">
+        <ul class="p-header__menu">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#service">SERVICE</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#news">NEWS</a></li>
+          <li><a href="#company">COMPANY</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
     </header> 
     <main>
       <section class="p-fv">
@@ -60,9 +73,9 @@
             </picture>
           </div>
         </div>
-        <h2 class="p-fv__catch">永遠も。<br class="u-spc">瞬間も。<br>あなたと共に。</h2>
+        <h2 class="p-fv__catch">永遠も。<br class="u-sp">瞬間も。<br>あなたと共に。</h2>
       </section>
-      <!------------about-->
+      <!-- about -->
       <section class="p-about" id="about">
         <div class="p-about__inner p-about-inner p-fade-in">
           <h3>伝統とイマを繋ぐ</h3>
@@ -79,7 +92,7 @@
           </div>
         </div>
       </section>
-      <!------------service-->
+      <!-- service -->
       <section class="p-service p-section" id="service">
         <div class="p-service__inner p-section__inner">
           <div class="c-headline p-fade-in">
@@ -128,7 +141,8 @@
                 <p class="p-service-item__title">広島県竹原市</p>
               </figure>
               <div class="p-service-item__caption">
-                <h3 class="p-service-item__caption-head">都市計画〜開発<br class="u-pc">公共施設</h3>
+                <!-- <h3 class="p-service-item__caption-head">都市計画〜開発<br class="u-pc">公共施設</h3> -->
+                <h3 class="p-service-item__caption-head">都市計画〜開発<br>公共施設</h3>
                 <p class="p-service-item__caption-txt">
                   都市計画から都市開発まで<br>ご提案いたします。<br>公共施設もさらに居心地良く。
                 </p>
@@ -137,7 +151,7 @@
           </div>
         </div>
       </section>
-      <!------------works-->
+      <!-- works -->
       <section class="p-works p-section" id="works">
         <div class="p-works__inner p-section__inner">
           <div class="c-headline p-fade-in">
@@ -146,49 +160,46 @@
           <div class="p-works__card p-card p-fade-in">
             <div class="p-card__item">
               <figure class="p-card__img">
-                  <!-- <img src="./images/pc-works_01.png" alt="【新築】長崎県T.O様自宅" data-modal="./images/pc-works_02-modal.png"> -->
                   <picture>
-                    <source srcset="./images/pc-works_01.png" media="(min-width: 768px)">
-                    <img src="./images/sp-works_01.jpg" alt="【新築】長崎県T.O様自宅" data-modal="./images/pc-works_02-modal.png">
+                    <source srcset="./images/pc-works_01.jpg" media="(min-width: 768px)">
+                    <img src="./images/sp-works_01.jpg" alt="【新築】長崎県T.O様自宅" data-modal="./images/pc-works_01-modal.jpg">
                   </picture>
               </figure>
               <div class="p-card__body">
-                  <h3 class="p-card__title">【新築】<br>長崎県T.O様自宅</h3>
+                  <h3 class="p-card__title">【新築】<br class="u-pc">長崎県T.O様自宅</h3>
               </div>
             </div>
             <div class="p-card__item">
               <figure class="p-card__img">
-                  <!-- <img src="./images/pc-works_02.png" alt="【リノベーション】京都府カトリック丹波教会" data-modal="./images/pc-works_02-modal.png"> -->
-                  <picture>
-                    <source srcset="./images/pc-works_02.png" media="(min-width: 768px)">
-                    <img src="./images/sp-works_02.jpg" alt="【リノベーション】京都府カトリック丹波教会" data-modal="./images/pc-works_02-modal.png">
-                  </picture>
+                <picture>
+                  <source srcset="./images/pc-works_02.jpg" media="(min-width: 768px)">
+                  <img src="./images/sp-works_02.jpg" alt="【リノベーション】京都府カトリック丹波教会" data-modal="./images/pc-works_02-modal.jpg">
+                </picture>
               </figure>
               <div class="p-card__body">
-                  <h3 class="p-card__title">【リノベーション】<br>京都府カトリック丹波教会</h3>
+                <h3 class="p-card__title">【リノベーション】<br>京都府カトリック丹波教会</h3>
               </div>
             </div>
             <div class="p-card__item">
               <figure class="p-card__img">
-                  <!-- <img src="./images/pc-works_03.png" alt="【新築】東京都A.F様自宅件事務所" data-modal="./images/pc-works_03-modal.png"> -->
-                  <picture>
-                    <source srcset="./images/pc-works_03.png" media="(min-width: 768px)">
-                    <img src="./images/sp-works_03.jpg" alt="【新築】東京都A.F様自宅件事務所" data-modal="./images/pc-works_03-modal.png">
-                  </picture>
-                </figure>
+                <picture>
+                  <source srcset="./images/pc-works_03.jpg" media="(min-width: 768px)">
+                  <img src="./images/sp-works_03.jpg" alt="【新築】東京都A.F様自宅件事務所" data-modal="./images/pc-works_03-modal.jpg">
+                </picture>
+              </figure>
               <div class="p-card__body">
-                  <h3 class="p-card__title">【新築】<br>東京都A.F様自宅件事務所</h3>
+                <h3 class="p-card__title">【新築】<br>東京都A.F様自宅兼事務所</h3><!-- 件 → 兼に修正 -->
               </div>
             </div>
             <div class="p-card__item">
               <figure class="p-card__img">
-                  <!-- <img src="./images/pc-works_04.png" alt="【都市開発】山形県銀山温泉協同組合" data-modal="./images/pc-works_04-modal.png"> -->
-                  <picture>
-                    <source srcset="./images/pc-works_04.png" media="(min-width: 768px)">
-                    <img src="./images/sp-works_04.jpg" alt="【都市開発】山形県銀山温泉協同組合" data-modal="./images/pc-works_04-modal.png">
-                  </picture>
-                  <div class="p-card__body">
-                  <h3 class="p-card__title">【都市開発】<br>山形県銀山温泉協同組合</h3>
+                <picture>
+                  <source srcset="./images/pc-works_04.jpg" media="(min-width: 768px)">
+                  <img src="./images/sp-works_04.jpg" alt="【都市開発】山形県銀山温泉協同組合" data-modal="./images/pc-works_04-modal.jpg">
+                </picture>
+              </figure>
+              <div class="p-card__body">
+                <h3 class="p-card__title">【都市開発】<br>山形県銀山温泉協同組合</h3>
               </div>
             </div>
           </div>
@@ -197,13 +208,13 @@
             <div class="p-modal__overlay"></div> <!-- 背景クリック領域 -->
             <div class="p-modal__content">
               <button class="p-modal__close" aria-label="閉じる">&times;</button>
-              <img id="js-modal-img" class="p-modal__img" />
+              <img id="js-modal-img" class="p-modal__img" alt="拡大画像表示エリア" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="><!-- 1pxの透明画像（通称：透明GIF）何も表示されないがバリデーターを通る-->
               <p id="caption" class="p-modal__caption"></p>
             </div>
           </div>
         </div>
       </section>
-      <!------------news-->
+      <!-- news -->
       <section class="p-news p-section" id="news">
         <div class="p-news__inner p-section__inner">
           <div class="c-headline p-fade-in">
@@ -227,7 +238,7 @@
                     </a>
                   </li>
                   <li>
-                  <li class="p-news__entry">
+                  <li class="p-news__entry p-news__entry_last">
                     <a href="#"  aria-label="公式ホームページがリニューアルしました。">
                       <span class="p-news__date p-news__date_last"><time  class="p-news__date_time" datetime="2025-06">2025.06</time></span>
                       <span class="p-news__article p-news__article_last">公式ホームページがリニューアルしました。</span>
@@ -246,20 +257,20 @@
                 <ul class="p-news__list">
                   <li class="p-news__entry">
                     <a href="#"  aria-label="あけましておめでとうございます。〜会長から社員まで〜">
-                      <dt class="p-news__date"><time class="p-news__date_time" datetime="2025-06">2025.06</time></dt>
-                      <dd class="p-news__article">あけましておめでとうございます。〜会長から社員まで〜</dd>
+                      <span class="p-news__date"><time class="p-news__date_time" datetime="2025-06">2025.06</time></span>
+                      <span class="p-news__article">あけましておめでとうございます。〜会長から社員まで〜</span>
                     </a>
                   </li>
                   <li class="p-news__entry">
                     <a href="#"  aria-label="【検証】土地と人に相性はあるのか？">
-                      <dt class="p-news__date"><time class="p-news__date_time" datetime="2025-06">2025.06</time></dt>
-                      <dd class="p-news__article">【検証】土地と人に相性はあるのか？</dd>
+                      <span class="p-news__date"><time class="p-news__date_time" datetime="2025-06">2025.06</time></span>
+                      <span class="p-news__article">【検証】土地と人に相性はあるのか？</span>
                     </a>
                   </li>
-                  <li class="p-news__entry">
+                  <li class="p-news__entry p-news__entry_last">
                     <a href="#"  aria-label="弊社創業初の入社式が行われました。">
-                      <dt class="p-news__date p-news__date_last"><time  class="p-news__date_time" datetime="2025-06">2025.06</time></dt>
-                      <dd class="p-news__article p-news__article_last">弊社創業初の入社式が行われました。</dd>
+                      <span class="p-news__date p-news__date_last"><time  class="p-news__date_time" datetime="2025-06">2025.06</time></span>
+                      <span class="p-news__article p-news__article_last">弊社創業初の入社式が行われました。</span>
                     </a>
                   </li>
                 </ul>
@@ -273,7 +284,7 @@
         </div>
       </section>
 
-      <!------------company-->
+      <!-- company -->
       <section class="p-company p-section" id="company">
         <div class="p-company__inner p-section__inner">
           <div class="c-headline p-fade-in">
@@ -301,7 +312,7 @@
           </div>
         </div>
       </section>
-      <!------------contact-->
+      <!-- contact -->
       <section class="p-contact p-section" id="contact">
         <div class="p-contact__inner p-section__inner">
           <div class="c-headline p-fade-in">
@@ -374,7 +385,7 @@
                 <label for="other"><input type="checkbox" name="source[]" value="other" id="other"> その他</label>
               </div>
             </div>
-            <!---------->
+            <!---->
             <div class="p-form__item p-form__privacy p-form-privacy">
               <h4 class="p-form__label">個人情報保護方針</h4>
               <div class="p-form-privacy__container">
@@ -456,18 +467,18 @@
                     <h5 class="p-form-privacy__title">プライバシーポリシーに関するお問合せ先</h5>
                     <p class="p-form-privacy__text">弊社の個人情報の取扱いに関するお問合せは、下記までお問い合せください。</p>
                   </article>
-                  <address class="p-form-privacy__address">
+                  <div class="p-form-privacy__address">
                     <h5 class="p-form-privacy__title">社名</h5>
-                    <p class="p-form-privacy__text">株式会社北村建設興業</p>
+                    <address class="p-form-privacy__text">株式会社北村建設興業</address>
                     <h5 class="p-form-privacy__title">住所</h5>
-                    <p class="p-form-privacy__text">長崎県長崎市横尾○丁目○-○</p>
+                    <address class="p-form-privacy__text">長崎県長崎市横尾○丁目○-○</address>
                     <h5 class="p-form-privacy__title">電話</h5>
-                    <p class="p-form-privacy__text">000-000-0000</p>
+                    <address class="p-form-privacy__text">000-000-0000</address>
                     <h5 class="p-form-privacy__title">FAX</h5>
-                    <p class="p-form-privacy__text">000-000-0000</p>
+                    <address class="p-form-privacy__text">000-000-0000</address>
                     <h5 class="p-form-privacy__title p-form-privacy__title-last">メールアドレス</h5>
-                    <p class="p-form-privacy__text p-form-privacy__text-last">info@example.com</p>
-                  </address>
+                    <address class="p-form-privacy__text p-form-privacy__text-last">info@example.com</address>
+                  </div>
                 </div>
               </div>
             </div>
@@ -513,5 +524,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="./js/script.js"></script>
+  
+  
+  <!-- 現在の幅 開発用 -->
+<!-- <p id="viewport-width" style="position: fixed; bottom: 10px; right: 10px; background: #000; color: #fff; padding: 5px 10px; font-size: 14px; z-index: 9999;">
+  現在の幅：   px
+</p>
+
+<script>
+  const el = document.getElementById('viewport-width');
+  function update() {
+    el.textContent = '現在の幅：' + window.innerWidth + 'px';
+  }
+  update();
+  window.addEventListener('resize', update);
+</script> -->
+  
+  
+  
+  
+  
   </body>
 </html>

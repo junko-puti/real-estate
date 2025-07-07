@@ -5,7 +5,7 @@
   }
 }
 
-// pc（768px〜979px）
+// pc（768px〜）
 @mixin pc {
   @media (min-width: 768px) {
     @content;
@@ -15,3 +15,9 @@
   // }
 }
 
+//微調整
+@mixin media($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
