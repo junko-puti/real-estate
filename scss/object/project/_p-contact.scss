@@ -7,8 +7,11 @@
   color: #000000;
   background-color: rgba(77, 150, 0, 0.1);
 }
+.p-contact__headline{
+  margin-bottom: rem(35);
+}
 .p-contact__message{
-  margin-top: rem(-33);
+  // margin-top: rem(-33);
   margin-bottom: rem(70);
   padding: 0 rem(60);
   text-align: left;

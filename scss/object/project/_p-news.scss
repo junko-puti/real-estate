@@ -43,7 +43,14 @@
   position: relative;
   padding-bottom: rem(13);
   margin-bottom: rem(20);
+  transition: color 0.3s ease-in-out;
+
+  // transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+.p-news__entry:hover{
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .p-news__entry_last{
   margin-bottom: rem(17);
 }
@@ -61,10 +68,8 @@
   justify-content: space-between;
   width: 100%;
   // gap: 4.76%;
-  transition: transform 1s ease-in-out;
-}
-.p-news__entry:hover{
-  color: rgba(0, 0, 0, 0.5);
+  // transition: transform 1s ease-in-out;
+  // transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .p-news__date{
   width: 31.28%;//calc(122 / (122 + 268) * 100%); // 比率を％で計算
@@ -91,7 +96,7 @@
    display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2; // ← 2行でカット
-  line-clamp: 2;
+  // line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
   @include sp {

@@ -6,12 +6,18 @@
 .p-fv {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
+  aspect-ratio: 1080 / 800;
   top: 0;
   left: 0;
   z-index: 900; /* ヘッダーより低く */
+  display: block;
+  @include sp {
+    aspect-ratio: 375 / 601;
+  }
+
 }
-.p-fv::after {
+.p-fv::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -24,17 +30,19 @@
   position: relative;
   z-index: 2;
 }
+.p-slider__item picture,
 .p-slider__item img {
-width: 100%;
-height: 100%;
-object-fit: cover; /* 画像を要素のサイズに合わせてトリミング */
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像を要素のサイズに合わせてトリミング */
 }
 .p-fv__catch{
   position: absolute;
   // top: 50%;
-  // left: 50%;
-  top: 51%;
-  left: 50.5%;
+  top: 51.5%;
+  left: 50%;
+  // left: 51%;/*横揺れの原因*/
   font-size: rem(40);
   line-height: calc(70 / 40);
   letter-spacing: 0.3em; /* 文字サイズの30% */
@@ -43,13 +51,20 @@ object-fit: cover; /* 画像を要素のサイズに合わせてトリミング 
   text-shadow: 5px 5px 5px #000000;
   @include sp {
     width: 100%;
-    top: 50.5%;
-    left: 51%;
+    // top: 51.5%;
+    // left: 51%;
     font-size: rem(30);
     line-height: calc(60 / 30);
   }
   @media (min-width: 768px) and (max-width: 979px) {
     font-size: rem(30);
   }
-
+}
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  height: 100%;
+}
+.swiper-slide {
+  flex-shrink: 0;
 }

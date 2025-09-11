@@ -2,28 +2,63 @@
 @use '../../foundation/mixin' as *;
 
 
+// .p-about {
+//   display: flex;
+//   justify-content:flex-start;
+//   max-width: 100%; /* 幅を画面いっぱいに*/
+//   height: auto; /*内容に応じて高さを自動調整*/
+//   // min-height: 500px; /*最低限の高さを確保*/
+//   padding-top: rem(110);
+//   padding-bottom: rem(110);
+//   background-image: url('../images/pc-about.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   margin-top: rem(-7);
+//   @include sp {
+//     padding-top: rem(50);
+//     padding-bottom: rem(50);
+//     background-image: url('../images/sp-about.jpg');
+//   }
+// }
+
+
 .p-about {
-  display: flex;
-  justify-content:flex-start;
-  max-width: 100%; /* 幅を画面いっぱいに*/
-  height: auto; /*内容に応じて高さを自動調整*/
-  // min-height: 500px; /*最低限の高さを確保*/
+  position: relative;
+  overflow: hidden;
   padding-top: rem(110);
   padding-bottom: rem(110);
-  background-image: url('../images/pc-about.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: rem(-7);
+  @include media(900px) {
+    display: flex;
+    justify-content: center;
+  }
+
   @include sp {
-    padding-top: rem(50);
+    padding-top: rem(55);
+    // padding-top: rem(50);
     padding-bottom: rem(50);
-    background-image: url('../images/sp-about.jpg');
   }
 }
+
+.p-about__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  // @include sp {
+  //   content: url('../images/sp-about.jpg');
+  // }
+}
+
+
+
 .p-about__inner {
   // padding-right: rem(288);
-  padding-left: 13.88%;
+  // padding-left: 13.88%;
+  width: 59.444%;
   writing-mode: vertical-rl; /* 右から左への縦書き */
   text-orientation: upright; /* 文字を縦向きに揃える */
   transform: rotate(0deg); /* 調整が必要なら回転も可能 */
@@ -39,8 +74,10 @@
   }
 }
 
-.p-about h3{
-  margin-left: rem(60);
+.p-about h2{
+  // margin-left: rem(60);
+  // margin-left: rem(50);
+  margin-left: rem(47);
   font-size: rem(30);
   line-height: 1;
   letter-spacing: 0.167em;/*118%微調整*/
@@ -50,6 +87,10 @@
     margin-left: 0;
     font-size: rem(25);
   }
+    @include media(340px) {
+    font-size: rem(20);
+  }
+
 }
 .p-about-inner__text{
   @include sp {
@@ -60,12 +101,14 @@
 .p-about p{
   margin-left: rem(30);
   font-size: rem(18);
-  line-height: 1;
+  // line-height: 2.466;//18px*137%/10
+  line-height: 2.64;//微調整
   letter-spacing: 0.4em;/*137％微調整*/
   @include sp {
     margin-left: rem(10);
     font-size: rem(16);
-    line-height: 1;
+    line-height: 2;//16px*125%/10
+    line-height: 1.6;//微調整
     letter-spacing: rem(4);
   }
 }

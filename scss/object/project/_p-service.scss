@@ -49,23 +49,29 @@
   color: #000000;
 }
 //テキスト
-.p-service-item__caption {
+.p-service-item__body {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  // align-items: flex-end;
   width: 54.348%;
   margin-left: -19.565%;
   padding-top: rem(50);
   padding-bottom: rem(42);
+  padding-left: 24%;
+  padding-right: rem(5);
   color: #ffffff;
   background-color: #4D9600;
   @include sp {
     width: 100%;
     padding: rem(20) 6.349% rem(12) 6.349%;
   }
+  @media (min-width: 768px) and (max-width: 979px) {
+    padding-left: 23%;
+  }
+
 }
-.p-service-item__caption-head,
-.p-service-item__caption-txt{
+.p-service-item__body-head,
+.p-service-item__body-txt{
   // width: rem(275);
   width: rem(280);/*微調整*/
   @include sp {
@@ -74,9 +80,8 @@
   @media (min-width: 768px) and (max-width: 979px) {
     width: rem(220);/*微調整*/
   }
-
 }
-.p-service-item__caption-head{
+.p-service-item__body-head{
   margin-bottom: rem(17);
   font-size: rem(25);
   /*font-weight: 400;*/
@@ -89,9 +94,8 @@
   @media (min-width: 768px) and (max-width: 979px) {
     font-size: rem(20);
   }
-
 }
-.p-service-item__caption-txt{
+.p-service-item__body-txt{
   font-size: rem(16);
   /*font-weight: 400;*/
   line-height: calc(25 / 16);
@@ -115,7 +119,7 @@
   }
 
 }
-.p-service-item:nth-child(even) .p-service-item__caption {
+.p-service-item:nth-child(even) .p-service-item__body {
   margin-left: 0;
   margin-right: -19.565%;
   align-items: flex-start;

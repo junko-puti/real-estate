@@ -3,9 +3,12 @@
 
 
 .c-headline{
-  padding-bottom: rem(68);
+  // padding-bottom: rem(68);
+  margin-bottom: rem(68);
   @include sp {
-  padding-bottom: rem(38);
+  // padding-bottom: rem(38);
+  margin-bottom: rem(38);
+
   }
 
 }

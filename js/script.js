@@ -1,13 +1,15 @@
-//slick
-$(document).ready(function(){
-  $('.p-fv__slider').slick({
-    dots: false,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    pauseOnFocus: false, // フォーカス時に停止しない
-    pauseOnHover: false, // ホバー時に停止しない
-    pauseOnDotsHover: false // ドットホバー時に停止しない
+
+//////////////////////////////////////////////////
+//Swiper
+window.addEventListener('load', () => {
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 0,
   });
 });
 
@@ -39,7 +41,7 @@ $(document).ready(function(){
 
 
 
-///////////////////
+//////////////////////////////////////////////////
 // triggerボタン、ドロワーメニュー開閉
 $(function(){
   $('.c-btn-trigger').on('click', function() {
@@ -76,32 +78,21 @@ $(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//////////////////////////////////////////////////
 // メニュー背景色の変化---ABOUTエリアが画面の真ん中に来たら変更する
 function updateHeaderClass() {
   const $about = $('#about');
+  const headerHeight = $('.js-header').outerHeight(); // ヘッダーの高さを取得
+
   if ($about.length === 0 || !$about.offset()) return;
 
   const aboutOffset = $about.offset().top;
   const scrollPosition = $(window).scrollTop();
   const windowHeight = $(window).height();
 
-  if (scrollPosition + windowHeight / 2 > aboutOffset) {
+  // if (scrollPosition + windowHeight / 2 > aboutOffset) {
+  // if (scrollPosition >= aboutOffset) {//ページがスクロールして #about の上端が window の上端に達したら
+  if (scrollPosition >= aboutOffset - headerHeight){//ヘッダーの高さ分を残して
     $('.js-header').addClass('is-colored');
   } else {
     $('.js-header').removeClass('is-colored');
@@ -115,6 +106,7 @@ $(function () {
 
 
 
+//////////////////////////////////////////////////
 // モーダル
 const modal = document.getElementById("myModal");
 const modalImg = document.getElementById("js-modal-img");
@@ -122,30 +114,57 @@ const captionText = document.getElementById("caption");
 const closeBtn = document.querySelector(".p-modal__close");
 const overlay = document.querySelector(".p-modal__overlay");
 
-// 画像クリックで開く（altをキャプションに使用）
-document.querySelectorAll(".p-card__img img").forEach(img => {
-  img.onclick = function () {
+document.querySelectorAll(".p-card__item").forEach(cardItem => {
+  const imgContainer = cardItem.querySelector(".p-card__img");
+  const title = cardItem.querySelector(".p-card__title");
+
+  const openModal = () => {
+    const img = imgContainer.querySelector("img");
+
     modal.style.display = "block";
-    modalImg.src = this.dataset.modal || this.src;
-    captionText.textContent = this.alt;
+    modalImg.src = img.dataset.modal || img.src;
+
+     // スクロールを止める
+    document.body.classList.add("no-scroll");
+
+    //タイトル改行指定
+    const isSP = window.matchMedia("(max-width: 500px)").matches;
+    captionText.innerHTML = title
+      ? isSP
+        ? title.innerHTML.trim() // <br>を含むHTMLをそのまま表示
+        : title.textContent.trim().replace(/\n/g, ' ') // 改行を無視して1行に
+      : '';
+
+    $('.c-top-btn').removeClass('active');
   };
+
+  imgContainer.onclick = openModal;
+  title.onclick = openModal;
 });
 
 // 閉じるボタン、またはオーバーレイクリックで閉じる
 closeBtn.onclick = overlay.onclick = function () {
   modal.style.display = "none";
+
+  // スクロールを戻す
+  document.body.classList.remove("no-scroll");
+
+  $(window).trigger('scroll'); // 9.1状態を再評価
 };
 
 
 
-
+//////////////////////////////////////////////////
 //スクロールトップボタンの変化
 $(function(){
   //変数にクラスをいれる
   var btn = $('.c-top-btn');
   //スクロールしてページトップから100に達したらボタンを表示
   $(window).on('load scroll',function(){
-    if($(this).scrollTop() > 100){
+     // 9.1モーダルが非表示かどうかを判定
+    var isModalClosed = $('#myModal').css('display') === 'none';
+    if ($(this).scrollTop() > 100 && isModalClosed) {
+    // if($(this).scrollTop() > 100){
       btn.addClass('active');
       $('.c-top-btn').css('transition', '0.6s');
     }else{
@@ -163,6 +182,7 @@ $(function(){
 
 
 
+//////////////////////////////////////////////////
 //fade-in
 $(window).on("scroll load", function() { // 初回ロード時にも実行
   $(".p-fade-in").each(function() {
