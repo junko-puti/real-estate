@@ -3,14 +3,11 @@
 
 
 .p-card{
-  max-width: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: rem(40);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // 常に4枠分の列を確保
+  gap: 4.347%;
   @include sp {
-    flex-direction: column;
+     grid-template-columns: 1fr; // SPサイズ：1列
     // gap: rem(22);
     gap: rem(20);/*微調整/*/
    }
@@ -18,29 +15,55 @@
 
 .p-card__item {
   flex: 1;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
 }
-.p-card__img img {
+.p-card__item:hover{
+  cursor:pointer;
+}
+
+.p-card__img {
+  // position: relative;
+  margin-bottom: rem(19);
+  overflow: hidden;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  @include sp {
+    margin-bottom: rem(9);
+    aspect-ratio: 315 / 250;
+  }
+}
+.p-card__item:hover .p-card__img img {
+  transform: scale(1.02); /* ホバー時に少し拡大 */
+}  
+.p-card__img img {
+  // position: absolute;
+  // inset: 0;
   height: auto;
   width: 100%;
   margin-bottom: rem(19);
-  @include sp {
-    aspect-ratio: auto;
-    margin-bottom: rem(9);
-  }
-
-}
-.p-card__img {
-  transition: transform 0.8s ease-in-out;
-}
-.p-card__img:hover {
-  cursor:pointer;
-  transform: scale(1.02); /* ホバー時に少し拡大 */
-  // transition: transform 0.8s ease-in-out;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
 }
 .p-card__title{
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
+  transition: color 0.3s ease;
+}
+.p-card__item:hover .p-card__title{
+  color: rgba(0, 0, 0, 0.7);
+}
+/* 767px以上：12px〜16pxで遷移 */
+@media screen and (min-width: 767px) {
+  .p-card__title {
+    font-size: clamp(12px, 2vw, 16px);
+  }
+}
+
+/* 767px未満：14px〜16pxで遷移 */
+@media screen and (max-width: 767px) {
+  .p-card__title {
+    font-size: clamp(14px, 5vw, 16px);
+  }
 }
 
 

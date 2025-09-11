@@ -21,7 +21,9 @@
     height: rem(50);
   }
 }
-
+.c-top-btn:hover{
+  opacity: 0.5;
+}
 
 // .c-top-btn::before{
 //  content: "";
@@ -37,9 +39,6 @@
 //   transform: translate(-50%, -50%); /* 完全に中央配置 */
 //   z-index: 99999;
 // }
-.c-top-btn:hover{
-  opacity: 0.5;
-}
 
 /*.activeクラス付与で表示する*/
 .active{

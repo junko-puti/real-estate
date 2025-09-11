@@ -23,6 +23,7 @@
   max-width: 600px;
   z-index: 1;
   @include sp {
+    max-width: 100%;
     width: 100%;
     padding-bottom: rem(19);
     margin: 0 auto;
@@ -103,3 +104,32 @@
 //   display: inline-block;
 //   width: 1em; // 全角1文字ぶん
 // }
+
+
+/*メール*/
+.c-mail-link {
+  color: inherit;
+  // text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+.c-mail-link:hover {
+  opacity: 0.6;
+}
+/*電話*/
+.c-tel-link {
+  pointer-events: none;
+  color: inherit;
+  vertical-align: middle;
+  // text-decoration: none;
+}
+@media (max-width: 767px) {
+  .c-tel-link {
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+    // text-decoration: underline;
+    // color: #0077cc;
+  }
+  .c-tel-link:hover {
+    opacity: 0.6;
+  }
+}
