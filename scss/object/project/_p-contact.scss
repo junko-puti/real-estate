@@ -7,13 +7,22 @@
   color: #000000;
   background-color: rgba(77, 150, 0, 0.1);
 }
+.p-contact__inner{
+padding-left: rem(90);
+padding-right: rem(90);
+  @include sp {
+    padding-left: rem(30);
+    padding-right: rem(30);
+  }
+}
+
 .p-contact__headline{
   margin-bottom: rem(35);
 }
 .p-contact__message{
   // margin-top: rem(-33);
   margin-bottom: rem(70);
-  padding: 0 rem(60);
+  // padding: 0 rem(60);
   text-align: left;
   font-size: rem(20);
   /*font-weight: 500;*/
@@ -24,6 +33,9 @@
     margin-top: rem(-3);
     margin-bottom: rem(40);
   }
+}
+.p-contact__message span{
+  display: inline-block;
 }
 .p-contact__form{
   padding-left: rem(60);

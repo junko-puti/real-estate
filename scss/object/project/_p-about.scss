@@ -1,45 +1,20 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-
-// .p-about {
-//   display: flex;
-//   justify-content:flex-start;
-//   max-width: 100%; /* 幅を画面いっぱいに*/
-//   height: auto; /*内容に応じて高さを自動調整*/
-//   // min-height: 500px; /*最低限の高さを確保*/
-//   padding-top: rem(110);
-//   padding-bottom: rem(110);
-//   background-image: url('../images/pc-about.jpg');
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   margin-top: rem(-7);
-//   @include sp {
-//     padding-top: rem(50);
-//     padding-bottom: rem(50);
-//     background-image: url('../images/sp-about.jpg');
-//   }
-// }
-
-
 .p-about {
   position: relative;
   overflow: hidden;
-  padding-top: rem(110);
-  padding-bottom: rem(110);
+  aspect-ratio: 54 / 25; /* 横2160px × 縦1000px (2.16 : 1)*/
+  box-sizing: border-box; // パディング込みで比率を計算
+  display: flex;
+  align-items: center;
   @include media(900px) {
-    display: flex;
     justify-content: center;
   }
-
   @include sp {
-    padding-top: rem(55);
-    // padding-top: rem(50);
-    padding-bottom: rem(50);
+    aspect-ratio: 375 / 584; /* 横750px × 縦1168px (0.642 : 1)*/
   }
 }
-
 .p-about__bg {
   position: absolute;
   top: 0;
@@ -48,16 +23,8 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  // @include sp {
-  //   content: url('../images/sp-about.jpg');
-  // }
 }
-
-
-
 .p-about__inner {
-  // padding-right: rem(288);
-  // padding-left: 13.88%;
   width: 59.444%;
   writing-mode: vertical-rl; /* 右から左への縦書き */
   text-orientation: upright; /* 文字を縦向きに揃える */
@@ -73,17 +40,13 @@
     justify-content: center;
   }
 }
-
 .p-about h2{
-  // margin-left: rem(60);
-  // margin-left: rem(50);
   margin-left: rem(47);
   font-size: rem(30);
   line-height: 1;
   letter-spacing: 0.167em;/*118%微調整*/
   @include sp {
     height: 100%;
-    // padding-bottom: rem(24);
     margin-left: 0;
     font-size: rem(25);
   }
@@ -95,13 +58,11 @@
 .p-about-inner__text{
   @include sp {
     min-height: rem(220); // 長文時の高さ確保に
-    // margin-top: rem(28);
   }
 }
 .p-about p{
   margin-left: rem(30);
   font-size: rem(18);
-  // line-height: 2.466;//18px*137%/10
   line-height: 2.64;//微調整
   letter-spacing: 0.4em;/*137％微調整*/
   @include sp {

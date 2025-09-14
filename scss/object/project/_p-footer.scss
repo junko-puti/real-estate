@@ -36,6 +36,7 @@
   width: 100%;
   margin-bottom: rem(28);
   padding-bottom: rem(28);
+  text-align: center;
   @include sp {
     margin-bottom: rem(20);
     padding-bottom: rem(20);
@@ -51,15 +52,14 @@
   bottom: 0;
   background-color: #000000;
 }
-.p-footer__logo a{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+.p-footer__logo a {
+  display: inline-block;
   font-size: rem(20);
-  /*font-weight: 500;*/
   line-height: calc(33 / 20);
   transition: color 0.3s ease-in-out;
+  padding: 0;   // 余白をなくす
+  height: auto; // 高さを文字に合わせる
+  text-align: center;
 }
 .p-footer__nav-menu{
   max-width: 710px;
@@ -69,7 +69,6 @@
   @include sp {
     margin-bottom: rem(28);
   }
-
 }
 .p-footer__menu{
   display: flex;

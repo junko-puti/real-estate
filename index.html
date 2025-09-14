@@ -145,7 +145,7 @@
               <div class="p-service-item__body">
                 <h3 class="p-service-item__body-head">新築<br class="u-pc">（土地探し〜建築）</h3>
                 <p class="p-service-item__body-txt">
-                  お客様にあった土地探しから<br>建築、施工までサポートいたします。<br>風水的観点からもご提案。
+                  お客様にあった土地探しから<br>建築、施工までサポート<span>いたします。</span><br>風水的観点からもご提案。
                 </p>
               </div>
             </div>
@@ -199,7 +199,7 @@
                   <img src="./images/sp-works_01.jpg" alt="【新築】長崎県T.O様自宅" data-modal="./images/pc-works_01-modal.jpg">
                 </picture>
               </div>
-                <h3 class="p-card__title">【新築】<br class="u-pc">長崎県T.O様自宅</h3>
+                <h3 class="p-card__title">【新築】<br class="u-pc">長崎県<span>T.O様自宅</span></h3>
             </div>
             <div class="p-card__item">
               <div class="p-card__img">
@@ -208,7 +208,7 @@
                   <img src="./images/sp-works_02.jpg" alt="【リノベーション】京都府カトリック丹波教会" data-modal="./images/pc-works_02-modal.jpg">
                 </picture>
               </div>
-              <h3 class="p-card__title">【リノベーション】<br>京都府カトリック丹波教会</h3>
+              <h3 class="p-card__title">【リノベーション】<br>京都府<span>カトリック丹波教会</span></h3>
             </div>
             <div class="p-card__item">
               <div class="p-card__img">
@@ -217,7 +217,7 @@
                   <img src="./images/sp-works_03.jpg" alt="【新築】東京都A.F様自宅件事務所" data-modal="./images/pc-works_03-modal.jpg">
                 </picture>
               </div>
-              <h3 class="p-card__title">【新築】<br>東京都A.F様自宅兼事務所</h3><!-- 件 → 兼に修正 -->
+              <h3 class="p-card__title">【新築】<br>東京都<span>A.F様自宅兼事務所</span></h3><!-- 件 → 兼に修正 -->
             </div>
             <div class="p-card__item">
               <div class="p-card__img">
@@ -226,7 +226,7 @@
                   <img src="./images/sp-works_04.jpg" alt="【都市開発】山形県銀山温泉協同組合" data-modal="./images/pc-works_04-modal.jpg">
                 </picture>
               </div>
-              <h3 class="p-card__title">【都市開発】<br>山形県銀山温泉協同組合</h3>
+              <h3 class="p-card__title">【都市開発】<br>山形県<span>銀山温泉協同組合</span></h3>
             </div>
           </div>
           <!-- モーダル -->
@@ -243,7 +243,7 @@
       <!-- news -->
       <section class="p-news p-section" id="news">
         <div class="p-news__inner p-section__inner">
-          <div class="c-headline p-fade-in">
+          <div class="c-headline p-news__headline p-fade-in">
             <h2 class="c-headline__main">NEWS<span class="c-headline__sub">お知らせ</span></h2>
           </div>
           <div class="p-news__item p-fade-in">
@@ -263,7 +263,6 @@
                       <span class="p-news__article">非住宅 木造建築フェアに出展します。</span>
                     </a>
                   </li>
-                  <li>
                   <li class="p-news__entry p-news__entry_last">
                     <a href="#"  aria-label="公式ホームページがリニューアルしました。">
                       <span class="p-news__date p-news__date_last"><time  class="p-news__date_time" datetime="2025-06">2025.06</time></span>
@@ -351,10 +350,10 @@
           <div class="c-headline p-contact__headline p-fade-in">
             <h2 class="c-headline__main">CONTACT<span class="c-headline__sub">お問い合わせ</span></h2>
           </div>
-          <p class="p-contact__message p-fade-in">３営業日以内にメールにてご連絡いたします。*は入力必須項目となります。</p>
+          <p class="p-contact__message p-fade-in">３営業日以内にメールにてご連絡いたします。<span>*は入力必須項目となります。</span></p>
 
-          <form class="p-contact__form p-form p-fade-in" method="post"  action="javascript:void(0);">
-
+          <form action="#" method="post">
+          <!-- <form class="p-contact__form p-form p-fade-in" method="post" action="javascript:void(0);" onsubmit="event.preventDefault(); alert('送信は行われません');"></form> -->
             <div class="p-form__item">
               <label class="p-form__label" for="name">お名前 *</label>
               <div class="p-form__input">
@@ -363,20 +362,12 @@
             </div>
 
             <div class="p-form__item p-form__item_gender">
-            <!-- <div class="p-form__item_row"> -->
               <p class="p-form__label ">性別</p>
               <div class="p-form__input p-form__radio">
                 <label class="p-form__radio-custom"><input type="radio" id="male" name="gender" value="男性"><span>男性</span></label>
                 <label class="p-form__radio-custom"><input type="radio" id="female" name="gender" value="女性"><span>女性</span></label>
               </div>
             </div>
-            <!-- <div class="p-form__item_row">
-              <p class="p-form__label">性別</p>
-              <div class="p-form__input p-form__radio">
-                <label for="male"><input type="radio" id="male" name="gender" value="男性">男性</label>
-                <label for="female"><input type="radio" id="female" name="gender" value="女性">女性</label>
-              </div>
-            </div> -->
             
             <div class="p-form__item">
               <label class="p-form__label" for="mail">メールアドレス *</label>
@@ -406,9 +397,7 @@
               </div>
             </div>
 
-            <!-- <div class="p-form__row p-form__column"> -->
             <div class="p-form__item p-form__checkbox-container"><!--6.5-->
-              <!-- <p class="p-form__label">何を見て当社HPを知りましたか？ (複数回答可) *</p> -->
 
               <p class="p-form__label">
                 何を見て当社HPを知りましたか？ (複数回答可)
@@ -425,16 +414,6 @@
                 <label class="p-form__checkbox-custom"><input type="checkbox" name="source[]" value="passing" id="passing"><span>通りがかり</span></label>
                 <label class="p-form__checkbox-custom"><input type="checkbox" name="source[]" value="other" id="other"><span>その他</span></label>
               </div>
-              <!-- <div class="p-form__input p-form__checkbox">
-                <label for="internet"><input type="checkbox" name="source[]" value="internet" id="internet"><span> インターネット</span></label>
-                <label for="flyer"><input type="checkbox" name="source[]" value="flyer" id="flyer"> チラシ</label>
-                <label for="housing"><input type="checkbox" name="source[]" value="housing" id="housing"> 住宅展示場</label>
-                <label for="signboard"><input type="checkbox" name="source[]" value="signboard" id="signboard"> 看板</label>
-                <label for="sns"><input type="checkbox" name="source[]" value="sns" id="sns"> 各種SNS</label>
-                <label for="referral"><input type="checkbox" name="source[]" value="referral" id="referral"> 紹介</label>
-                <label for="passing"><input type="checkbox" name="source[]" value="passing" id="passing"> 通りがかり</label>
-                <label for="other"><input type="checkbox" name="source[]" value="other" id="other"> その他</label>
-              </div> -->
             </div>
             <!---->
             <div class="p-form__item p-form__privacy p-form-privacy">
@@ -539,9 +518,9 @@
               </div><!--wrapper-->
 
             </div>
-            <p class="c-button">
-                <button type="submit" class="c-button__submit">内容に同意して送信</button>
-            </p>
+
+            <button type="submit" class="c-button__submit">内容に同意して送信</button><!--送信ボタン TOPへ移動するように設定-->
+
           </form>
         </div>
       </section>
