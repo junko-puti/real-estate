@@ -45,15 +45,15 @@ body {
 
 
 
-// 固定ヘッダーの高さに合わせて調整
-[id] {
-  scroll-margin-top: rem(80); // PC向け
-}
-@include sp {
-  [id] {
-    scroll-margin-top: rem(50); // SP向け
-  }
-}
+// 固定ヘッダーの高さに合わせてスクロール調整→わずかな隙間ができるためJSで制御に変更
+// [id] {
+//   scroll-margin-top: rem(80); // PC向け
+// }
+// @include sp {
+//   [id] {
+//     scroll-margin-top: rem(50); // SP向け
+//   }
+// }
 
 
 img{

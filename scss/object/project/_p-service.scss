@@ -103,6 +103,9 @@
     font-size: rem(14);
   }
 }
+.p-service-item__body-txt span{
+  display: inline-block;
+}
 
 .p-service-item:nth-child(even) {
   flex-direction: row-reverse;

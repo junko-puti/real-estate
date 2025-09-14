@@ -16,7 +16,6 @@
 .p-card__item {
   flex: 1;
   overflow: hidden;
-  transition: box-shadow 0.3s ease-in-out;
 }
 .p-card__item:hover{
   cursor:pointer;
@@ -32,9 +31,6 @@
     aspect-ratio: 315 / 250;
   }
 }
-.p-card__item:hover .p-card__img img {
-  transform: scale(1.02); /* ホバー時に少し拡大 */
-}  
 .p-card__img img {
   // position: absolute;
   // inset: 0;
@@ -45,12 +41,19 @@
   transition: transform 0.3s ease-in-out;
   will-change: transform;
 }
+.p-card__item:hover .p-card__img img {
+  transform: scale(1.1); /* ホバー時に少し拡大 */
+}  
+
 .p-card__title{
   color: #000000;
   transition: color 0.3s ease;
 }
+.p-card__title span{
+  display: inline-block;
+}
 .p-card__item:hover .p-card__title{
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.6);
 }
 /* 767px以上：12px〜16pxで遷移 */
 @media screen and (min-width: 767px) {

@@ -105,11 +105,18 @@
     line-height: calc(25 / 16);
   }
 }
+// .p-form__textarea-container .p-form__textarea {
+//   height: rem(200);
+//   resize: vertical;
+//   overflow-y: auto;
+// }
 .p-form__textarea-container .p-form__textarea {
-  height: rem(200);
-  resize: vertical;
-  overflow-y: auto;
+  height: rem(200);     /* 初期の高さ */
+  min-height: rem(200); /* 最低の高さを200pxに固定 */
+  resize: vertical;     /* 垂直方向のみリサイズ可能 */
+  overflow-y: auto;     /* 縦スクロールを表示 */
 }
+
 .p-form__checkbox-container .p-form__label {
   @include sp {
     line-height: calc(27 / 20);
@@ -258,7 +265,7 @@
   // @include sp {
   //   padding-left: rem(30);
   // }
-  @include media(340px) {
+  @include media(350px) {
     padding-left: rem(23);
   }
 }
@@ -370,11 +377,15 @@ input[type="submit"] {
 .p-form-privacy__inner {
   max-width: rem(800);
   margin: 0 auto;
-  padding-left: rem(40);
-  padding-right: rem(40);
+  padding-left: 40px;
+  padding-right: 40px;
+  // padding-left: rem(40);
+  // padding-right: rem(40);
   @include sp {
-    padding-left: rem(30);
-    padding-right: rem(30);
+    padding-left: 30px;
+    padding-right: 30px;
+    // padding-left: rem(30);
+    // padding-right: rem(30);
   }
 }
 .p-form-privacy article{
@@ -419,12 +430,12 @@ input[type="submit"] {
 }
 
 
-/*スクロールバーのカスタマイズ*/
+/*スクロールバーのカスタマイズ 優先してしまうので設定しない*/
 /* Firefox対応 */
-  .p-form-privacy__container {
-    scrollbar-width: thin; /* スクロールバーの太さ: auto | thin | none */
-    scrollbar-color: #9B9B9B #f0f0f0;/* thumb色 / track色 */
-  }
+  // .p-form-privacy__container {
+  //   scrollbar-width: thin; /* スクロールバーの太さ: auto | thin | none */
+  //   scrollbar-color: #9B9B9B #f0f0f0;/* thumb色 / track色 */
+  // }
 
 /* WebKit系（Chrome, Safari, Edge）対応 */
 .p-form-privacy__container::-webkit-scrollbar {

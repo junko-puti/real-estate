@@ -34,19 +34,16 @@
 }
 
 // 各バーの初期位置（上下にずらす）
-.c-btn-trigger span:nth-of-type(1) { top: rem(11);};
-.c-btn-trigger span:nth-of-type(2) { top: rem(23);};
-.c-btn-trigger span:nth-of-type(3) { top: rem(35);};
-// .c-btn-trigger span:nth-of-type(1) { top: rem(13.5);};
-// .c-btn-trigger span:nth-of-type(2) { top: rem(24.5);};
-// .c-btn-trigger span:nth-of-type(3) { top: rem(35.5);};
-// .c-btn-trigger span:nth-of-type(1) { top: 13.5px;};
-// .c-btn-trigger span:nth-of-type(2) { top: 24.5px;};
-// .c-btn-trigger span:nth-of-type(3) { top: 35.5px;};
+.c-btn-trigger span:nth-of-type(1) { top: 26%;};
+.c-btn-trigger span:nth-of-type(2) { top: 50%;};
+.c-btn-trigger span:nth-of-type(3) { top: 74%;};
+// .c-btn-trigger span:nth-of-type(1) { top: rem(11);};
+// .c-btn-trigger span:nth-of-type(2) { top: rem(23);};
+// .c-btn-trigger span:nth-of-type(3) { top: rem(35);};
 
 // アクティブ時（×になる）
 #btn-trigger.active span:nth-of-type(1) {
-  top: rem(25);
+  top: 50%;
   // top: 25px;
   transform: translate(-50%, -50%) rotate(45deg);
 }
@@ -54,7 +51,7 @@
   opacity: 0;
 }
 #btn-trigger.active span:nth-of-type(3) {
-  top: rem(25);
+  top: 50%;
   // top: 25px;
   transform: translate(-50%, -50%) rotate(-45deg);
 

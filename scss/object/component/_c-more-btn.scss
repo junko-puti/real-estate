@@ -6,31 +6,15 @@
   color: #55A500;
   // transition: transform 5.8s;//animationを適用しているので不要？
 }
-.c-more-btn:hover{
-  animation: shake-right 1s ease-in-out 1; // 1秒間で1回のアニメーション
-}
-@keyframes shake-right {
-  0% {
-    transform: translateX(0); // 初期位置
-  }
-  50% {
-    transform: translateX(5px); // 右に揺れる量
-  }
-  100% {
-    transform: translateX(0); // 元の位置に戻る
-  }
-}
+// .c-more-btn a:hover{
+//   animation: shake-right 1s ease-in-out 1; // 1秒間で1回のアニメーション
+// }
 .c-more-btn__link{
   font-size: rem(20);
   /*font-weight: 600;*/
   line-height: calc(33 / 20);
   // transition: transform 5.8s;
 }
-// .c-more-btn__link:hover{
-//   text-decoration: none;
-//   // color: #4D9600;
-//   opacity: 0.5;
-// }
 .c-more-btn__arrow {
   position: relative;
   display: inline-block;
@@ -60,6 +44,12 @@
   top: rem(-9);
   width: rem(18);
   transform: rotate(-90deg);
+}
+.c-more-btn__link:hover{
+  animation: shake-right 1s ease-in-out 1; // 1秒間で1回のアニメーション
+}
+.c-more-btn__link:hover + .c-more-btn__arrow {
+  animation: shake-right 1s ease-in-out 1;
 }
 @keyframes shake-right {
   0% {
