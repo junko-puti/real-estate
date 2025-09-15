@@ -615,20 +615,6 @@ img {
   visibility: visible;
 }
 
-.js-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  z-index: 1000;
-  transition: background-color 0.3s ease;
-  transform: translateZ(0);
-}
-
 .p-header {
   transition: background-color 0.4s, padding 0.4s;
   height: 8rem;
@@ -1027,7 +1013,7 @@ img {
   }
 }
 
-.p-service-item__title {
+.p-service-item__caption {
   font-size: 1.6rem;
   line-height: 1.5625;
   color: #000000;
@@ -1057,54 +1043,54 @@ img {
   }
 }
 
-.p-service-item__body-head,
+.p-service-item__title,
 .p-service-item__body-txt {
   width: 28rem; /*微調整*/
 }
 @media (max-width: 767px) {
-  .p-service-item__body-head,
+  .p-service-item__title,
   .p-service-item__body-txt {
     width: 100%;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  .p-service-item__body-head,
+  .p-service-item__title,
   .p-service-item__body-txt {
     width: 22rem; /*微調整*/
   }
 }
 
-.p-service-item__body-head {
+.p-service-item__title {
   margin-bottom: 1.7rem;
   font-size: 2.5rem;
   /*font-weight: 400;*/
   line-height: 1.32;
 }
 @media (max-width: 767px) {
-  .p-service-item__body-head {
+  .p-service-item__title {
     margin-bottom: 1.4rem;
     font-size: 2rem;
     line-height: 1.25;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  .p-service-item__body-head {
+  .p-service-item__title {
     font-size: 2rem;
   }
 }
 
-.p-service-item__body-txt {
+.p-service-item__txt {
   font-size: 1.6rem;
   /*font-weight: 400;*/
   line-height: 1.5625;
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  .p-service-item__body-txt {
+  .p-service-item__txt {
     font-size: 1.4rem;
   }
 }
 
-.p-service-item__body-txt span {
+.p-service-item__txt span {
   display: inline-block;
 }
 
@@ -1117,11 +1103,11 @@ img {
   }
 }
 
-.p-service-item:nth-child(even) .p-service-item__title {
+.p-service-item:nth-child(even) .p-service-item__caption {
   text-align: right;
 }
 @media (max-width: 767px) {
-  .p-service-item:nth-child(even) .p-service-item__title {
+  .p-service-item:nth-child(even) .p-service-item__caption {
     text-align: left;
   }
 }

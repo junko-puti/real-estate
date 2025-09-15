@@ -1,19 +1,19 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-.js-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  z-index: 1000; // 他の要素より前面に出す
-  transition: background-color 0.3s ease;
-  transform: translateZ(0);
-}
+// .js-header {
+//   width: 100%;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   z-index: 1000; // 他の要素より前面に出す
+//   transition: background-color 0.3s ease;
+//   transform: translateZ(0);
+// }
 // .js-header.is-colored {
 //   background-color: #4D9600; // 変更後の背景色
 // }
