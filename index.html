@@ -76,10 +76,12 @@
       <!-- about -->
       <section class="p-about" id="about">
         <!-- <img src="images/pc-about.jpg" alt="伝統とイマを繋ぐ背景" class="p-about__bg"> -->
-        <picture>
-          <source srcset="images/sp-about.jpg" media="(max-width: 767px)">
-          <img src="images/pc-about.jpg" alt="ブランドの世界観を伝える背景画像" class="p-about__bg">
-        </picture>
+         <div class="p-about__bg"> 
+           <picture>
+             <source srcset="images/sp-about.jpg" media="(max-width: 767px)">
+             <img src="images/pc-about.jpg" alt="ブランドの世界観を伝える背景画像" >
+           </picture>
+         </div>
         <div class="p-about__inner p-about-inner p-fade-in">
           <h2>伝統とイマを繋ぐ</h2>
           <div class="p-about-inner__text">
@@ -514,12 +516,15 @@
         </div>
       </div>
       <p class="p-footer__copyright">&copy;Copyright0000<br class="u-sp"><span class="u-spacer"></span>kitamurakensetukogyo</p>
-      <a href="#" class="c-top-btn">
-        <picture>
-          <source srcset="./images/pc-top.png" media="(min-width: 768px)">
-          <img src="./images/sp-top.png" alt="先頭に戻るボタン">
-        </picture>
-      </a>
+      <a href="#" class="c-top-btn" aria-label="先頭に戻る"></a>
+      <!-- <a href="#" class="c-top-btn">
+        <div>
+          <picture>
+            <source srcset="./images/pc-top.png" media="(min-width: 768px)">
+            <img src="./images/sp-top.png" alt="先頭に戻るボタン">
+          </picture>
+        </div>
+      </a> -->
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

@@ -78,7 +78,11 @@
   border: none;
   background: transparent;
   color: #000000;
+  transition: opacity 0.3s ease;
   cursor: pointer;
+}
+.p-modal__close:hover {
+  opacity: 0.6;
 }
 
 /* オーバーレイ内に別エリアを用意してクリックで閉じる */

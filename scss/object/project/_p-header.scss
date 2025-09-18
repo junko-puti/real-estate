@@ -113,7 +113,6 @@
 //   text-decoration: none;
 //   color: rgba(255, 255, 255, 0.7);
 // }
-//////////////////////
 .p-header__menu a{
   position: relative;
   text-decoration: none; /* 元の下線を消す */
@@ -186,6 +185,7 @@
 }
 .p-header__drawer .p-header__menu a{
   padding: 12.5px 0 12.5px 20px;
+  transition: background-color 0.1s linear;
 }
 .p-header__drawer .p-header__menu a:hover{
   // text-decoration: underline;//8.31
