@@ -6,14 +6,20 @@
   position: fixed;
   right: rem(60);
   bottom: rem(60);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: rem(68);
   height: rem(68);
-  cursor: pointer;
+  border-radius: 50%;
+  background-color: #4D9600;
+
   /*デフォルトで非表示にする*/
   opacity: 0;
   visibility: hidden;
+
   transition: opacity 1s ease-in-out;
-  z-index: 999;
   @include sp {
     right: rem(20);
     bottom: rem(60);
@@ -21,8 +27,27 @@
     height: rem(50);
   }
 }
+.c-top-btn::before{
+  content: "";
+  display: block;
+  width: rem(20); // 画像サイズに合わせて調整
+  height: rem(20);
+  background-image: url("../images/icon-arrow-pc.png"); // 矢印画像のパス
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include sp {
+    background-image: url("../images/icon-arrow-sp.png"); // 矢印画像のパス
+}
+
+}
 .c-top-btn:hover{
-  opacity: 0.5;
+  opacity: 0.6;
+}
+/*.activeクラス付与で表示する*/
+.active{
+  opacity: 1;
+  visibility: visible;
 }
 
 // .c-top-btn::before{
@@ -40,11 +65,6 @@
 //   z-index: 99999;
 // }
 
-/*.activeクラス付与で表示する*/
-.active{
-  opacity: 1;
-  visibility: visible;
-}
 
 
 

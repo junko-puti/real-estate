@@ -33,6 +33,7 @@
   z-index: 1;
   @include sp {
     width: 100%;
+    max-width: 100%;
     padding-bottom: rem(6);
   }
 }
@@ -63,7 +64,8 @@
   background-color: #4D9600;
   @include sp {
     width: 100%;
-    padding: rem(20) 6.349% rem(12) 6.349%;
+    padding: rem(20) rem(20) rem(12);
+    // padding: rem(20) 6.349% rem(12) 6.349%;
   }
   @media (min-width: 768px) and (max-width: 979px) {
     padding-left: 23%;
@@ -129,7 +131,8 @@
   padding-left: rem(40);
   @include sp {
     margin-right: 0;
-    padding: rem(20) 6.349% rem(12) 6.349%;
+    padding: rem(20) rem(20) rem(12);
+    // padding: rem(20) 6.349% rem(12) 6.349%;
   }
 }
 

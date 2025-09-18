@@ -82,6 +82,7 @@
 
 .p-news__date{
   width: 31.28%;//calc(122 / (122 + 268) * 100%); // 比率を％で計算
+  height: rem(50);
   font-size: rem(16);
   /*font-weight: 500;*/
   line-height: calc(33 / 16);
@@ -98,6 +99,7 @@
 }
 .p-news__article{
   width: 68.72%; // 元の計算: calc(268 / (122 + 268) * 100%)
+  height: rem(50);
   font-size: rem(18);
   line-height: calc(25 / 18);
 
@@ -110,9 +112,9 @@
   @include sp {
     width: 73.818%;
   }
-  @media (max-width: 340px) {
-    font-size: rem(16);
-  }
+  // @media (max-width: 340px) {
+  //   font-size: rem(16);
+  // }
 
 }
 .p-news__date_last,

@@ -5,11 +5,12 @@ window.addEventListener('load', () => {
   const swiper = new Swiper(".swiper", {
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 3000,
       disableOnInteraction: false,
     },
     slidesPerView: 1,
     spaceBetween: 0,
+    speed: 400 // speed を指定しなければデフォルト（300ms）
   });
 });
 

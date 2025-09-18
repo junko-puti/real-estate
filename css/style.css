@@ -587,14 +587,18 @@ img {
   position: fixed;
   right: 6rem;
   bottom: 6rem;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 6.8rem;
   height: 6.8rem;
-  cursor: pointer;
+  border-radius: 50%;
+  background-color: #4D9600;
   /*デフォルトで非表示にする*/
   opacity: 0;
   visibility: hidden;
   transition: opacity 1s ease-in-out;
-  z-index: 999;
 }
 @media (max-width: 767px) {
   .c-top-btn {
@@ -605,8 +609,24 @@ img {
   }
 }
 
+.c-top-btn::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("../images/icon-arrow-pc.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 767px) {
+  .c-top-btn::before {
+    background-image: url("../images/icon-arrow-sp.png");
+  }
+}
+
 .c-top-btn:hover {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 /*.activeクラス付与で表示する*/
@@ -777,6 +797,7 @@ img {
 
 .p-header__drawer .p-header__menu a {
   padding: 12.5px 0 12.5px 20px;
+  transition: background-color 0.1s linear;
 }
 
 .p-header__drawer .p-header__menu a:hover {
@@ -859,11 +880,6 @@ img {
   display: flex;
   align-items: center;
 }
-@media (max-width: 900px) {
-  .p-about {
-    justify-content: center;
-  }
-}
 @media (max-width: 767px) {
   .p-about {
     aspect-ratio: 375/584; /* 横750px × 縦1168px (0.642 : 1)*/
@@ -871,9 +887,6 @@ img {
 }
 
 .p-about__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -881,7 +894,14 @@ img {
 }
 
 .p-about__inner {
-  width: 59.444%;
+  position: absolute;
+  left: -14%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   writing-mode: vertical-rl; /* 右から左への縦書き */
   text-orientation: upright; /* 文字を縦向きに揃える */
   transform: rotate(0deg); /* 調整が必要なら回転も可能 */
@@ -889,13 +909,9 @@ img {
 }
 @media (max-width: 767px) {
   .p-about__inner {
-    display: flex;
+    left: 0;
     flex-direction: row;
-    padding-left: 0;
-    margin: 0 auto;
     gap: 2.8rem;
-    align-items: center;
-    justify-content: center;
   }
 }
 
@@ -907,7 +923,6 @@ img {
 }
 @media (max-width: 767px) {
   .p-about h2 {
-    height: 100%;
     margin-left: 0;
     font-size: 2.5rem;
   }
@@ -1000,6 +1015,7 @@ img {
 @media (max-width: 767px) {
   .p-service-item__img {
     width: 100%;
+    max-width: 100%;
     padding-bottom: 0.6rem;
   }
 }
@@ -1034,7 +1050,7 @@ img {
 @media (max-width: 767px) {
   .p-service-item__body {
     width: 100%;
-    padding: 2rem 6.349% 1.2rem 6.349%;
+    padding: 2rem 2rem 1.2rem;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -1121,7 +1137,7 @@ img {
 @media (max-width: 767px) {
   .p-service-item:nth-child(even) .p-service-item__body {
     margin-right: 0;
-    padding: 2rem 6.349% 1.2rem 6.349%;
+    padding: 2rem 2rem 1.2rem;
   }
 }
 
@@ -1181,6 +1197,7 @@ img {
 }
 
 .p-card__title {
+  font-size: 1.6rem;
   color: #000000;
   transition: color 0.3s ease;
 }
@@ -1194,17 +1211,7 @@ img {
 }
 
 /* 767px以上：12px〜16pxで遷移 */
-@media screen and (min-width: 767px) {
-  .p-card__title {
-    font-size: clamp(12px, 2vw, 16px);
-  }
-}
 /* 767px未満：14px〜16pxで遷移 */
-@media screen and (max-width: 767px) {
-  .p-card__title {
-    font-size: clamp(14px, 5vw, 16px);
-  }
-}
 .p-modal {
   display: none;
   position: fixed;
@@ -1251,7 +1258,12 @@ img {
   border: none;
   background: transparent;
   color: #000000;
+  transition: opacity 0.3s ease;
   cursor: pointer;
+}
+
+.p-modal__close:hover {
+  opacity: 0.6;
 }
 
 /* オーバーレイ内に別エリアを用意してクリックで閉じる */
@@ -1349,6 +1361,7 @@ img {
 
 .p-news__date {
   width: 31.28%;
+  height: 5rem;
   font-size: 1.6rem;
   /*font-weight: 500;*/
   line-height: 2.0625;
@@ -1371,6 +1384,7 @@ img {
 
 .p-news__article {
   width: 68.72%;
+  height: 5rem;
   font-size: 1.8rem;
   line-height: 1.3888888889;
   display: -webkit-box;
@@ -1382,11 +1396,6 @@ img {
 @media (max-width: 767px) {
   .p-news__article {
     width: 73.818%;
-  }
-}
-@media (max-width: 340px) {
-  .p-news__article {
-    font-size: 1.6rem;
   }
 }
 
