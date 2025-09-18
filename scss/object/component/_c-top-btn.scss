@@ -30,13 +30,14 @@
 .c-top-btn::before{
   content: "";
   display: block;
-  width: rem(20); // 画像サイズに合わせて調整
+  width: rem(23); 
   height: rem(20);
   background-image: url("../images/icon-arrow-pc.png"); // 矢印画像のパス
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   @include sp {
+    width: rem(17); 
     background-image: url("../images/icon-arrow-sp.png"); // 矢印画像のパス
 }
 
