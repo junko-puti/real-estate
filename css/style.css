@@ -895,71 +895,81 @@ img {
 
 .p-about__inner {
   position: absolute;
-  /* アニメーションによる transform 上書きを防ぐため */
-  transform: translateX(-14%) !important;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 767px) {
+  .p-about__inner {
+    flex-direction: row;
+  }
+}
+
+.p-about-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 28%;
   writing-mode: vertical-rl; /* 右から左への縦書き */
   text-orientation: upright; /* 文字を縦向きに揃える */
   color: #000;
 }
 @media (max-width: 767px) {
-  .p-about__inner {
-    /* アニメーションによる transform 上書きを防ぐため */
-    transform: translateX(0) !important;
+  .p-about-message {
+    padding-right: 0;
     flex-direction: row;
     gap: 2.8rem;
   }
 }
 
-.p-about h2 {
+.p-about-message__title {
   margin-left: 4.7rem;
   font-size: 3rem;
   line-height: 1;
-  letter-spacing: 0.167em; /*118%微調整*/
+  letter-spacing: 0.167em;
 }
 @media (max-width: 830px) {
-  .p-about h2 {
+  .p-about-message__title {
     margin-left: 3.7rem;
     font-size: 2.8rem;
   }
 }
 @media (max-width: 767px) {
-  .p-about h2 {
+  .p-about-message__title {
     margin-left: 0;
     font-size: 2.5rem;
   }
 }
 @media (max-width: 340px) {
-  .p-about h2 {
+  .p-about-message__title {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 767px) {
-  .p-about-inner__text {
+  .p-about-message__text {
     min-height: 22rem;
   }
 }
 
-.p-about p {
+.p-about-message__text p {
   margin-left: 3rem;
   font-size: 1.8rem;
   line-height: 2.64;
-  letter-spacing: 0.4em; /*137％微調整*/
+  letter-spacing: 0.4em;
 }
 @media (max-width: 830px) {
-  .p-about p {
+  .p-about-message__text p {
     font-size: 1.6rem;
     line-height: 2.4;
   }
 }
 @media (max-width: 767px) {
-  .p-about p {
+  .p-about-message__text p {
     margin-left: 1rem;
     font-size: 1.6rem;
     line-height: 2;
@@ -968,7 +978,7 @@ img {
   }
 }
 
-.p-about p:last-child {
+.p-about-message__text p:last-child {
   margin-left: 0;
 }
 
