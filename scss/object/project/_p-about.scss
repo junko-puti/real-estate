@@ -8,17 +8,11 @@
   box-sizing: border-box; // パディング込みで比率を計算
   display: flex;
   align-items: center;
-  // @include media(900px) {
-  //   justify-content: center;
-  // }
   @include sp {
     aspect-ratio: 375 / 584; /* 横750px × 縦1168px (0.642 : 1)*/
   }
 }
 .p-about__bg {
-  // position: absolute;
-  // top: 0;
-  // left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -26,26 +20,27 @@
 }
 .p-about__inner {
   position: absolute;
-  left: -14%;
+  // left: -14%;
+  // padding-right: 60%;
+  /* アニメーションによる transform 上書きを防ぐため */
+  transform: translateX(-14%) !important;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // width: 59.444%;
   writing-mode: vertical-rl; /* 右から左への縦書き */
   text-orientation: upright; /* 文字を縦向きに揃える */
-  transform: rotate(0deg); /* 調整が必要なら回転も可能 */
+  // transform: rotate(0deg); /* 調整が必要なら回転も可能 */
   color: #000;
   @include sp {
-    left: 0;
+    // left: 0;
+    // padding-right: 0;
+    /* アニメーションによる transform 上書きを防ぐため */
+    transform: translateX(0) !important;
     flex-direction: row;
-    // padding-left: 0;
-    // margin: 0 auto;
     gap: rem(28);
-    // align-items: center;
-    // justify-content: center;
   }
 }
 .p-about h2{
@@ -53,8 +48,11 @@
   font-size: rem(30);
   line-height: 1;
   letter-spacing: 0.167em;/*118%微調整*/
+  @include media(830px) {
+    margin-left: rem(37);
+    font-size: rem(28);
+  }
   @include sp {
-    // height: 100%;
     margin-left: 0;
     font-size: rem(25);
   }
@@ -72,6 +70,10 @@
   font-size: rem(18);
   line-height: 2.64;//微調整
   letter-spacing: 0.4em;/*137％微調整*/
+  @include media(830px) {
+    font-size: rem(16);
+    line-height: 2.4;//微調整
+  }
   @include sp {
     margin-left: rem(10);
     font-size: rem(16);

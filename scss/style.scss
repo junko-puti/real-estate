@@ -1,32 +1,66 @@
-@use 'foundation/reset' as *;
-@use 'foundation/base' as *;
+@use 'foundation/reset';
+@use 'foundation/base';
 
 
-@use "layout/l-header" as *;
-@use "layout/l-footer" as *;
+@use "layout/l-header";
+@use "layout/l-footer";
 
-@use "object/component/c-headline" as *;
-@use "object/component/c-btn-trigger" as *;
-@use "object/component/c-more-btn" as *;
-@use "object/component/c-button" as *;
-@use "object/component/c-top-btn" as *;
+@use "object/component/c-headline";
+@use "object/component/c-btn-trigger";
+@use "object/component/c-more-btn";
+@use "object/component/c-button";
+@use "object/component/c-top-btn";
 
-@use "object/project/p-header" as *;
-@use "object/project/p-fv" as *;
-@use "object/project/p-about" as *;
-@use "object/project/p-section" as *;
-@use "object/project/p-service" as *;
-@use "object/project/p-works" as *;
-@use "object/project/p-card" as *;
-@use "object/project/p-modal" as *;
-@use "object/project/p-news" as *;
-@use "object/project/p-company" as *;
-@use "object/project/p-contact" as *;
-@use "object/project/p-form" as *;
-@use "object/project/p-footer" as *;
-@use "object/project/p-fade-in" as *;
+@use "object/project/p-header";
+@use "object/project/p-fv";
+@use "object/project/p-about";
+@use "object/project/p-section";
+@use "object/project/p-service";
+@use "object/project/p-works";
+@use "object/project/p-card";
+@use "object/project/p-modal";
+@use "object/project/p-news";
+@use "object/project/p-company";
+@use "object/project/p-contact";
+@use "object/project/p-form";
+@use "object/project/p-footer";
+@use "object/project/p-fade-in";
 
-@use "object/utility/u-pc" as *;
-@use "object/utility/u-sp" as *;
-@use "object/utility/u-mb0" as *;
-@use "object/utility/u-spacer" as *;
+@use "object/utility/u-pc";
+@use "object/utility/u-sp";
+@use "object/utility/u-mb0";
+@use "object/utility/u-spacer";
+
+
+// @use 'foundation/reset' as *;
+// @use 'foundation/base' as *;
+
+
+// @use "layout/l-header" as *;
+// @use "layout/l-footer" as *;
+
+// @use "object/component/c-headline" as *;
+// @use "object/component/c-btn-trigger" as *;
+// @use "object/component/c-more-btn" as *;
+// @use "object/component/c-button" as *;
+// @use "object/component/c-top-btn" as *;
+
+// @use "object/project/p-header" as *;
+// @use "object/project/p-fv" as *;
+// @use "object/project/p-about" as *;
+// @use "object/project/p-section" as *;
+// @use "object/project/p-service" as *;
+// @use "object/project/p-works" as *;
+// @use "object/project/p-card" as *;
+// @use "object/project/p-modal" as *;
+// @use "object/project/p-news" as *;
+// @use "object/project/p-company" as *;
+// @use "object/project/p-contact" as *;
+// @use "object/project/p-form" as *;
+// @use "object/project/p-footer" as *;
+// @use "object/project/p-fade-in" as *;
+
+// @use "object/utility/u-pc" as *;
+// @use "object/utility/u-sp" as *;
+// @use "object/utility/u-mb0" as *;
+// @use "object/utility/u-spacer" as *;

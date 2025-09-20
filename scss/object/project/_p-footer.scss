@@ -73,13 +73,13 @@
 .p-footer__menu{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
+  column-gap: rem(50);
   @include sp {
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    column-gap: rem(20);
-    row-gap: rem(4);
+    column-gap: rem(30);
+    row-gap: rem(5);
   }
 }
 .p-footer__sns-menu{
@@ -88,7 +88,6 @@
 }
 .p-footer__sns-menu a:hover{
   opacity: 0.6;
-  // transition: opacity 0.3s ease-in-out;
 }
 .p-footer__sns-menu img{
   width: rem(28);
