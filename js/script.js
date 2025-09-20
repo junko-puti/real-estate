@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
   const swiper = new Swiper(".swiper", {
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 2000,
       disableOnInteraction: false,
     },
     slidesPerView: 1,

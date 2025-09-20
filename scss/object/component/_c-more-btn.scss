@@ -10,10 +10,9 @@
 //   animation: shake-right 1s ease-in-out 1; // 1秒間で1回のアニメーション
 // }
 .c-more-btn__link{
+  // padding-left: rem(3);
   font-size: rem(20);
-  /*font-weight: 600;*/
   line-height: calc(33 / 20);
-  // transition: transform 5.8s;
 }
 .c-more-btn__arrow {
   position: relative;
@@ -21,7 +20,6 @@
   width: rem(80);
   height: rem(1);
   top: rem(-4);
-  // border-radius: 9999px;
   background-color: #55A500;
 }
 .c-more-btn__arrow::before,
