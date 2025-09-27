@@ -27,7 +27,7 @@
   overflow: hidden;
   aspect-ratio: 1 / 1;
   @include sp {
-    margin-bottom: rem(9);
+    margin-bottom: rem(9.7);//微調整9.26
     aspect-ratio: 315 / 250;
   }
 }
@@ -36,7 +36,7 @@
   // inset: 0;
   height: auto;
   width: 100%;
-  margin-bottom: rem(19);
+  // margin-bottom: rem(19);
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
   will-change: transform;
@@ -50,9 +50,9 @@
   color: #000000;
   transition: color 0.3s ease;
 }
-.p-card__title span{
-  display: inline-block;
-}
+// .p-card__title span{
+//   display: inline-block;
+// }
 .p-card__item:hover .p-card__title{
   color: rgba(0, 0, 0, 0.6);
 }

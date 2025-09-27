@@ -37,14 +37,10 @@
 .c-btn-trigger span:nth-of-type(1) { top: 26%;};
 .c-btn-trigger span:nth-of-type(2) { top: 50%;};
 .c-btn-trigger span:nth-of-type(3) { top: 74%;};
-// .c-btn-trigger span:nth-of-type(1) { top: rem(11);};
-// .c-btn-trigger span:nth-of-type(2) { top: rem(23);};
-// .c-btn-trigger span:nth-of-type(3) { top: rem(35);};
 
 // アクティブ時（×になる）
 #btn-trigger.active span:nth-of-type(1) {
   top: 50%;
-  // top: 25px;
   transform: translate(-50%, -50%) rotate(45deg);
 }
 #btn-trigger.active span:nth-of-type(2) {
@@ -52,8 +48,6 @@
 }
 #btn-trigger.active span:nth-of-type(3) {
   top: 50%;
-  // top: 25px;
   transform: translate(-50%, -50%) rotate(-45deg);
-
 }
 

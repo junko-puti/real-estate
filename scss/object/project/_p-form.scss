@@ -2,77 +2,58 @@
 @use '../../foundation/mixin' as *;
 
 
-.p-form__item,
-.p-form__item_row {
+.p-form__item {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: rem(50);
   @include sp {
     flex-direction: column;
-    align-items: flex-start;
+    // align-items: flex-start;
     margin-bottom: rem(30);
   }
 }
 .p-form__label {
   width: 21.25%;
   font-size: rem(20);
-  /*font-weight: 500;*/
   line-height: calc(33 / 20);
+  @media (min-width: 768px) and (max-width: 900px) {
+    width: 24%;
+  }
   @include sp {
     width: 100%;
   }
-  @media (min-width: 768px) and (max-width: 979px) {
-    font-size: rem(16);
+}
+.p-form__input {
+  flex: 1;
+  font-size: rem(16);
+  line-height: calc(25 / 16);
+  @include sp {
+    width: 100%;
   }
 }
+/*gender*/
 .p-form__item_gender {
   @include sp {
     flex-direction: row;
   }
 }
 .p-form__item_gender .p-form__label {
-  @include sp {
+  @media (min-width: 501px) and (max-width: 767px) {
+  // @media (min-width: 501px) and (max-width: 767.3333px) {
+    width: 18%;
+  }
+  @media (max-width: 500px) {
     width: 28%;
   }
 }
 .p-form__item_gender .p-form__input {
   @include sp {
-    width: 72%;
+    flex: 1;//9.25
     gap: rem(27);
   }
 }
-.p-form__item_row {
-  @include sp {
-    flex-direction: row;
-    gap: rem(50);
-  }
-}
-.p-form__item_row .p-form__label {
-  @include sp {
-    width: auto;
-  }
-}
-.p-form__item_row .p-form__input {
-  @include sp {
-    width: auto;
-  }
-}
-.p-form__item_row .p-form__radio label {
-  @include sp {
-  margin-right: rem(30);
-  }
-}
-/*----------------------*/
-.p-form__input {
-  width: 78.75%;
-  font-size: rem(16);
-  /*font-weight: 500;*/
-  line-height: calc(25 / 16);
-  @include sp {
-    width: 100%;
-  }
-}
+/**/
 .p-form__textarea-container .p-form__label,
 .p-form__checkbox-container .p-form__label,
 .p-form__privacy .p-form__label{
@@ -81,9 +62,6 @@
   @include sp {
       margin-bottom: 0;
   }
-  // @media (max-width: 340px) {
-  //   font-size: rem(14);
-  // }
 }
 .p-form__textarea-container .p-form__input{
   width: 100%;
@@ -137,30 +115,28 @@
   margin-right: rem(21);
 }
 .p-form__checkbox{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4列を均等な幅で設定 */
-    row-gap: rem(16);
-    column-gap: rem(7);
-    width: 100%;
-    @include sp {
-      grid-template-columns: repeat(2, 1fr); /* 4列を均等な幅で設定 */
-      row-gap: rem(5);
-      column-gap: rem(1);
-    }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4列を均等な幅で設定 */
+  row-gap: rem(16);
+  column-gap: rem(7);
+  width: 100%;
+  @include sp {
+    grid-template-columns: repeat(2, 1fr); /* 2列*/
+    row-gap: rem(5);
+    column-gap: rem(1);
+  }
+  @include media(350px) {
+    grid-template-columns: repeat(1, 1fr); /* 4列*/
+  }
 }
 .p-form__radio label,
 .p-form__checkbox label {
   font-size: rem(18);
-  /*font-weight: 500;*/
   line-height: calc(25 / 18);
-  // display: flex;//9.2
   display: inline-flex;//9.2
   width: fit-content;//9.2
   align-items: center;
   cursor: pointer;
-  @media (min-width: 768px) and (max-width: 979px) {
-    font-size: rem(14);
-  }
 }
 .p-form__checkbox label {
   @include sp {
@@ -173,15 +149,8 @@
   line-height: calc(33 / 20);
 }
 
-.p-form__checkbox label {
-  @media (max-width: 340px) {
-    font-size: rem(14);
-  }
-}
 .p-form__required {
-  margin-left: 0.5em; //アスタリスクの前に少し空ける
-  // font-weight: bold;
-  // font-size: 0.9em;// やや小さめでもOK
+  margin-left: 0.7em; //アスタリスクの前に少し空ける微調整9.26
 }
 
 
@@ -208,49 +177,7 @@
   background-repeat: no-repeat;
   pointer-events: none;
 }
-// [type="radio"] {
-// // [type="radio"] ,
-// // [type="checkbox"]{
-//   width: rem(20);
-//   height: rem(20);
-//   background-color: #FFFFFF;
-//   cursor: pointer;
-//   appearance: none;
-//   position: relative;
-// }
-// [type="radio"] {
-//   margin-right: rem(19);
-//   border-radius: 50%;
-// }
-// [type="radio"]:checked::after {
-//   content: '';
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 6px;
-//   height: 6px;
-//   background: #000;
-//   border-radius: 50%;
-// }
 
-// [type="checkbox"]{
-//   margin-right: rem(20);
-//   @include sp {
-//     margin-right: rem(10);
-//   }
-// }
-// [type="checkbox"]:checked::after {
-//   content: '';
-//   position: absolute;
-//   top: 0px;
-//   left: 6px;
-//   width: 8px;
-//   height: 12px;
-//   border: solid #000;
-//   border-width: 0 2px 2px 0;
-//   transform: rotate(45deg);
-// }
 .p-form__radio-custom span,
 .p-form__checkbox-custom span{
   position: relative;
@@ -261,12 +188,6 @@
   padding-left: rem(40);
   @include media(900px) {
     padding-left: rem(30);
-  }
-  // @include sp {
-  //   padding-left: rem(30);
-  // }
-  @include media(350px) {
-    padding-left: rem(23);
   }
 }
 .p-form__radio-custom span::before ,
@@ -282,7 +203,6 @@
   box-sizing: border-box;
 }
 .p-form__radio-custom span::before{
-  // margin-right: rem(19);//9.8
   left: rem(-20);
   border-radius: 50%;
 }
@@ -291,40 +211,23 @@
   position: absolute;
   top: 50%;
   left: rem(-10);
-  // left: 50%;
   transform: translate(-50%, -50%);
   width: rem(6);
   height: rem(6);
   background: #000;
   border-radius: 50%;
 }
-// .p-form__checkbox-custom input:checked + span::after {
-//   content: '';
-//   position: absolute;
-//   top: 0;
-//   left: rem(6);
-//   width: rem(8);
-//   height: rem(12);
-//   border: solid #000;
-//   border-width: 0 rem(2) rem(2) 0;
-//   transform: rotate(45deg);
-// }
 .p-form__checkbox-custom input:checked + span::after {
   content: '';
   position: absolute;
   top: 50%;
   left: rem(10); // ::before の left + width / 2
-  // left: rem(-10); // ::before の left + width / 2
   transform: translate(-50%, -50%) rotate(45deg);
   width: rem(8);
   height: rem(12);
   border: solid #000;
   border-width: 0 rem(2) rem(2) 0;
 }
-
-
-
-
 
 input:focus,
 textarea:focus,
@@ -342,7 +245,7 @@ input[type="submit"] {
 
 /*個人情報保護方針*/
 .p-form-privacy {
-  margin-bottom: rem(80);
+  margin-bottom: rem(78);//微調整9.26
   @include sp {
     margin-bottom: rem(50);
   }
@@ -360,18 +263,15 @@ input[type="submit"] {
 }
 .p-form-privacy__container {
   width: calc(100% - 10px);
-  // width: 100%;
   max-height: rem(280); /* 縦スクロールの高さを制限 */
-  // max-height: rem(300); /* 縦スクロールの高さを制限 */
   overflow: auto; /* 必要に応じてスクロールを追加 */
-  padding-top: rem(40);
-  padding-bottom: rem(40);
+  padding-top: rem(30);
+  // padding-bottom: rem(40);
   background: #FFFFFF;
   @include sp {
     max-height: rem(290); /* 縦スクロールの高さを制限 */
-    // max-height: rem(323); /* 縦スクロールの高さを制限 */
-    padding-top: rem(30);
-    padding-bottom: rem(30);
+    padding-top: rem(20);
+    // padding-bottom: rem(20);
   }
 }
 .p-form-privacy__inner {
@@ -379,13 +279,9 @@ input[type="submit"] {
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
-  // padding-left: rem(40);
-  // padding-right: rem(40);
   @include sp {
     padding-left: 30px;
     padding-right: 30px;
-    // padding-left: rem(30);
-    // padding-right: rem(30);
   }
 }
 .p-form-privacy article{
@@ -393,9 +289,9 @@ input[type="submit"] {
 }
 .p-form-privacy__title,
 .p-form-privacy__text,
-.p-form-privacy__list li{
+.p-form-privacy__list li,
+.p-form-privacy__address p{
   font-size: rem(18);
-  /*font-weight: 500;*/
   line-height: calc(31 / 18);
   @include sp {
     font-size: rem(16);
@@ -409,33 +305,18 @@ input[type="submit"] {
   list-style-type: disc; /* 点をリストアイコンとして使用 */
   margin-left: rem(20);
 }
-.p-form-privacy__address{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.p-form-privacy__address p{
+  width: 100%;
 }
-.p-form-privacy__address .p-form-privacy__title{
-  margin-top: 0;
-  width: 15%;
+.p-form-privacy__address span{
+margin-right: 0.3em;
 }
-.p-form-privacy__address .p-form-privacy__text{
-  width: 85%;
-}
-.p-form-privacy__address .p-form-privacy__title-last{
-  width: 30%;
-  margin-top: 0;
-}
-.p-form-privacy__address .p-form-privacy__text-last{
-  width: 70%;
+@include sp {
+  .p-form-privacy__address p:last-of-type span{
+    display: block;
+  }
 }
 
-
-/*スクロールバーのカスタマイズ 優先してしまうので設定しない*/
-/* Firefox対応 */
-  // .p-form-privacy__container {
-  //   scrollbar-width: thin; /* スクロールバーの太さ: auto | thin | none */
-  //   scrollbar-color: #9B9B9B #f0f0f0;/* thumb色 / track色 */
-  // }
 
 /* WebKit系（Chrome, Safari, Edge）対応 */
 .p-form-privacy__container::-webkit-scrollbar {
@@ -451,3 +332,9 @@ input[type="submit"] {
   display: none;
   height: 0;
 }
+/*スクロールバーのカスタマイズ 優先してしまうので設定しない*/
+/* Firefox対応 */
+  // .p-form-privacy__container {
+  //   scrollbar-width: thin; /* スクロールバーの太さ: auto | thin | none */
+  //   scrollbar-color: #9B9B9B #f0f0f0;/* thumb色 / track色 */
+  // }

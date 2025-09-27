@@ -1,8 +1,15 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-.u-sp{
-  @include pc{
-     display: none;
+// .u-sp{
+//   @include pc{
+//      display: none;
+//   }
+// }
+
+.u-sp {
+  display: none;
+  @include sp {
+    display: block;
   }
 }

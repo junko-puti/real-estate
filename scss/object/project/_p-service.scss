@@ -8,7 +8,7 @@
 .p-service__list{
   display: flex;
   flex-direction: column;
-  row-gap: rem(80);
+  row-gap: rem(82);//微調整9.26
   @include sp {
     row-gap: rem(50);
   }
@@ -75,7 +75,7 @@
 .p-service-item__title,
 .p-service-item__body-txt{
   // width: rem(275);
-  width: rem(280);/*微調整*/
+  // width: rem(280);/*微調整*/
   @include sp {
     width: 100%;
   }

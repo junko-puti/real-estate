@@ -4,22 +4,17 @@
 
 .c-more-btn{
   color: #55A500;
-  // transition: transform 5.8s;//animationを適用しているので不要？
 }
-// .c-more-btn a:hover{
-//   animation: shake-right 1s ease-in-out 1; // 1秒間で1回のアニメーション
-// }
 .c-more-btn__link{
-  // padding-left: rem(3);
   font-size: rem(20);
-  line-height: calc(33 / 20);
+  line-height: 0.6;//9.25
 }
 .c-more-btn__arrow {
   position: relative;
   display: inline-block;
   width: rem(80);
   height: rem(1);
-  top: rem(-4);
+  top: rem(7);//9.25
   background-color: #55A500;
 }
 .c-more-btn__arrow::before,
@@ -27,7 +22,6 @@
   content: "";
   position: absolute;
   height: rem(1);
-  // border-radius: 9999px;
   background-color: #55A500;
   transform-origin: calc(100% - 0.5px) 50%;
 }
@@ -38,7 +32,7 @@
   transform: rotate(45deg);
 }
 .c-more-btn__arrow::after {
-  right: rem(9);
+  right: rem(9.5);
   top: rem(-9);
   width: rem(18);
   transform: rotate(-90deg);

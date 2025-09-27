@@ -3,21 +3,22 @@
 
 
 .p-contact{
-  margin-top: rem(-2);/*微調整*/
+  // margin-top: rem(-2);/*微調整*/
   color: #000000;
-  background-color: rgba(77, 150, 0, 0.1);
+  // background-color: rgba(77, 150, 0, 0.1);
+  background-color: rgba(77, 150, 0, 0.149)
+;
 }
 .p-contact__inner{
-padding-left: rem(90);
-padding-right: rem(90);
-  @include sp {
-    padding-left: rem(30);
-    padding-right: rem(30);
-  }
+  max-width: 860px;
+  margin: 0 auto;
 }
 
 .p-contact__headline{
   margin-bottom: rem(35);
+    @include sp {
+      margin-bottom: rem(38);
+    }
 }
 .p-contact__message{
   // margin-top: rem(-33);
@@ -34,9 +35,9 @@ padding-right: rem(90);
     margin-bottom: rem(40);
   }
 }
-.p-contact__message span{
-  display: inline-block;
-}
+// .p-contact__message span{
+//   display: inline-block;
+// }
 .p-contact__form{
   padding-left: rem(60);
   padding-right: rem(60);

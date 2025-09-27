@@ -3,10 +3,8 @@
 
 
 .c-headline{
-  // padding-bottom: rem(68);
   margin-bottom: rem(68);
   @include sp {
-  // padding-bottom: rem(38);
   margin-bottom: rem(38);
 
   }
@@ -15,10 +13,7 @@
 .c-headline__main {
   padding-left: rem(8);/*微調整*/
   font-size: rem(30);
-  /*font-weight: 500;*/
-  // line-height:calc(33 / 30);
   line-height:1.16;
-  // letter-spacing: 0.3em; 
   letter-spacing: 0.28em; 
   text-align: center;
   color:rgba(77, 150, 0, 1);
@@ -28,9 +23,8 @@
   display: block;
   margin-top: rem(5);
   font-size:rem(20) ;
-  /*font-weight: 500;*/
   line-height:calc(33 / 20);
-  letter-spacing: 0.3em; 
+  letter-spacing: 0.26em; //微調整9.26
   text-align: center;
   color:rgba(0, 0, 0, 1);
 }

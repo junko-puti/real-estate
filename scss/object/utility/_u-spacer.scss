@@ -4,7 +4,4 @@
 .u-spacer{
   display: inline-block;
   width: 1em; // 全角1文字ぶん
-  @include sp {
-    display: none; // スマホでは非表示
-  }
 }
