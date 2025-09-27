@@ -46,8 +46,10 @@
   }
 }
 .p-about-message__title{
-  margin-left: rem(47);
+  margin-top: rem(6);//9.27
+  margin-left: rem(45);
   font-size: rem(30);
+  font-weight: 600;
   line-height: 1;
   letter-spacing: 0.167em;
   @include media(830px) {
@@ -70,7 +72,7 @@
 .p-about-message__text p{
   margin-left: rem(30);
   font-size: rem(18);
-  line-height: 2.64;//微調整
+  line-height: 2.66;//微調整
   letter-spacing: 0.4em;
   @include media(830px) {
     font-size: rem(16);

@@ -47,7 +47,7 @@
   // flex: 1; /*34.782%*/
   width: 54.347%;
   margin-left: -19.565%;
-  padding-top: rem(49);
+  padding-top: rem(48.5);//微調整9.26
   padding-bottom: rem(42);
   color: #ffffff;
   background-color: #4D9600;
@@ -90,20 +90,21 @@
   margin-bottom: rem(12);
 }
 .p-company-details__tel{
-  margin-bottom: rem(19);
+  margin-bottom: rem(16.5);//微調整9.29
 }
-.p-company-details__tel span{
+.p-company-details__tel span:nth-of-type(2){
   display: inline-block;
   font-size: rem(25);
   line-height: calc(25/25); /* 親要素の line-height を継承 */
+  letter-spacing: -0.02em;
   @media (min-width: 768px) and (max-width: 979px) {
     font-size: rem(20);
   }
 }
-// .p-company-details__mail span{
-//   display: inline-block;
-//   width: 1em; // 全角1文字ぶん
-// }
+.p-company-details__mail span{
+  display: inline-block;
+  margin-right: rem(12); // 全角1文字ぶん
+}
 
 
 /*メール*/

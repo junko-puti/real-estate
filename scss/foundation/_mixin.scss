@@ -1,5 +1,6 @@
 // SPのみ（〜767px）
 @mixin sp {
+  // @media (max-width: 767.3333px) {//test用
   @media (max-width: 767px) {
     @content;
   }
