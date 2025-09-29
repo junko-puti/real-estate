@@ -1314,7 +1314,6 @@ img {
 
 .p-news__content {
   width: 46.74%;
-  height: 38.3rem;
   background-color: rgb(255, 255, 255);
 }
 @media (max-width: 767px) {
@@ -1675,12 +1674,17 @@ img {
 
 @media (min-width: 501px) and (max-width: 767px) {
   .p-form__item_gender .p-form__label {
-    width: 18%;
+    width: 10rem;
   }
 }
 @media (max-width: 500px) {
   .p-form__item_gender .p-form__label {
-    width: 28%;
+    width: 8.7rem;
+  }
+}
+@media (max-width: 340px) {
+  .p-form__item_gender .p-form__label {
+    width: 6rem;
   }
 }
 
