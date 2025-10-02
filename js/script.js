@@ -15,6 +15,8 @@ window.addEventListener('load', () => {
 });
 
 
+
+//////////////////////////////////////////////////
 // スムーススクロール（ヘッダー高さ80px考慮）
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -84,29 +86,56 @@ $(function(){
 
 //////////////////////////////////////////////////
 // メニュー背景色の変化---ABOUTエリアが画面の真ん中に来たら変更する
+// function updateHeaderClass() {
+//   const $about = $('#about');
+//   const headerHeight = $('.js-header').outerHeight(); // ヘッダーの高さを取得
+
+//   if ($about.length === 0 || !$about.offset()) return;
+
+//   const aboutOffset = $about.offset().top;
+//   const scrollPosition = $(window).scrollTop();
+//   const windowHeight = $(window).height();
+
+//   if (scrollPosition >= aboutOffset - headerHeight){//ヘッダーの高さ分を残して
+//     $('.js-header').addClass('is-colored');
+//   } else {
+//     $('.js-header').removeClass('is-colored');
+//   }
+// }
+
+// $(function () {
+//   updateHeaderClass();
+//   $(window).on('scroll', updateHeaderClass);
+// });
+
+//////////////////////////////////////////////////
+// メニュー背景色の変化---p-fvの高さ分以上スクロールしたら変更する
 function updateHeaderClass() {
-  const $about = $('#about');
-  const headerHeight = $('.js-header').outerHeight(); // ヘッダーの高さを取得
+  const $fv = $('.p-fv'); // FVセクションを取得
+  const fvHeight = $fv.outerHeight(); // FVの高さ
+  const headerHeight = $('.js-header').outerHeight(); // ヘッダーの高さ
+  const scrollPosition = $(window).scrollTop(); // 現在のスクロール位置
 
-  if ($about.length === 0 || !$about.offset()) return;
-
-  const aboutOffset = $about.offset().top;
-  const scrollPosition = $(window).scrollTop();
-  const windowHeight = $(window).height();
-
-  // if (scrollPosition + windowHeight / 2 > aboutOffset) {
-  // if (scrollPosition >= aboutOffset) {//ページがスクロールして #about の上端が window の上端に達したら
-  if (scrollPosition >= aboutOffset - headerHeight){//ヘッダーの高さ分を残して
+  // FVの高さ分以上スクロールしたら
+  if (scrollPosition >= fvHeight) {
     $('.js-header').addClass('is-colored');
   } else {
     $('.js-header').removeClass('is-colored');
   }
+
+  // もし「FVがヘッダーの下に隠れたら」にしたい場合はこちらを使う
+  // if (scrollPosition >= fvHeight - headerHeight) {
+  //   $('.js-header').addClass('is-colored');
+  // } else {
+  //   $('.js-header').removeClass('is-colored');
+  // }
 }
 
 $(function () {
   updateHeaderClass();
   $(window).on('scroll', updateHeaderClass);
 });
+
 
 
 

@@ -7,23 +7,36 @@
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: rem(50);
+  column-gap: rem(15);
   @include sp {
     flex-direction: column;
-    // align-items: flex-start;
+    align-items: flex-start;
     margin-bottom: rem(30);
   }
 }
 .p-form__label {
-  width: 21.25%;
+  width: rem(155);
   font-size: rem(20);
   line-height: calc(33 / 20);
-  @media (min-width: 768px) and (max-width: 900px) {
-    width: 24%;
-  }
-  @include sp {
-    width: 100%;
-  }
+
+  // @media (min-width: 768px) and (max-width: 900px) {
+  //   width: 24%;
+  // }
+  // @include sp {
+  //   width: 100%;
+  // }
 }
+// .p-form__label {
+//   width: 21.25%;
+//   font-size: rem(20);
+//   line-height: calc(33 / 20);
+//   @media (min-width: 768px) and (max-width: 900px) {
+//     width: 24%;
+//   }
+//   @include sp {
+//     width: 100%;
+//   }
+// }
 .p-form__input {
   flex: 1;
   font-size: rem(16);
@@ -55,7 +68,7 @@
 .p-form__item_gender .p-form__input {
   @include sp {
     flex: 1;//9.25
-    gap: rem(27);
+    gap: rem(51);//10.2
   }
 }
 /**/
@@ -188,6 +201,9 @@
   position: relative;
   padding-left: rem(20);
   display: inline-block;
+  @include sp {
+    padding-left: 0;
+  }
 }
 .p-form__checkbox-custom span{
   padding-left: rem(40);
@@ -210,6 +226,10 @@
 .p-form__radio-custom span::before{
   left: rem(-20);
   border-radius: 50%;
+  @include sp {
+    left: rem(-40);
+  }
+
 }
 .p-form__radio-custom input:checked + span::after {
   content: '';
