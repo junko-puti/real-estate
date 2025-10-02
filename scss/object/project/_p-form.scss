@@ -68,7 +68,7 @@
 .p-form__item_gender .p-form__input {
   @include sp {
     flex: 1;//9.25
-    gap: rem(51);//10.2
+    gap: rem(41);//10.2
   }
 }
 /**/
@@ -202,7 +202,7 @@
   padding-left: rem(20);
   display: inline-block;
   @include sp {
-    padding-left: 0;
+    padding-left: rem(7);
   }
 }
 .p-form__checkbox-custom span{
@@ -227,7 +227,7 @@
   left: rem(-20);
   border-radius: 50%;
   @include sp {
-    left: rem(-40);
+    left: rem(-33);
   }
 
 }

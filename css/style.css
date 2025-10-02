@@ -1471,7 +1471,7 @@ img {
 @media (max-width: 767px) {
   .p-company-details__info {
     width: 100%;
-    padding: 1.9rem 1.2rem 2rem 2rem;
+    padding: 1.9rem 2rem 1.2rem 2rem;
   }
 }
 
@@ -1665,7 +1665,7 @@ img {
 @media (max-width: 767px) {
   .p-form__item_gender .p-form__input {
     flex: 1;
-    gap: 5.1rem;
+    gap: 4.1rem;
   }
 }
 
@@ -1820,7 +1820,7 @@ img {
 @media (max-width: 767px) {
   .p-form__radio-custom span,
   .p-form__checkbox-custom span {
-    padding-left: 0;
+    padding-left: 0.7rem;
   }
 }
 
@@ -1852,7 +1852,7 @@ img {
 }
 @media (max-width: 767px) {
   .p-form__radio-custom span::before {
-    left: -4rem;
+    left: -3.3rem;
   }
 }
 
