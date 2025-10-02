@@ -634,7 +634,7 @@ img {
 }
 
 .p-header {
-  transition: background-color 0.4s, padding 0.4s;
+  transition: background-color 0.4s, padding 0.6s;
   height: 8rem;
   display: flex;
   align-items: center;
@@ -1360,13 +1360,15 @@ img {
 
 .p-news__entry a {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
   width: 100%;
   padding: 1.65rem 0;
+  column-gap: 17.6%;
   transition: color 0.3s ease-in-out;
-  box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  .p-news__entry a {
+    column-gap: 6.9%;
+  }
 }
 
 .p-news__entry a:hover {
@@ -1374,15 +1376,8 @@ img {
 }
 
 .p-news__date {
-  width: 31.28%;
   font-size: 1.6rem;
-  /*font-weight: 500;*/
   line-height: 1.3888888889; /*記事の高さにそろえる*/
-}
-@media (max-width: 767px) {
-  .p-news__date {
-    width: 20.727%;
-  }
 }
 @media (max-width: 340px) {
   .p-news__date {
@@ -1390,13 +1385,7 @@ img {
   }
 }
 
-.p-news__date_time {
-  line-height: 1.3888888889; /*textと揃える*/
-  vertical-align: top;
-}
-
 .p-news__article {
-  width: 68.72%;
   font-size: 1.8rem;
   line-height: 1.3888888889;
   display: -webkit-box;
@@ -1404,11 +1393,6 @@ img {
   -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-@media (max-width: 767px) {
-  .p-news__article {
-    width: 73.818%;
-  }
 }
 
 @media (max-width: 767px) {
@@ -1475,21 +1459,19 @@ img {
 .p-company-details__info {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   width: 54.347%;
   margin-left: -19.565%;
   padding-top: 4.85rem;
   padding-bottom: 4.2rem;
+  padding-left: 24%;
+  padding-right: 0.5rem;
   color: #ffffff;
   background-color: #4D9600;
 }
 @media (max-width: 767px) {
   .p-company-details__info {
     width: 100%;
-    padding-top: 1.9rem;
-    padding-bottom: 1.2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 1.9rem 1.2rem 2rem 2rem;
   }
 }
 
@@ -1630,28 +1612,20 @@ img {
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 5rem;
+  column-gap: 1.5rem;
 }
 @media (max-width: 767px) {
   .p-form__item {
     flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 3rem;
   }
 }
 
 .p-form__label {
-  width: 21.25%;
+  width: 15.5rem;
   font-size: 2rem;
   line-height: 1.65;
-}
-@media (min-width: 768px) and (max-width: 900px) {
-  .p-form__label {
-    width: 24%;
-  }
-}
-@media (max-width: 767px) {
-  .p-form__label {
-    width: 100%;
-  }
 }
 
 .p-form__input {
@@ -1691,7 +1665,7 @@ img {
 @media (max-width: 767px) {
   .p-form__item_gender .p-form__input {
     flex: 1;
-    gap: 2.7rem;
+    gap: 5.1rem;
   }
 }
 
@@ -1843,6 +1817,12 @@ img {
   padding-left: 2rem;
   display: inline-block;
 }
+@media (max-width: 767px) {
+  .p-form__radio-custom span,
+  .p-form__checkbox-custom span {
+    padding-left: 0;
+  }
+}
 
 .p-form__checkbox-custom span {
   padding-left: 4rem;
@@ -1869,6 +1849,11 @@ img {
 .p-form__radio-custom span::before {
   left: -2rem;
   border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .p-form__radio-custom span::before {
+    left: -4rem;
+  }
 }
 
 .p-form__radio-custom input:checked + span::after {
@@ -2141,7 +2126,7 @@ input[type=submit] {
   /*font-weight: 500;*/
   line-height: 1.8333333333;
   letter-spacing: 0.01em;
-  transition: opacity 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .p-footer__logo a:hover,

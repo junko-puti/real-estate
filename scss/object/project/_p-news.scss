@@ -66,40 +66,41 @@
 }
 .p-news__entry a{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  // flex-direction: row;
+  // justify-content: space-between;
+  // align-items: flex-start;
   width: 100%;
   padding: rem(16.5) 0;
-  // height: 100%;
-  // height: rem(83);//9.12
+  column-gap: 17.6%;
+  // column-gap: rem(68.5);
   transition: color 0.3s ease-in-out;
-  box-sizing: border-box; // パディング込みで高さを計算
+  // box-sizing: border-box; // パディング込みで高さを計算
+  @include sp {
+    column-gap: 6.9%;
+    // column-gap: rem(19);
+  }
 }
 .p-news__entry a:hover{
   color: rgba(0, 0, 0, 0.5);
 }
 
 .p-news__date{
-  width: 31.28%;//calc(122 / (122 + 268) * 100%); // 比率を％で計算
-  // height: rem(50);
+  // width: 31.28%;//calc(122 / (122 + 268) * 100%); // 比率を％で計算
   font-size: rem(16);
-  /*font-weight: 500;*/
-  // line-height: calc(33 / 16);
   line-height: calc(25 / 18);/*記事の高さにそろえる*/
-  @include sp {
-    width: 20.727%;
-  }
+  // @include sp {
+  //   width: 20.727%;
+  // }
   @media (max-width: 340px) {
     font-size: rem(14);
   }
 }
-.p-news__date_time {
-  line-height: calc(25 / 18);/*textと揃える*/
-  vertical-align: top;
-}
+// .p-news__date_time {
+//   line-height: calc(25 / 18);/*textと揃える*/
+//   vertical-align: top;
+// }
 .p-news__article{
-  width: 68.72%; // 元の計算: calc(268 / (122 + 268) * 100%)
+  // width: 68.72%; // 元の計算: calc(268 / (122 + 268) * 100%)
   // height: rem(50);
   font-size: rem(18);
   line-height: calc(25 / 18);
@@ -109,9 +110,9 @@
   // line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-  @include sp {
-    width: 73.818%;
-  }
+  // @include sp {
+  //   width: 73.818%;
+  // }
   // @media (max-width: 340px) {
   //   font-size: rem(16);
   // }

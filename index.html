@@ -290,10 +290,10 @@
             <h2 class="c-headline__main">COMPANY<span class="c-headline__sub">会社概要</span></h2>
           </div>
           <div class="p-company__details p-company-details p-fade-in">
-            <figure class="p-company-details__map">
+            <div class="p-company-details__map">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13412.71896604478!2d129.83095079999993!3d32.81400219999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356aad7694d1194f%3A0x17f1422c9430784f!2z44CSODUyLTgwNjUg6ZW35bSO55yM6ZW35bSO5biC5qiq5bC-!5e0!3m2!1sja!2sjp!4v1758939176034!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13412.716307548506!2d129.82065103422545!3d32.814019812269144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356aad7694d1194f%3A0x17f1422c9430784f!2z44CSODUyLTgwNjUg6ZW35bSO55yM6ZW35bSO5biC5qiq5bC-!5e0!3m2!1sja!2sjp!4v1752557769004!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-            </figure>
+            </div>
             <div class="p-company-details__info">
               <h3 class="p-company-details__company-name">株式会社 北村建設興業</h3>
               <p class="p-company-details__access p-company-details__address">
@@ -334,8 +334,14 @@
             <div class="p-form__item p-form__item_gender">
               <p class="p-form__label ">性別</p>
               <div class="p-form__input p-form__radio">
-                <label class="p-form__radio-custom"><input type="radio" id="male" name="gender" value="男性"><span>男性</span></label>
-                <label class="p-form__radio-custom"><input type="radio" id="female" name="gender" value="女性"><span>女性</span></label>
+                <label class="p-form__radio-custom" for="male">
+                  <input type="radio" id="male" name="gender" value="男性">
+                  <span>男性</span>
+                </label>
+                <label class="p-form__radio-custom" for="female">
+                  <input type="radio" id="female" name="gender" value="女性">
+                  <span>女性</span>
+                </label>
               </div>
             </div>
             
@@ -368,12 +374,10 @@
             </div>
 
             <div class="p-form__item p-form__checkbox-container"><!--6.5-->
-
               <p class="p-form__label">
                 何を見て当社HPを知りましたか？<br class="u-sp"> (複数回答可)
                 <span class="p-form__required">*</span>
               </p>
-
               <div class="p-form__input p-form__checkbox">
                 <label class="p-form__checkbox-custom"><input type="checkbox" name="source[]" value="internet" id="internet"><span>インターネット</span></label>
                 <label class="p-form__checkbox-custom"><input type="checkbox" name="source[]" value="flyer" id="flyer"><span>チラシ</span></label>
