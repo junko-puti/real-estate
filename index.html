@@ -324,16 +324,18 @@
 
           <form action="#" method="post">
           <!-- <form class="p-contact__form p-form p-fade-in" method="post" action="javascript:void(0);" onsubmit="event.preventDefault(); alert('送信は行われません');"></form> -->
-            <div class="p-form__item">
-              <label class="p-form__label" for="name">お名前 *</label>
-              <div class="p-form__input">
+            <dl class="p-form__item">
+              <dt class="p-form__label">
+                <label for="name">お名前 *</label>
+              </dt>
+              <dd class="p-form__input">
                 <input type="text" id="name" name="お名前" class="p-form__text" placeholder="例：北村太郎" autocomplete="name">
-              </div>
-            </div>
+              </dd>
+            </dl>
 
-            <div class="p-form__item p-form__item_gender">
-              <p class="p-form__label ">性別</p>
-              <div class="p-form__input p-form__radio">
+            <dl class="p-form__item p-form__item_gender">
+              <dt class="p-form__label ">性別</dt>
+              <dd class="p-form__input p-form__radio">
                 <label class="p-form__radio-custom" for="male">
                   <input type="radio" id="male" name="gender" value="男性">
                   <span>男性</span>
@@ -342,19 +344,22 @@
                   <input type="radio" id="female" name="gender" value="女性">
                   <span>女性</span>
                 </label>
-              </div>
-            </div>
-            
-            <div class="p-form__item">
-              <label class="p-form__label" for="mail">メールアドレス *</label>
-              <div class="p-form__input">
+              </dd>
+            </dl>
+            <dl class="p-form__item">
+              <dt class="p-form__label">
+                <label for="mail">メールアドレス *</label>
+              </dt>
+              <dd class="p-form__input">
                 <input type="email" id="mail" name="メールアドレス" class="p-form__text" placeholder="例：aaaaaaaa@gmail.com" autocomplete="email">
-              </div>
-            </div>
+              </dd>
+            </dl>
 
-            <div class="p-form__item">
-              <label class="p-form__label" for="category">問い合わせ種別</label>
-              <div class="p-form__input p-form__input-select">
+            <dl class="p-form__item">
+              <dt class="p-form__label">
+                <label for="category">問い合わせ種別</label>
+              </dt>
+              <dd class="p-form__input p-form__input-select">
                 <select name="選択肢" id="category" class="p-form__select">
                   <option selected>家づくりについて</option>
                   <option>Google/Yahoo検索</option>
@@ -363,22 +368,24 @@
                   <option>友人や知人</option>
                   <option>その他</option>
                 </select>
-              </div>
-            </div>
+              </dd>
+            </dl>
 
-            <div class="p-form__item p-form__textarea-container">
-              <label class="p-form__label" for="content">内容 *</label>
-              <div class="p-form__input">
+            <dl class="p-form__item p-form__textarea-container">
+              <dt class="p-form__label">
+                <label for="content">内容 *</label>
+              </dt>
+              <dd class="p-form__input">
                 <textarea name="お問合せ" id="content" class="p-form__textarea"></textarea>
-              </div>
-            </div>
+              </dd>
+            </dl>
 
-            <div class="p-form__item p-form__checkbox-container"><!--6.5-->
-              <p class="p-form__label">
+            <dl class="p-form__item p-form__checkbox-container"><!--6.5-->
+              <dt class="p-form__label">
                 何を見て当社HPを知りましたか？<br class="u-sp"> (複数回答可)
                 <span class="p-form__required">*</span>
-              </p>
-              <div class="p-form__input p-form__checkbox">
+              </dt>
+              <dd class="p-form__input p-form__checkbox">
                 <label class="p-form__checkbox-custom"><input type="checkbox" name="source[]" value="internet" id="internet"><span>インターネット</span></label>
                 <label class="p-form__checkbox-custom"><input type="checkbox" name="source[]" value="flyer" id="flyer"><span>チラシ</span></label>
                 <label class="p-form__checkbox-custom"><input type="checkbox" name="source[]" value="housing" id="housing"><span>住宅展示場</span></label>
@@ -387,8 +394,8 @@
                 <label class="p-form__checkbox-custom"><input type="checkbox" name="source[]" value="referral" id="referral"><span>紹介</span></label>
                 <label class="p-form__checkbox-custom"><input type="checkbox" name="source[]" value="passing" id="passing"><span>通りがかり</span></label>
                 <label class="p-form__checkbox-custom"><input type="checkbox" name="source[]" value="other" id="other"><span>その他</span></label>
-              </div>
-            </div>
+              </dd>
+            </dl>
             <!---->
             <div class="p-form__item p-form__privacy p-form-privacy">
               <h3 class="p-form__label">個人情報保護方針</h3>

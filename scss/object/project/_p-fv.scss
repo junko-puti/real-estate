@@ -10,12 +10,10 @@
   aspect-ratio: 1080 / 800;
   top: 0;
   left: 0;
-  // z-index: 900; /* ヘッダーより低く */
   display: block;
   @include sp {
     aspect-ratio: 375 / 601;
   }
-
 }
 .p-fv::before {
   content: "";
@@ -23,15 +21,8 @@
   inset: 0;
   background-color: rgba(0, 0, 0, 0.15); //15%の黒
   z-index: 10;
-  // z-index: 100;
   pointer-events: none;
 }
-// .p-fv__slider,
-// .p-fv__catch {
-//   position: relative;
-//   z-index: 20;
-//   // z-index: 2;
-// }
 .p-slider__item picture,
 .p-slider__item img {
   display: block;
@@ -41,9 +32,7 @@
 }
 .p-fv__catch{
   position: absolute;
-  // top: 50%;
   top: 51.5%;
-  // left: 51%;/*横揺れの原因*/
   left: 50%;
   z-index: 20;
   padding-left: rem(10);/*微調整*/

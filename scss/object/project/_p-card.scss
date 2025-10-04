@@ -8,7 +8,6 @@
   gap: 4.347%;
   @include sp {
      grid-template-columns: 1fr; // SPサイズ：1列
-    // gap: rem(22);
     gap: rem(20);/*微調整/*/
    }
 }
@@ -22,7 +21,6 @@
 }
 
 .p-card__img {
-  // position: relative;
   margin-bottom: rem(19);
   overflow: hidden;
   aspect-ratio: 1 / 1;
@@ -32,11 +30,8 @@
   }
 }
 .p-card__img img {
-  // position: absolute;
-  // inset: 0;
   height: auto;
   width: 100%;
-  // margin-bottom: rem(19);
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
   will-change: transform;
@@ -50,54 +45,6 @@
   color: #000000;
   transition: color 0.3s ease;
 }
-// .p-card__title span{
-//   display: inline-block;
-// }
 .p-card__item:hover .p-card__title{
   color: rgba(0, 0, 0, 0.6);
 }
-/* 767px以上：12px〜16pxで遷移 */
-// @media screen and (min-width: 767px) {
-//   .p-card__title {
-//     font-size: clamp(12px, 2vw, 16px);
-//   }
-// }
-/* 767px未満：14px〜16pxで遷移 */
-// @media screen and (max-width: 767px) {
-//   .p-card__title {
-//     font-size: clamp(14px, 5vw, 16px);
-//   }
-// }
-
-
-
-
-//   /* モーダルのスタイル */
-// .p-modal {
-//   display: none; /* 初期状態は非表示 */
-//   position: fixed; /* スクロールしても位置が固定 */
-//   z-index: 1; /* 他の要素の上に表示 */
-//   top: 0;
-//   left: 0;
-//   width: 100%; /* 幅は全体 */
-//   height: 100%; /* 高さも全体 */
-//   overflow: auto; /* コンテンツが多い場合はスクロール */
-//   background-color: rgba(0, 0, 0, 0.5); /* 背景の透明度 */
-// }
-
-// .p-modal img {
-//   display: block; /* ブロック要素 */
-//   margin: 15% auto; /* 中央寄せ */
-//   width: 50%; /* 幅は50% */
-//   max-width: 500px; /* 最大幅を設定 */
-// }
-
-// .p-modal__close {
-//   position: absolute; /* 絶対位置に配置 */
-//   top: 10px; /* 上から10pxの位置 */
-//   right: 25px; /* 右から25pxの位置 */
-//   font-size: 35px; /* フォントサイズを35pxに */
-//   font-weight: bold; /* 太字 */
-//   color: white; /* 色を白に */
-//   cursor: pointer;  /* カーソルをポインターにしてクリック可能に */
-// }

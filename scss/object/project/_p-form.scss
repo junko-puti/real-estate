@@ -7,7 +7,6 @@
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: rem(50);
-  column-gap: rem(15);
   @include sp {
     flex-direction: column;
     align-items: flex-start;
@@ -15,28 +14,10 @@
   }
 }
 .p-form__label {
-  width: rem(155);
+  width: rem(170);
   font-size: rem(20);
   line-height: calc(33 / 20);
-
-  // @media (min-width: 768px) and (max-width: 900px) {
-  //   width: 24%;
-  // }
-  // @include sp {
-  //   width: 100%;
-  // }
 }
-// .p-form__label {
-//   width: 21.25%;
-//   font-size: rem(20);
-//   line-height: calc(33 / 20);
-//   @media (min-width: 768px) and (max-width: 900px) {
-//     width: 24%;
-//   }
-//   @include sp {
-//     width: 100%;
-//   }
-// }
 .p-form__input {
   flex: 1;
   font-size: rem(16);
@@ -53,16 +34,13 @@
 }
 .p-form__item_gender .p-form__label {
   @media (min-width: 501px) and (max-width: 767px) {
-  // @media (min-width: 501px) and (max-width: 767.3333px) {
     width: rem(100);
-    // width: 18%;
   }
   @media (max-width: 500px) {
-    width: rem(87);
-    // @media (max-width: 500px) {
+    width: rem(100);
   }
   @media (max-width: 340px) {
-    width: rem(60);
+    width: rem(80);
   }
 }
 .p-form__item_gender .p-form__input {
@@ -101,18 +79,12 @@
     line-height: calc(25 / 16);
   }
 }
-// .p-form__textarea-container .p-form__textarea {
-//   height: rem(200);
-//   resize: vertical;
-//   overflow-y: auto;
-// }
 .p-form__textarea-container .p-form__textarea {
   height: rem(200);     /* 初期の高さ */
   min-height: rem(200); /* 最低の高さを200pxに固定 */
   resize: vertical;     /* 垂直方向のみリサイズ可能 */
   overflow-y: auto;     /* 縦スクロールを表示 */
 }
-
 .p-form__checkbox-container .p-form__label {
   @include sp {
     line-height: calc(27 / 20);
@@ -162,7 +134,6 @@
     line-height: calc(25 / 16);
   }
 }
-
 .p-form__radio label{/*高さをそろえる*/
   line-height: calc(33 / 20);
 }
@@ -170,9 +141,6 @@
 .p-form__required {
   margin-left: 0.7em; //アスタリスクの前に少し空ける微調整9.26
 }
-
-
-
 .p-form__input-select {
   position: relative;
   appearance: none;
@@ -195,7 +163,6 @@
   background-repeat: no-repeat;
   pointer-events: none;
 }
-
 .p-form__radio-custom span,
 .p-form__checkbox-custom span{
   position: relative;
@@ -229,7 +196,6 @@
   @include sp {
     left: rem(-33);
   }
-
 }
 .p-form__radio-custom input:checked + span::after {
   content: '';
@@ -241,6 +207,9 @@
   height: rem(6);
   background: #000;
   border-radius: 50%;
+  @include sp {
+    left: rem(-23);
+  }
 }
 .p-form__checkbox-custom input:checked + span::after {
   content: '';
@@ -253,7 +222,6 @@
   border: solid #000;
   border-width: 0 rem(2) rem(2) 0;
 }
-
 input:focus,
 textarea:focus,
 select:focus {
@@ -265,9 +233,6 @@ input[type="radio"]:focus,
 input[type="submit"] {
   outline: none; /* フォーカス時の枠線を削除 */
 }
-
-
-
 /*個人情報保護方針*/
 .p-form-privacy {
   margin-bottom: rem(78);//微調整9.26
@@ -341,8 +306,6 @@ margin-right: 0.3em;
     display: block;
   }
 }
-
-
 /* WebKit系（Chrome, Safari, Edge）対応 */
 .p-form-privacy__container::-webkit-scrollbar {
   width: 10px;
