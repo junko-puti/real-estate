@@ -1590,6 +1590,7 @@ img {
   width: 17rem;
   font-size: 2rem;
   line-height: 1.65;
+  font-weight: 400;
 }
 
 .p-form__input {
