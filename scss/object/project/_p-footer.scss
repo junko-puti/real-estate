@@ -57,7 +57,7 @@
   display: inline-block;
   font-size: rem(20);
   line-height: calc(33 / 20);
-  transition: color 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   padding: 0;   // 余白をなくす
   height: auto; // 高さを文字に合わせる
   text-align: center;

@@ -63,13 +63,15 @@
   width: 100%;
   padding: rem(16.5) 0;
   column-gap: 17.6%;
-  transition: color 0.3s ease-in-out;
+  // transition: color 0.3s ease-in-out;10.4
+  transition: opacity 0.3s ease-in-out;
   @include sp {
     column-gap: rem(24);
   }
 }
 .p-news__entry a:hover{
-  color: rgba(0, 0, 0, 0.5);
+  // color: rgba(0, 0, 0, 0.5);10.4
+  opacity: 0.5;
 }
 
 .p-news__date{
