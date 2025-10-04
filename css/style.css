@@ -683,7 +683,6 @@ img {
   align-items: center;
   height: 100%;
   font-size: 2rem;
-  /*font-weight: 500;*/
   line-height: 1.65;
   transition: color 0.3s ease-in-out;
 }
@@ -725,7 +724,6 @@ img {
   align-items: center;
   height: 100%;
   font-size: 1.8rem;
-  /*font-weight: 500;*/
   line-height: 1.8333333333;
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -1082,24 +1080,15 @@ img {
   }
 }
 
-@media (max-width: 767px) {
-  .p-service-item__title,
-  .p-service-item__body-txt {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) and (max-width: 979px) {
-  .p-service-item__title,
-  .p-service-item__body-txt {
-    width: 22rem; /*微調整*/
-  }
-}
-
 .p-service-item__title {
   margin-bottom: 1.7rem;
   font-size: 2.5rem;
-  /*font-weight: 400;*/
   line-height: 1.32;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .p-service-item__title {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 767px) {
   .p-service-item__title {
@@ -1108,15 +1097,9 @@ img {
     line-height: 1.25;
   }
 }
-@media (min-width: 768px) and (max-width: 979px) {
-  .p-service-item__title {
-    font-size: 2rem;
-  }
-}
 
 .p-service-item__txt {
   font-size: 1.6rem;
-  /*font-weight: 400;*/
   line-height: 1.5625;
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -1224,8 +1207,6 @@ img {
   color: rgba(0, 0, 0, 0.6);
 }
 
-/* 767px以上：12px〜16pxで遷移 */
-/* 767px未満：14px〜16pxで遷移 */
 .p-modal {
   display: none;
   position: fixed;
@@ -1331,7 +1312,6 @@ img {
 .p-news__title {
   padding: 0.9rem 2rem 0.8rem 2rem;
   font-size: 2rem;
-  /*font-weight: 600;*/
   line-height: 1.65;
   color: rgb(255, 255, 255);
   background-color: rgb(77, 150, 0);
@@ -1367,7 +1347,7 @@ img {
 }
 @media (max-width: 767px) {
   .p-news__entry a {
-    column-gap: 6.9%;
+    column-gap: 2.4rem;
   }
 }
 
@@ -1475,33 +1455,19 @@ img {
   }
 }
 
-.p-company-details__company-name,
-.p-company-details__access {
-  width: 28rem;
-}
-@media (max-width: 767px) {
-  .p-company-details__company-name,
-  .p-company-details__access {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) and (max-width: 979px) {
-  .p-company-details__company-name,
-  .p-company-details__access {
-    width: 22rem; /*微調整*/
-  }
-}
-
 .p-company-details__company-name {
   margin-bottom: 0.7rem;
   font-size: 2rem;
-  /*font-weight: 600;*/
   line-height: 1.65;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .p-company-details__company-name {
+    font-size: 1.8rem;
+  }
 }
 
 .p-company-details__access {
   font-size: 1.6rem;
-  /*font-weight: 600;*/
   line-height: 1.5625;
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -1584,7 +1550,6 @@ img {
   margin-bottom: 7rem;
   text-align: left;
   font-size: 2rem;
-  /*font-weight: 500;*/
   line-height: 1.65;
 }
 @media (max-width: 767px) {
@@ -1612,7 +1577,6 @@ img {
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 5rem;
-  column-gap: 1.5rem;
 }
 @media (max-width: 767px) {
   .p-form__item {
@@ -1623,7 +1587,7 @@ img {
 }
 
 .p-form__label {
-  width: 15.5rem;
+  width: 17rem;
   font-size: 2rem;
   line-height: 1.65;
 }
@@ -1653,12 +1617,12 @@ img {
 }
 @media (max-width: 500px) {
   .p-form__item_gender .p-form__label {
-    width: 8.7rem;
+    width: 10rem;
   }
 }
 @media (max-width: 340px) {
   .p-form__item_gender .p-form__label {
-    width: 6rem;
+    width: 8rem;
   }
 }
 
@@ -1866,6 +1830,11 @@ img {
   height: 0.6rem;
   background: #000;
   border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .p-form__radio-custom input:checked + span::after {
+    left: -2.3rem;
+  }
 }
 
 .p-form__checkbox-custom input:checked + span::after {
@@ -2110,10 +2079,6 @@ input[type=submit] {
   gap: 3rem;
 }
 
-.p-footer__sns-menu a:hover {
-  opacity: 0.6;
-}
-
 .p-footer__sns-menu img {
   width: 2.8rem;
 }
@@ -2123,15 +2088,14 @@ input[type=submit] {
   align-items: center;
   height: 100%;
   font-size: 1.8rem;
-  /*font-weight: 500;*/
   line-height: 1.8333333333;
   letter-spacing: 0.01em;
-  transition: color 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .p-footer__logo a:hover,
 .p-footer__menu a:hover {
-  color: rgba(0, 0, 0, 0.6);
+  opacity: 0.6;
 }
 
 .p-footer .p-footer__copyright {
@@ -2139,7 +2103,6 @@ input[type=submit] {
   padding-top: 3.2rem;
   padding-bottom: 2.9rem;
   font-size: 2rem;
-  /*font-weight: 500;*/
   line-height: 1.65;
   letter-spacing: -0.01em;
   text-align: center;

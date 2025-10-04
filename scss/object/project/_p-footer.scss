@@ -16,7 +16,6 @@
     padding-top: rem(50);
     padding-bottom: rem(50);
   }
-
 }
 .p-footer__menu-inner {
   display: flex;
@@ -24,9 +23,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 762px;//722px+20px+20px
-  // max-width: 782px;//722px+30px+30px
   width: 100%;
-  // height: 100%;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -34,9 +31,6 @@
     padding-left: 30px;
     padding-right: 30px;
   }
-
-  // padding-left: 30px;
-  // padding-right: 30px;
 }
 .p-footer__logo{
   position: relative;
@@ -49,7 +43,6 @@
     margin-bottom: rem(20);
     padding-bottom: rem(20);
   }
-
 }
 .p-footer__logo::after{
   position: absolute;
@@ -93,9 +86,6 @@
 .p-footer__sns-menu{
   gap: rem(30);
 }
-.p-footer__sns-menu a:hover{
-  opacity: 0.6;
-}
 .p-footer__sns-menu img{
   width: rem(28);
 }
@@ -104,15 +94,13 @@
   align-items: center;
   height: 100%;
   font-size: rem(18);
-  /*font-weight: 500;*/
   line-height: calc(33 / 18);
   letter-spacing: 0.01em;
-  transition: color 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .p-footer__logo a:hover,
 .p-footer__menu a:hover{
-  // text-decoration: underline;
-  color: rgba(0, 0, 0, 0.6)
+  opacity: 0.6;
 }
   
 
@@ -122,7 +110,6 @@
   padding-top: rem(32);//微調整9.26
   padding-bottom: rem(29);
   font-size: rem(20);
-  /*font-weight: 500;*/
   line-height: calc(33 / 20);
   letter-spacing: -0.01em;
   text-align: center;
@@ -132,7 +119,6 @@
   @include sp {
     padding-top: rem(21);
     padding-bottom: rem(21);
-    // margin-left: rem(-20);
     line-height: calc(25 / 20);
     .u-spacer{
       display: none;

@@ -3,9 +3,7 @@
 
 
 .p-contact{
-  // margin-top: rem(-2);/*微調整*/
   color: #000000;
-  // background-color: rgba(77, 150, 0, 0.1);
   background-color: rgba(77, 150, 0, 0.149)
 ;
 }
@@ -13,7 +11,6 @@
   max-width: 860px;
   margin: 0 auto;
 }
-
 .p-contact__headline{
   margin-bottom: rem(35);
     @include sp {
@@ -21,12 +18,9 @@
     }
 }
 .p-contact__message{
-  // margin-top: rem(-33);
   margin-bottom: rem(70);
-  // padding: 0 rem(60);
   text-align: left;
   font-size: rem(20);
-  /*font-weight: 500;*/
   line-height: calc(33 / 20);
   @include sp {
     padding-left: 0;
@@ -35,9 +29,6 @@
     margin-bottom: rem(40);
   }
 }
-// .p-contact__message span{
-//   display: inline-block;
-// }
 .p-contact__form{
   padding-left: rem(60);
   padding-right: rem(60);
